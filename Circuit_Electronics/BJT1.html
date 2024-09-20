@@ -179,21 +179,30 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections of Circuit and Electronics course</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="BasicElements.html">Basic component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="KVL_KCL.html">Voltage , Current</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NodalMeshAnalysis.html">Basic Nodal and Mesh Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RC_RL_RLC.html">R-C, R-L circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Diode_chapter.html">Diode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DiodeApplication.html">Diode Application</a></li>
-
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Bipolar junction transistor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FET.html">Field Effect Transistor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OpAmp.html">Operational Amplifier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching assistant</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="PySpice_Installation_Manual.html">PySpice Installation Manual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PySpice_circuit_example1.html">Example 1: RESISTIVE DIVIDER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PySpice_circuit_example6.html">Example 6: Thevenin and Norton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Students effort</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="DiodeCharacteristicCurve.html">Simulating and Plotting the Characteristic Curve of a Diode</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Contact_Me.html">Contact Me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About_Me.html">About Me</a></li>
 </ul>
@@ -576,72 +585,15 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">PySpice.Logging.Logging</span> <span class="k">as</span> <span class="nn">Logging</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">PySpice.Logging.Logging</span> <span class="k">as</span> <span class="nn">Logging</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">Logging</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
 
-<span class="n">File</span> <span class="n">E</span><span class="p">:</span>\<span class="n">MainHomePage</span>\<span class="o">.</span><span class="n">M_HomePage</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">276</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>         <span class="k">if</span> <span class="n">parse_version</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">parse_version</span><span class="p">(</span><span class="n">minver</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>             <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Matplotlib requires </span><span class="si">{</span><span class="n">modname</span><span class="si">}</span><span class="s2">&gt;=</span><span class="si">{</span><span class="n">minver</span><span class="si">}</span><span class="s2">; &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>                               <span class="sa">f</span><span class="s2">&quot;you have </span><span class="si">{</span><span class="n">module</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">276</span> <span class="n">_check_versions</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span> <span class="c1"># The decorator ensures this always returns the same handler (and it is only</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="c1"># attached once).</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">cache</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span> <span class="k">def</span> <span class="nf">_ensure_handler</span><span class="p">():</span>
-
-<span class="nn">File E:\MainHomePage\.M_HomePage\Lib\site-packages\matplotlib\__init__.py:270,</span> in <span class="ni">_check_versions</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">261</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">ft2font</span>  <span class="c1"># noqa: F401</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span> <span class="k">for</span> <span class="n">modname</span><span class="p">,</span> <span class="n">minver</span> <span class="ow">in</span> <span class="p">[</span>
-<span class="g g-Whitespace">    </span><span class="mi">264</span>         <span class="p">(</span><span class="s2">&quot;cycler&quot;</span><span class="p">,</span> <span class="s2">&quot;0.10&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">265</span>         <span class="p">(</span><span class="s2">&quot;dateutil&quot;</span><span class="p">,</span> <span class="s2">&quot;2.7&quot;</span><span class="p">),</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span>         <span class="p">(</span><span class="s2">&quot;pyparsing&quot;</span><span class="p">,</span> <span class="s2">&quot;2.3.1&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span> <span class="p">]:</span>
-<span class="ne">--&gt; </span><span class="mi">270</span>     <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">modname</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>     <span class="k">if</span> <span class="n">parse_version</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">parse_version</span><span class="p">(</span><span class="n">minver</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Matplotlib requires </span><span class="si">{</span><span class="n">modname</span><span class="si">}</span><span class="s2">&gt;=</span><span class="si">{</span><span class="n">minver</span><span class="si">}</span><span class="s2">; &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>                           <span class="sa">f</span><span class="s2">&quot;you have </span><span class="si">{</span><span class="n">module</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>             <span class="k">break</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ne">---&gt; </span><span class="mi">90</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
-
-<span class="n">File</span> <span class="n">E</span><span class="p">:</span>\<span class="n">MainHomePage</span>\<span class="o">.</span><span class="n">M_HomePage</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">kiwisolver</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># --------------------------------------------------------------------------------------</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Copyright (c) 2013-2022, Nucleic Development Team.</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># The full license is in the file LICENSE, distributed with this software.</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># --------------------------------------------------------------------------------------</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">._cext</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">Constraint</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">Expression</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">Solver</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">Term</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">Variable</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">__kiwi_version__</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">__version__</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">strength</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">BadRequiredStrength</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">DuplicateConstraint</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">UnsatisfiableConstraint</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="s2">&quot;BadRequiredStrength&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="s2">&quot;DuplicateConstraint&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="s2">&quot;__kiwi_version__&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="p">]</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;PySpice&#39;
 </pre></div>
 </div>
 </div>

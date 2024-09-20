@@ -57,10 +57,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Circuit_Electronics/PySpice_circuit_example6';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contact Me" href="../Contact_Me.html" />
+    <link rel="next" title="Simulating and Plotting the Characteristic Curve of a Diode" href="DiodeCharacteristicCurve.html" />
     <link rel="prev" title="Example 1: RESISTIVE DIVIDER" href="PySpice_circuit_example1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -177,21 +179,30 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections of Circuit and Electronics course</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="BasicElements.html">Basic component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="KVL_KCL.html">Voltage , Current</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NodalMeshAnalysis.html">Basic Nodal and Mesh Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RC_RL_RLC.html">R-C, R-L circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Diode_chapter.html">Diode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DiodeApplication.html">Diode Application</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="BJT1.html">Bipolar junction transistor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FET.html">Field Effect Transistor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OpAmp.html">Operational Amplifier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching assistant</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="PySpice_Installation_Manual.html">PySpice Installation Manual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PySpice_circuit_example1.html">Example 1: RESISTIVE DIVIDER</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Example 6: Thevenin and Norton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Students effort</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="DiodeCharacteristicCurve.html">Simulating and Plotting the Characteristic Curve of a Diode</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Contact_Me.html">Contact Me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About_Me.html">About Me</a></li>
 </ul>
@@ -416,11 +427,14 @@ Sania Dolat, Ali Saadatpour</p>
 <strong>Thevenin’s theorem</strong> simplifies a complex circuit to a single voltage source and a resistor, making analysis easier.<br />
 <strong>Norton’s theorem</strong> simplifies the circuit to a current source and a parallel resistor.<br />
 Both methods provide equivalent circuits that produce the same voltage and current at the terminals when no load is attached. The Norton’s theorem is the dual of the Thévenin’s therorem and both are related by these equations:</p>
-<p>\begin{split}\begin{align}
-R_{no} &amp; = R_{th} \
-I_{no} &amp; = V_{th} / R_{th} \
-V_{th} &amp; = I_{No} R_{no}
-\end{align}\end{split}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{split}\begin{align}
+  R_{no} &amp; = R_{th} \\
+  I_{no} &amp; = V_{th} / R_{th} \\
+  V_{th} &amp; = I_{No} R_{no}
+\end{align}\end{split}
+\end{split}\]</div>
 <p>A picture below is the circuit we want to analyse for Thevinan and Norton theorems</p>
 <p><img alt="Question.jpg" src="Circuit_Electronics/attachment:Question.jpg" /></p>
 <section id="imports">
@@ -731,11 +745,11 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\3431291225.py:7: DeprecationWarn
       </div>
     </a>
     <a class="right-next"
-       href="../Contact_Me.html"
+       href="DiodeCharacteristicCurve.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Contact Me</p>
+        <p class="prev-next-title">Simulating and Plotting the Characteristic Curve of a Diode</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

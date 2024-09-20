@@ -179,21 +179,30 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections of Circuit and Electronics course</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="BasicElements.html">Basic component</a></li>
 <li class="toctree-l1"><a class="reference internal" href="KVL_KCL.html">Voltage , Current</a></li>
 <li class="toctree-l1"><a class="reference internal" href="NodalMeshAnalysis.html">Basic Nodal and Mesh Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RC_RL_RLC.html">R-C, R-L circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Diode_chapter.html">Diode</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Diode Application</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="BJT1.html">Bipolar junction transistor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FET.html">Field Effect Transistor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OpAmp.html">Operational Amplifier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching assistant</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="PySpice_Installation_Manual.html">PySpice Installation Manual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PySpice_circuit_example1.html">Example 1: RESISTIVE DIVIDER</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PySpice_circuit_example6.html">Example 6: Thevenin and Norton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Students effort</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="DiodeCharacteristicCurve.html">Simulating and Plotting the Characteristic Curve of a Diode</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Contact_Me.html">Contact Me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../About_Me.html">About Me</a></li>
 </ul>
@@ -391,69 +400,67 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Diode Application</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#or-gate">OR Gate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#and-gate">AND Gate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#half-wave-rectifier">Half-Wave Rectifier</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-diode-rectifier">Power Diode Rectifier</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-wave-rectifier">Full-wave rectifier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Full Wave Rectifier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Power Diode Rectifier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-wave-rectifier">Full-wave rectifier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Full Wave Rectifier</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Power Diode Rectifier</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-wave-rectifier-with-smoothing-capacitor">Full Wave Rectifier with Smoothing Capacitor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ripple-factor-of-a-half-wave-rectifier"><strong>Ripple Factor of a Half-Wave Rectifier</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-half-wave-rectifier">For Half Wave Rectifier</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-calculate-ripple-factor-for-full-wave-rectifier-with-capacitor">Homework : Calculate ripple factor for Full Wave Rectifier with Capacitor</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regulators">Regulators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regulator">Linear regulator</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lm-series-integrated-circuits">LM-series integrated circuits</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miniprogect-complete-linear-regulator-include">MiniProgect : Complete Linear regulator include:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switchig-regulator">Switchig Regulator</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buck-converter-topology">Buck converter topology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-boost-converter">Simple boost converter</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-multiplier">Voltage multiplier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miniprojects-continue-voltage-multiplier">Miniprojects: Continue Voltage Multiplier</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diode-clippers">DIODE CLIPPERS</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-clipper">Positive Clipper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-diode-clipper">Negative Diode Clipper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biased-positive-clipper">Biased Positive Clipper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-negative-cycle-bias-clipper">Positive &amp; Negative Cycle Bias Clipper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zener-diode-clipper">Zener diode clipper</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clampers">Clampers</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-clamper-circuit">Positive Clamper Circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-wave-rectifier-with-smoothing-capacitor">Full Wave Rectifier with Smoothing Capacitor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ripple-factor-of-a-half-wave-rectifier"><strong>Ripple Factor of a Half-Wave Rectifier</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-half-wave-rectifier">For Half Wave Rectifier</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-think-about-positive-clamper-with-positive-vr-using-zener-diod">Homework: Think about Positive Clamper with Positive Vr using zener diod</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-clamper">Negative clamper</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protective-diode">Protective Diode</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diode-protector-to-limit-the-emitterbase-voltage">Diode protector to limit the emitter–base voltage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-can-be-used-to-limit-the-input-of-opamp-to-0-7v">Diodes can be used to limit the input of OPAMP to 0.7V</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarity-insurance">POLARITY INSURANCE</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relay-with-diode-circuit">Relay with Diode Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-calculate-ripple-factor-for-full-wave-rectifier-with-capacitor">Homework : Calculate ripple factor for Full Wave Rectifier with Capacitor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regulators">Regulators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regulator">Linear regulator</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lm-series-integrated-circuits">LM-series integrated circuits</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miniproject-choose-one-application-related-to-protective-diodes">Miniproject : Choose one application related to protective diodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miniprogect-complete-linear-regulator-include">MiniProgect : Complete Linear regulator include:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switchig-regulator">Switchig Regulator</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#buck-converter-topology">Buck converter topology</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-boost-converter">Simple boost converter</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-multiplier">Voltage multiplier</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#miniprojects-continue-voltage-multiplier">Miniprojects: Continue Voltage Multiplier</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diode-clippers">DIODE CLIPPERS</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-clipper">Positive Clipper</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-diode-clipper">Negative Diode Clipper</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biased-positive-clipper">Biased Positive Clipper</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-negative-cycle-bias-clipper">Positive &amp; Negative Cycle Bias Clipper</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zener-diode-clipper">Zener diode clipper</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clampers">Clampers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-clamper-circuit">Positive Clamper Circuit</a></li>
 </ul>
 </li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-think-about-positive-clamper-with-positive-vr-using-zener-diod">Homework: Think about Positive Clamper with Positive Vr using zener diod</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-clamper">Negative clamper</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protective-diode">Protective Diode</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#diode-protector-to-limit-the-emitterbase-voltage">Diode protector to limit the emitter–base voltage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-can-be-used-to-limit-the-input-of-opamp-to-0-7v">Diodes can be used to limit the input of OPAMP to 0.7V</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#polarity-insurance">POLARITY INSURANCE</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relay-with-diode-circuit">Relay with Diode Circuit</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miniproject-choose-one-application-related-to-protective-diodes">Miniproject : Choose one application related to protective diodes</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -464,7 +471,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="diode-application">
+  <section class="tex2jax_ignore mathjax_ignore" id="diode-application">
 <h1>Diode Application<a class="headerlink" href="#diode-application" title="Link to this heading">#</a></h1>
 <section id="or-gate">
 <h2>OR Gate<a class="headerlink" href="#or-gate" title="Link to this heading">#</a></h2>
@@ -621,12 +628,11 @@ V_{\text{rms}} = \frac{V_{\text{max}}}{\sqrt{2}}
 <p><img alt="NegativeBridge" src="../_images/NegativeBridge.PNG" /></p>
 <p><strong>Advantages and Circuit Operation</strong></p>
 <p>A full wave rectifier produces a higher average DC output voltage with less ripple compared to a half wave rectifier, resulting in a smoother output waveform. Such as Half Wave Rectifier, can reach to:</p>
-</section>
 <section id="id1">
-<h2>Full Wave Rectifier<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h3>Full Wave Rectifier<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>A full-wave rectifier converts the entire AC waveform into DC, providing a smoother and more efficient output compared to a half-wave rectifier. It utilizes four diodes to rectify both halves of the AC cycle, resulting in a higher average DC output with reduced ripple.</p>
 <section id="id2">
-<h3>Power Diode Rectifier<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h4>Power Diode Rectifier<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p>Power diodes can be configured into various rectifier circuits. A common design is the full-wave rectifier, using a center-tapped transformer and two diodes to handle both half-cycles of the input waveform. This configuration doubles the frequency of the output signal, resulting in a smoother DC output.</p>
 <p><strong>DC Output Value Calculation</strong></p>
 <p>For a full-wave rectifier, the average DC output voltage <span class="math notranslate nohighlight">\(V_{\text{DC}}\)</span> is given by:</p>
@@ -640,11 +646,11 @@ V_{\text{DC}} = \frac{2 V_{\text{max}}}{\pi}
 </section>
 </section>
 <section id="full-wave-rectifier-with-smoothing-capacitor">
-<h2>Full Wave Rectifier with Smoothing Capacitor<a class="headerlink" href="#full-wave-rectifier-with-smoothing-capacitor" title="Link to this heading">#</a></h2>
+<h3>Full Wave Rectifier with Smoothing Capacitor<a class="headerlink" href="#full-wave-rectifier-with-smoothing-capacitor" title="Link to this heading">#</a></h3>
 <p>Capacitors smooth the full-wave rectifier output, reducing peak-to-peak ripple for a more stable voltage.</p>
 </section>
 <section id="ripple-factor-of-a-half-wave-rectifier">
-<h2><strong>Ripple Factor of a Half-Wave Rectifier</strong><a class="headerlink" href="#ripple-factor-of-a-half-wave-rectifier" title="Link to this heading">#</a></h2>
+<h3><strong>Ripple Factor of a Half-Wave Rectifier</strong><a class="headerlink" href="#ripple-factor-of-a-half-wave-rectifier" title="Link to this heading">#</a></h3>
 <p>Ripple is the residual AC component in the output of a half-wave rectifier that causes the DC waveform to pulsate. The ripple factor <span class="math notranslate nohighlight">\( \gamma \)</span> quantifies this unwanted AC component and is obtained as:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -693,7 +699,7 @@ V_{r(\text{rms})}^2 = V_{rms}^2 - V_{dc}^2,
 \gamma = \sqrt{\frac{V_{rms}^2}{V_{dc}^2} - 1}.
 \]</div>
 <section id="for-half-wave-rectifier">
-<h3>For Half Wave Rectifier<a class="headerlink" href="#for-half-wave-rectifier" title="Link to this heading">#</a></h3>
+<h4>For Half Wave Rectifier<a class="headerlink" href="#for-half-wave-rectifier" title="Link to this heading">#</a></h4>
 <p>Substituting the values for <span class="math notranslate nohighlight">\( V_{dc} \)</span> and <span class="math notranslate nohighlight">\( V_{rms} \)</span>, we find:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -714,16 +720,16 @@ V_{r(\text{rms})}^2 = V_{rms}^2 - V_{dc}^2,
 </section>
 </section>
 <section id="homework-calculate-ripple-factor-for-full-wave-rectifier-with-capacitor">
-<h1>Homework : Calculate ripple factor for Full Wave Rectifier with Capacitor<a class="headerlink" href="#homework-calculate-ripple-factor-for-full-wave-rectifier-with-capacitor" title="Link to this heading">#</a></h1>
+<h2>Homework : Calculate ripple factor for Full Wave Rectifier with Capacitor<a class="headerlink" href="#homework-calculate-ripple-factor-for-full-wave-rectifier-with-capacitor" title="Link to this heading">#</a></h2>
 <section id="regulators">
-<h2>Regulators<a class="headerlink" href="#regulators" title="Link to this heading">#</a></h2>
+<h3>Regulators<a class="headerlink" href="#regulators" title="Link to this heading">#</a></h3>
 <p>After rectification, the DC output can be further stabilized using regulators, which are primarily of two types:</p>
 <ul class="simple">
 <li><p><strong>Linear Regulators:</strong> These provide a stable output voltage by using a linear pass element to drop excess voltage. They are simple and offer low noise but are less efficient, especially with large voltage drops.</p></li>
 <li><p><strong>Switching Regulators:</strong> These use high-frequency switching elements to convert input voltage to a desired output voltage with higher efficiency. They are more complex but provide better efficiency and can step up, step down, or invert the voltage.</p></li>
 </ul>
 <section id="linear-regulator">
-<h3>Linear regulator<a class="headerlink" href="#linear-regulator" title="Link to this heading">#</a></h3>
+<h4>Linear regulator<a class="headerlink" href="#linear-regulator" title="Link to this heading">#</a></h4>
 <p>A simple transistor regulator maintains a relatively constant output voltage (Uout) despite changes in input voltage (Uin) and load resistance (RL), provided Uin exceeds Uout sufficiently and the transistor’s power capacity isn’t exceeded. The stabilizer’s output voltage equals the Zener diode voltage minus the transistor’s base-emitter voltage (UZ − UBE), with UBE typically around 0.7 V for silicon transistors. If Uout drops due to external factors, UBE increases, activating the transistor further to boost the load voltage. Rv supplies bias current to both the Zener diode and transistor, with its value affecting input voltage requirements and regulator efficiency. Lower Rv values increase diode power dissipation and worsen regulator performance.</p>
 <p><img alt="LinearRegulator_1_Schem" src="../_images/LinearRegulator_1.PNG" /></p>
 <p><strong>Regulator with a differential amplifier</strong></p>
@@ -731,50 +737,50 @@ V_{r(\text{rms})}^2 = V_{rms}^2 - V_{dc}^2,
 <p><img alt="LinearRegulator_Schem_2" src="../_images/LinearReg_2.PNG" /></p>
 </section>
 <section id="lm-series-integrated-circuits">
-<h3>LM-series integrated circuits<a class="headerlink" href="#lm-series-integrated-circuits" title="Link to this heading">#</a></h3>
+<h4>LM-series integrated circuits<a class="headerlink" href="#lm-series-integrated-circuits" title="Link to this heading">#</a></h4>
 <p>Example of linear regulator is <strong>LM317</strong>:
 Adjustable 1.5 A positive voltage regulator (1.25 V-37 V)</p>
 <p><img alt="LM317_Regulator" src="../_images/LM317_LinearRegulator.PNG" /></p>
 </section>
 </section>
 <section id="miniprogect-complete-linear-regulator-include">
-<h2>MiniProgect : Complete Linear regulator include:<a class="headerlink" href="#miniprogect-complete-linear-regulator-include" title="Link to this heading">#</a></h2>
+<h3>MiniProgect : Complete Linear regulator include:<a class="headerlink" href="#miniprogect-complete-linear-regulator-include" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Electronic perspective of LR</p></li>
 <li><p>Pyspice</p></li>
 </ul>
 </section>
 <section id="switchig-regulator">
-<h2>Switchig Regulator<a class="headerlink" href="#switchig-regulator" title="Link to this heading">#</a></h2>
+<h3>Switchig Regulator<a class="headerlink" href="#switchig-regulator" title="Link to this heading">#</a></h3>
 <p>A switching regulator (DC-DC converter) is a power supply that converts input DC voltage to a desired DC voltage with high efficiency. It achieves this by turning a switching element ON and OFF, supplying electricity only as needed, unlike less efficient linear regulators which dissipate excess energy as heat.</p>
 <p><img alt="SwitchingRegulator" src="../_images/SwitchingRegulator_%21.PNG" /></p>
 <p>Switching regulators can create output voltages that are higher (step-up, boost), lower (step-down, buck), or have different polarity than the input voltage. They use a power switch (usually a Field Effect Transistor, FET), an inductor, and a diode, controlled by a feedback loop to maintain constant output. The components can be configured into various designs like step-down, step-up, or inverter circuits.</p>
 <section id="buck-converter-topology">
-<h3>Buck converter topology<a class="headerlink" href="#buck-converter-topology" title="Link to this heading">#</a></h3>
+<h4>Buck converter topology<a class="headerlink" href="#buck-converter-topology" title="Link to this heading">#</a></h4>
 <p><img alt="Buck converter topology_1" src="../_images/BuckConverterTopology1.PNG" /></p>
 </section>
 <section id="simple-boost-converter">
-<h3>Simple boost converter<a class="headerlink" href="#simple-boost-converter" title="Link to this heading">#</a></h3>
+<h4>Simple boost converter<a class="headerlink" href="#simple-boost-converter" title="Link to this heading">#</a></h4>
 <p><img alt="Simple boost converter_1" src="../_images/BoostConverterTopology_1_Schem.PNG" /></p>
 </section>
 </section>
 <section id="voltage-multiplier">
-<h2>Voltage multiplier<a class="headerlink" href="#voltage-multiplier" title="Link to this heading">#</a></h2>
+<h3>Voltage multiplier<a class="headerlink" href="#voltage-multiplier" title="Link to this heading">#</a></h3>
 <p>A voltage multiplier is an electrical circuit that converts AC electrical power from a lower voltage to a higher DC voltage, typically using a network of capacitors and diodes. Voltage multipliers can be used to generate a few volts for electronic appliances, to millions of volts.</p>
 <p><strong>Example</strong>
 <span class="math notranslate nohighlight">\( V_o \)</span> of four times the peak of the AC input voltage <span class="math notranslate nohighlight">\( V_i \)</span></p>
 <p><img alt="MultiplierVoltage" src="../_images/VoltageMultiplier_4Vmax_ACSignal.PNG" /></p>
 <section id="miniprojects-continue-voltage-multiplier">
-<h3>Miniprojects: Continue Voltage Multiplier<a class="headerlink" href="#miniprojects-continue-voltage-multiplier" title="Link to this heading">#</a></h3>
+<h4>Miniprojects: Continue Voltage Multiplier<a class="headerlink" href="#miniprojects-continue-voltage-multiplier" title="Link to this heading">#</a></h4>
 </section>
 </section>
 <section id="diode-clippers">
-<h2>DIODE CLIPPERS<a class="headerlink" href="#diode-clippers" title="Link to this heading">#</a></h2>
+<h3>DIODE CLIPPERS<a class="headerlink" href="#diode-clippers" title="Link to this heading">#</a></h3>
 <p>Clippers are circuits designed to remove or “clip” portions of an input signal. They are used to limit the amplitude of a signal, preventing it from exceeding certain voltage levels. Clippers can be categorized into two main types:</p>
 <p><strong>Series and Parallel Clippers</strong></p>
 <p>Clippers are generally categorized into series and parallel (shunt) types. In a series clipper, the diode is placed in series with the load, while in a shunt clipper, the diode is positioned parallel to the load.</p>
 <section id="positive-clipper">
-<h3>Positive Clipper<a class="headerlink" href="#positive-clipper" title="Link to this heading">#</a></h3>
+<h4>Positive Clipper<a class="headerlink" href="#positive-clipper" title="Link to this heading">#</a></h4>
 <p><strong>Positive series Clipper</strong></p>
 <p>In a positive clipper, the positive half-cycles of the input voltage are removed. The diode in series with the load blocks the positive half-cycle, resulting in zero output voltage during this period.</p>
 <p><img alt="PositiveSeriesClipper" src="../_images/PositiveClipper.PNG" /></p>
@@ -783,22 +789,22 @@ Adjustable 1.5 A positive voltage regulator (1.25 V-37 V)</p>
 <p><img alt="PositiveShuntClipper" src="../_images/PositiveClipping_Shunt.PNG" /></p>
 </section>
 <section id="negative-diode-clipper">
-<h3>Negative Diode Clipper<a class="headerlink" href="#negative-diode-clipper" title="Link to this heading">#</a></h3>
+<h4>Negative Diode Clipper<a class="headerlink" href="#negative-diode-clipper" title="Link to this heading">#</a></h4>
 <p>The negative clipping circuit is almost same as the positive clipping circuit, with diode is reconnected reversed polarity</p>
 <p><img alt="Negative_Clipper" src="../_images/NegativeClipping_Series_Shunt.PNG" /></p>
 </section>
 <section id="biased-positive-clipper">
-<h3>Biased Positive Clipper<a class="headerlink" href="#biased-positive-clipper" title="Link to this heading">#</a></h3>
+<h4>Biased Positive Clipper<a class="headerlink" href="#biased-positive-clipper" title="Link to this heading">#</a></h4>
 <p>A reverse polarity biasing voltage is added in series with the diode to aid reverse biasing, requiring a higher voltage to forward bias the diode compared to an unbiased diode. This circuit limits any voltage below -0.7V plus the bias voltage.</p>
 <p><img alt="BiasedPositiveClipper_1" src="../_images/BiasedPositiveClipper.PNG" /></p>
 </section>
 <section id="positive-negative-cycle-bias-clipper">
-<h3>Positive &amp; Negative Cycle Bias Clipper<a class="headerlink" href="#positive-negative-cycle-bias-clipper" title="Link to this heading">#</a></h3>
+<h4>Positive &amp; Negative Cycle Bias Clipper<a class="headerlink" href="#positive-negative-cycle-bias-clipper" title="Link to this heading">#</a></h4>
 <p>A clipping circuit that limits voltage in both positive and negative cycles uses diodes in a reverse parallel arrangement, where one diode conducts while the other remains open. The output waveform is limited to +0.7V during positive cycles and -0.7V during negative cycles. Variable voltage clippers can be created using variable voltage sources, with the bias voltage adjustable based on the application requirements.</p>
 <p><img alt="PosNegClipper" src="../_images/PositiveNegativeClipper.PNG" /></p>
 </section>
 <section id="zener-diode-clipper">
-<h3>Zener diode clipper<a class="headerlink" href="#zener-diode-clipper" title="Link to this heading">#</a></h3>
+<h4>Zener diode clipper<a class="headerlink" href="#zener-diode-clipper" title="Link to this heading">#</a></h4>
 <p>A Zener diode clipper is designed to limit voltage accurately with minimal components, avoiding the need for biasing voltage required in traditional bias diode clippers. The Zener diode behaves like a normal diode when forward-biased, but conducts above its Zener voltage in reverse, necessitating a series resistor to prevent damage. It clips both cycles, limited by the forward voltage drop during negative cycles and conducting above Zener voltage during positive cycles.</p>
 <p><img alt="Positive cycle Zener diode_1" src="../_images/PositivecycleZenerdiode.PNG" /></p>
 <p><strong>full-wave clipper based on two Zener diodes</strong></p>
@@ -806,7 +812,7 @@ Adjustable 1.5 A positive voltage regulator (1.25 V-37 V)</p>
 </section>
 </section>
 <section id="clampers">
-<h2>Clampers<a class="headerlink" href="#clampers" title="Link to this heading">#</a></h2>
+<h3>Clampers<a class="headerlink" href="#clampers" title="Link to this heading">#</a></h3>
 <p>The previous section explored diode configurations that clip signals. This section examines diode configurations that shift signals to different levels, focusing on clamper networks consisting of a diode, resistor, and capacitor. These networks shift the signal’s DC level without altering its shape, relying on a sufficiently large time constant to maintain the capacitor’s charge.</p>
 <p><strong>Types of Clampers:</strong></p>
 <ul class="simple">
@@ -814,7 +820,7 @@ Adjustable 1.5 A positive voltage regulator (1.25 V-37 V)</p>
 <li><p>Negative Clamper</p></li>
 </ul>
 <section id="positive-clamper-circuit">
-<h3>Positive Clamper Circuit<a class="headerlink" href="#positive-clamper-circuit" title="Link to this heading">#</a></h3>
+<h4>Positive Clamper Circuit<a class="headerlink" href="#positive-clamper-circuit" title="Link to this heading">#</a></h4>
 <p>A clamping circuit restores the DC level of a signal and shifts the output signal to the positive portion of the input. During the negative half cycle, the capacitor charges to the peak value, and in the positive half cycle, the signal is positively clamped, resulting in an output that shifts according to the input changes.</p>
 <p><img alt="PositiveClamperCircuit1" src="../_images/PositiveClamperCircuit.PNG" /></p>
 <p><em><strong>Positive Clamper with Positive Vr</strong></em>
@@ -824,12 +830,12 @@ See below figure,</p>
 </section>
 </section>
 <section id="homework-think-about-positive-clamper-with-positive-vr-using-zener-diod">
-<h1>Homework: Think about Positive Clamper with Positive Vr using zener diod<a class="headerlink" href="#homework-think-about-positive-clamper-with-positive-vr-using-zener-diod" title="Link to this heading">#</a></h1>
+<h2>Homework: Think about Positive Clamper with Positive Vr using zener diod<a class="headerlink" href="#homework-think-about-positive-clamper-with-positive-vr-using-zener-diod" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Test with Pyspice</p></li>
 </ul>
 <section id="negative-clamper">
-<h2>Negative clamper<a class="headerlink" href="#negative-clamper" title="Link to this heading">#</a></h2>
+<h3>Negative clamper<a class="headerlink" href="#negative-clamper" title="Link to this heading">#</a></h3>
 <p>During the positive half cycle of the input AC signal, the diode is forward biased, allowing current to charge the capacitor to the peak input voltage. During the negative half cycle, the diode is reverse biased, preventing current flow, and the stored charge in the capacitor combines with the input voltage to produce an output voltage of <span class="math notranslate nohighlight">\( -2V_m \)</span>, resulting in a downward-shifted signal.</p>
 <p><img alt="NegativeClamper_1" src="../_images/Negativeclamper.PNG" /></p>
 <p><em><strong>Negative clamper with Bias</strong></em></p>
@@ -838,27 +844,28 @@ See below figure,</p>
 <p><img alt="Negative clamper with Bias 1" src="../_images/NegativeclamperwithBias_2.PNG" /></p>
 </section>
 <section id="protective-diode">
-<h2>Protective Diode<a class="headerlink" href="#protective-diode" title="Link to this heading">#</a></h2>
+<h3>Protective Diode<a class="headerlink" href="#protective-diode" title="Link to this heading">#</a></h3>
 <section id="diode-protector-to-limit-the-emitterbase-voltage">
-<h3>Diode protector to limit the emitter–base voltage<a class="headerlink" href="#diode-protector-to-limit-the-emitterbase-voltage" title="Link to this heading">#</a></h3>
+<h4>Diode protector to limit the emitter–base voltage<a class="headerlink" href="#diode-protector-to-limit-the-emitterbase-voltage" title="Link to this heading">#</a></h4>
 <p><img alt="Diode protector1" src="../_images/ProtectVBE_Trans_BJT_N.PNG" /></p>
 </section>
 <section id="diodes-can-be-used-to-limit-the-input-of-opamp-to-0-7v">
-<h3>Diodes can be used to limit the input of OPAMP to 0.7V<a class="headerlink" href="#diodes-can-be-used-to-limit-the-input-of-opamp-to-0-7v" title="Link to this heading">#</a></h3>
+<h4>Diodes can be used to limit the input of OPAMP to 0.7V<a class="headerlink" href="#diodes-can-be-used-to-limit-the-input-of-opamp-to-0-7v" title="Link to this heading">#</a></h4>
 <p><img alt="OpAmp_Protect_Input_1" src="../_images/OpAmp_Protect_Input.PNG" /></p>
 </section>
 <section id="polarity-insurance">
-<h3>POLARITY INSURANCE<a class="headerlink" href="#polarity-insurance" title="Link to this heading">#</a></h3>
+<h4>POLARITY INSURANCE<a class="headerlink" href="#polarity-insurance" title="Link to this heading">#</a></h4>
 <p><img alt="POLARITY INSURANCE 1" src="../_images/POLARITYINSURANCE.PNG" /></p>
 </section>
 <section id="relay-with-diode-circuit">
-<h3>Relay with Diode Circuit<a class="headerlink" href="#relay-with-diode-circuit" title="Link to this heading">#</a></h3>
+<h4>Relay with Diode Circuit<a class="headerlink" href="#relay-with-diode-circuit" title="Link to this heading">#</a></h4>
 <p>A relay circuit consists of three key components: switches, a relay coil, and a diode. The switches ensure reliable electrical contact without bounce, while the relay coil controls the switching between open and closed states. The diode provides transient voltage suppression, protecting the switching circuitry from voltage spikes caused by the relay’s activation and deactivation.</p>
 <p><img alt="Relay with Diode Circuit 1" src="../_images/Basicrelaywithdiodecircuit.PNG" /></p>
 </section>
 </section>
 <section id="miniproject-choose-one-application-related-to-protective-diodes">
-<h2>Miniproject : Choose one application related to protective diodes<a class="headerlink" href="#miniproject-choose-one-application-related-to-protective-diodes" title="Link to this heading">#</a></h2>
+<h3>Miniproject : Choose one application related to protective diodes<a class="headerlink" href="#miniproject-choose-one-application-related-to-protective-diodes" title="Link to this heading">#</a></h3>
+</section>
 </section>
 </section>
 
@@ -926,69 +933,67 @@ See below figure,</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Diode Application</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#or-gate">OR Gate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#and-gate">AND Gate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#half-wave-rectifier">Half-Wave Rectifier</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-diode-rectifier">Power Diode Rectifier</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-wave-rectifier">Full-wave rectifier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Full Wave Rectifier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Power Diode Rectifier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-wave-rectifier">Full-wave rectifier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Full Wave Rectifier</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Power Diode Rectifier</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-wave-rectifier-with-smoothing-capacitor">Full Wave Rectifier with Smoothing Capacitor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ripple-factor-of-a-half-wave-rectifier"><strong>Ripple Factor of a Half-Wave Rectifier</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-half-wave-rectifier">For Half Wave Rectifier</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-calculate-ripple-factor-for-full-wave-rectifier-with-capacitor">Homework : Calculate ripple factor for Full Wave Rectifier with Capacitor</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regulators">Regulators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regulator">Linear regulator</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lm-series-integrated-circuits">LM-series integrated circuits</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miniprogect-complete-linear-regulator-include">MiniProgect : Complete Linear regulator include:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switchig-regulator">Switchig Regulator</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buck-converter-topology">Buck converter topology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-boost-converter">Simple boost converter</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-multiplier">Voltage multiplier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miniprojects-continue-voltage-multiplier">Miniprojects: Continue Voltage Multiplier</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diode-clippers">DIODE CLIPPERS</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-clipper">Positive Clipper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-diode-clipper">Negative Diode Clipper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biased-positive-clipper">Biased Positive Clipper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-negative-cycle-bias-clipper">Positive &amp; Negative Cycle Bias Clipper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zener-diode-clipper">Zener diode clipper</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clampers">Clampers</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-clamper-circuit">Positive Clamper Circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-wave-rectifier-with-smoothing-capacitor">Full Wave Rectifier with Smoothing Capacitor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ripple-factor-of-a-half-wave-rectifier"><strong>Ripple Factor of a Half-Wave Rectifier</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-half-wave-rectifier">For Half Wave Rectifier</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-think-about-positive-clamper-with-positive-vr-using-zener-diod">Homework: Think about Positive Clamper with Positive Vr using zener diod</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-clamper">Negative clamper</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protective-diode">Protective Diode</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diode-protector-to-limit-the-emitterbase-voltage">Diode protector to limit the emitter–base voltage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-can-be-used-to-limit-the-input-of-opamp-to-0-7v">Diodes can be used to limit the input of OPAMP to 0.7V</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarity-insurance">POLARITY INSURANCE</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relay-with-diode-circuit">Relay with Diode Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-calculate-ripple-factor-for-full-wave-rectifier-with-capacitor">Homework : Calculate ripple factor for Full Wave Rectifier with Capacitor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regulators">Regulators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regulator">Linear regulator</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lm-series-integrated-circuits">LM-series integrated circuits</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miniproject-choose-one-application-related-to-protective-diodes">Miniproject : Choose one application related to protective diodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miniprogect-complete-linear-regulator-include">MiniProgect : Complete Linear regulator include:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switchig-regulator">Switchig Regulator</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#buck-converter-topology">Buck converter topology</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-boost-converter">Simple boost converter</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-multiplier">Voltage multiplier</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#miniprojects-continue-voltage-multiplier">Miniprojects: Continue Voltage Multiplier</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diode-clippers">DIODE CLIPPERS</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-clipper">Positive Clipper</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-diode-clipper">Negative Diode Clipper</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biased-positive-clipper">Biased Positive Clipper</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-negative-cycle-bias-clipper">Positive &amp; Negative Cycle Bias Clipper</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zener-diode-clipper">Zener diode clipper</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clampers">Clampers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-clamper-circuit">Positive Clamper Circuit</a></li>
 </ul>
 </li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-think-about-positive-clamper-with-positive-vr-using-zener-diod">Homework: Think about Positive Clamper with Positive Vr using zener diod</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-clamper">Negative clamper</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protective-diode">Protective Diode</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#diode-protector-to-limit-the-emitterbase-voltage">Diode protector to limit the emitter–base voltage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#diodes-can-be-used-to-limit-the-input-of-opamp-to-0-7v">Diodes can be used to limit the input of OPAMP to 0.7V</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#polarity-insurance">POLARITY INSURANCE</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relay-with-diode-circuit">Relay with Diode Circuit</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miniproject-choose-one-application-related-to-protective-diodes">Miniproject : Choose one application related to protective diodes</a></li>
+</ul>
+</li>
+</ul>
   </nav></div>
 
 </div></div>

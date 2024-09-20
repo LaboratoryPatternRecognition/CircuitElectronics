@@ -1,0 +1,1017 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>From ChatGPT &#8212; Dr.Hadi Sadoghi Yazdi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Circuit_Electronics/SchemDrawGuide';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../Introduction_CircuitElectronics.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-light" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
+    <script>document.write(`<img src="../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-dark" alt="Dr.Hadi Sadoghi Yazdi - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../Introduction_CircuitElectronics.html">
+                    Introduction to Circuit and Electronics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections of Circuit and Electronics course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="BasicElements.html">Basic component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="KVL_KCL.html">Voltage , Current</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NodalMeshAnalysis.html">Basic Nodal and Mesh Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RC_RL_RLC.html">R-C, R-L circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Diode_chapter.html">Diode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DiodeApplication.html">Diode Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BJT1.html">Bipolar junction transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FET.html">Field Effect Transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OpAmp.html">Operational Amplifier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching assistant</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="PySpice_Installation_Manual.html">PySpice Installation Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PySpice_circuit_example1.html">Example 1: RESISTIVE DIVIDER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PySpice_circuit_example6.html">Example 6: Thevenin and Norton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Students effort</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="DiodeCharacteristicCurve.html">Simulating and Plotting the Characteristic Curve of a Diode</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Contact_Me.html">Contact Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../About_Me.html">About Me</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git/issues/new?title=Issue%20on%20page%20%2FCircuit_Electronics/SchemDrawGuide.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Circuit_Electronics/SchemDrawGuide.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>From ChatGPT</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-circuit-elements">Drawing Circuit Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-direction">Changing Direction:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-syntax">Basic Syntax:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-elements">Customizing Elements:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotating-diagrams">Annotating Diagrams:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>In this guid we are going to understand what schemdraw is and how it works</p>
+<p>Schemdraw is a python library for creating electrical circuit schematics in a simple way.
+It allows you to generate high-quality vector graphics which can be used in presentations and similar events.</p>
+<p>At first you have to install python and pip on your machine following this steps:
+1.Install the latest python from <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> note that pip will be installed automatically
+2.If you are using windows you can open a command prompt (by using windows+R and typing cmd)
+3.Install schemdraw:
+pip install schemdraw
+4.Install some Dependencies to get a better output such as matplotlib:
+pip install matplotlib
+5.this will automatically install schemdraw on your system</p>
+<p>To start using schemdraw you should import the library:
+import schemdraw
+from schemdraw import elements as e
+DRAWING ELEMENTS:
+here is a simple guid for schemdraw’s syntax. To have a better look at the guid, you can check the website below:
+<a class="reference external" href="https://schemdraw.readthedocs.io/en/stable/usage/placement.html">https://schemdraw.readthedocs.io/en/stable/usage/placement.html</a></p>
+<p>schemdraw provides a variety of components to create circuit diagrams. Here are the most common elements(e):
+Resistor: e.Resistor()
+Capacitors: e.Capacitors()
+Inductors: e.Inductor()
+Voltage Sources: e.SourceV()
+Grounds: e.Ground()</p>
+<p>Elements instantiated insde a with block are automatically added to the Drawing.
+The Drawing maintains a current position and direction,
+such that the default placement of the next element will start at the end of the previous element,
+going in the same direction.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">():</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Diode</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">():</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;schemdraw&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If a direction method (up, down, left, right) is added to an element,
+the element is rotated in that direction, and future elements take the same direction:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">():</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Diode</span><span class="p">()</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/6c3e71e211e3670ebf60f8610dc7bffe07ab5b40d8cff91b8079622c6305b087.svg"><img alt="../_images/6c3e71e211e3670ebf60f8610dc7bffe07ab5b40d8cff91b8079622c6305b087.svg" height="430" src="../_images/6c3e71e211e3670ebf60f8610dc7bffe07ab5b40d8cff91b8079622c6305b087.svg" width="943" /></a>
+</div>
+</div>
+<p>Basic Syntax:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/a6b3be0a3aa2ef2a36cb396287933f2218d6dc0764f2ae74271555184dd19695.svg"><img alt="../_images/a6b3be0a3aa2ef2a36cb396287933f2218d6dc0764f2ae74271555184dd19695.svg" height="430" src="../_images/a6b3be0a3aa2ef2a36cb396287933f2218d6dc0764f2ae74271555184dd19695.svg" width="943" /></a>
+</div>
+</div>
+<p>Some Other Features:</p>
+<p>you can customize the attributes of elements, such as labels and colors:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;bottom&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/012fedfe06d5034808e0ac534474e11aee5b393843da6cb4ce33e81e70f9135e.svg"><img alt="../_images/012fedfe06d5034808e0ac534474e11aee5b393843da6cb4ce33e81e70f9135e.svg" height="430" src="../_images/012fedfe06d5034808e0ac534474e11aee5b393843da6cb4ce33e81e70f9135e.svg" width="943" /></a>
+</div>
+</div>
+<p>you can annonate parts of your drawing by using the text method:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/d40b53961645099dda22130bcd7da9158a6b67427d2a8dbac9e1fbbd04ba0254.svg"><img alt="../_images/d40b53961645099dda22130bcd7da9158a6b67427d2a8dbac9e1fbbd04ba0254.svg" height="430" src="../_images/d40b53961645099dda22130bcd7da9158a6b67427d2a8dbac9e1fbbd04ba0254.svg" width="943" /></a>
+</div>
+</div>
+<p>You can see a simple circuit and a RC circuit below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#simple circuit</span>
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/feda7c8bceada6559cd10382c4fef5b5863688d16f9a7c4c87cf689d30f76929.svg"><img alt="../_images/feda7c8bceada6559cd10382c4fef5b5863688d16f9a7c4c87cf689d30f76929.svg" height="430" src="../_images/feda7c8bceada6559cd10382c4fef5b5863688d16f9a7c4c87cf689d30f76929.svg" width="943" /></a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#RC circuit</span>
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/161c42546761688600d72627e2f95bf77f5db28f2a98fcc617e996fc4e0f0df4.svg"><img alt="../_images/161c42546761688600d72627e2f95bf77f5db28f2a98fcc617e996fc4e0f0df4.svg" height="430" src="../_images/161c42546761688600d72627e2f95bf77f5db28f2a98fcc617e996fc4e0f0df4.svg" width="943" /></a>
+</div>
+</div>
+<section id="from-chatgpt">
+<h1>From ChatGPT<a class="headerlink" href="#from-chatgpt" title="Link to this heading">#</a></h1>
+<p><strong>What is Schemdraw and Its Applications</strong></p>
+<p>Schemdraw is a Python library designed for creating electrical circuit schematics quickly and efficiently. It simplifies the process of generating professional, high-quality vector graphics that can be used for presentations, educational materials, technical documentation, and engineering designs. With its intuitive syntax, Schemdraw allows users to draw complex circuits with ease, using predefined components like resistors, capacitors, voltage sources, and more.</p>
+<p>The simplicity of Schemdraw makes it an accessible tool for both students and professionals. Users can create circuit diagrams by stacking components, rotating them, and customizing attributes like labels and colors. This flexibility allows for a wide range of applications, from basic educational exercises to detailed professional engineering schematics.</p>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
+<p>Schemdraw plays a significant role in high-tech industries by enabling the visualization of circuit designs and system architectures. Some of the key applications include:</p>
+<ol class="arabic simple">
+<li><p><strong>Educational Tools</strong>: Schemdraw is used to teach students about circuit design and electronics, helping them visualize theoretical concepts in a practical way. Professors and instructors can quickly generate diagrams for textbooks, tutorials, and classroom presentations.</p></li>
+<li><p><strong>Research and Development</strong>: Engineers and researchers use Schemdraw to illustrate their circuit prototypes and ideas. The ability to create accurate and scalable vector images makes it ideal for documenting designs for research papers and patents.</p></li>
+<li><p><strong>Electronics Design Automation (EDA)</strong>: In the electronics industry, Schemdraw can be integrated into the design process to create circuit diagrams for printed circuit boards (PCBs), chip designs, and other electronic components, complementing advanced simulation tools.</p></li>
+<li><p><strong>Technical Documentation</strong>: Companies often require clear, professional circuit schematics for internal documentation, manuals, and user guides. Schemdraw’s high-quality output is used to produce these materials, ensuring accuracy and clarity.</p></li>
+<li><p><strong>Presentations and Visual Communication</strong>: Whether in business meetings, technical seminars, or conferences, Schemdraw helps convey complex technical information clearly. Its versatility makes it suitable for demonstrating how electronic systems function in a visually appealing and understandable way.</p></li>
+</ol>
+<p><strong>Guide to Schemdraw</strong></p>
+<p>In this guide, we will understand what Schemdraw is and how it works.</p>
+<p><strong>Schemdraw</strong> is a Python library for creating electrical circuit schematics in a simple way. It allows you to generate high-quality vector graphics, which can be used in presentations and technical documentation.</p>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<p>To start, you need Python and pip installed on your machine:</p>
+<ol class="arabic">
+<li><p>Install the latest version of Python from <a class="reference external" href="https://www.python.org/downloads/">python.org</a>. Note that <code class="docutils literal notranslate"><span class="pre">pip</span></code> will be installed automatically.</p></li>
+<li><p>If you are using Windows, you can open a command prompt by pressing <code class="docutils literal notranslate"><span class="pre">Windows+R</span></code>, typing <code class="docutils literal notranslate"><span class="pre">cmd</span></code>, and pressing Enter.</p></li>
+<li><p>Install Schemdraw by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>schemdraw
+</pre></div>
+</div>
+</li>
+<li><p>Install other dependencies, such as <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, for better output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>matplotlib
+</pre></div>
+</div>
+</li>
+<li><p>Once installed, you’re ready to use Schemdraw.</p></li>
+</ol>
+</section>
+<section id="drawing-circuit-elements">
+<h2>Drawing Circuit Elements<a class="headerlink" href="#drawing-circuit-elements" title="Link to this heading">#</a></h2>
+<p>To start using Schemdraw, import the library:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+</pre></div>
+</div>
+<p>Schemdraw provides a variety of components to create circuit diagrams. Below are the most common elements:</p>
+<ul class="simple">
+<li><p><strong>Resistor:</strong> <code class="docutils literal notranslate"><span class="pre">e.Resistor()</span></code></p></li>
+<li><p><strong>Capacitor:</strong> <code class="docutils literal notranslate"><span class="pre">e.Capacitor()</span></code></p></li>
+<li><p><strong>Inductor:</strong> <code class="docutils literal notranslate"><span class="pre">e.Inductor()</span></code></p></li>
+<li><p><strong>Voltage Source:</strong> <code class="docutils literal notranslate"><span class="pre">e.SourceV()</span></code></p></li>
+<li><p><strong>Ground:</strong> <code class="docutils literal notranslate"><span class="pre">e.Ground()</span></code></p></li>
+</ul>
+<section id="example">
+<h3>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p>Elements inside a <code class="docutils literal notranslate"><span class="pre">with</span></code> block are automatically added to the drawing. The drawing maintains a current position and direction, such that the next element will start at the end of the previous element, following the same direction.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Diode</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="changing-direction">
+<h3>Changing Direction:<a class="headerlink" href="#changing-direction" title="Link to this heading">#</a></h3>
+<p>You can rotate elements using direction methods like <code class="docutils literal notranslate"><span class="pre">.up()</span></code>, <code class="docutils literal notranslate"><span class="pre">.down()</span></code>, <code class="docutils literal notranslate"><span class="pre">.left()</span></code>, and <code class="docutils literal notranslate"><span class="pre">.right()</span></code>. The subsequent elements will follow the same direction.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>  <span class="c1"># Rotates the Resistor upwards</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Diode</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="basic-syntax">
+<h2>Basic Syntax:<a class="headerlink" href="#basic-syntax" title="Link to this heading">#</a></h2>
+<p>Here’s a basic example of creating a circuit with a labeled voltage source, a resistor, and ground:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="customizing-elements">
+<h2>Customizing Elements:<a class="headerlink" href="#customizing-elements" title="Link to this heading">#</a></h2>
+<p>You can customize the attributes of elements, such as labels and colors:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="annotating-diagrams">
+<h2>Annotating Diagrams:<a class="headerlink" href="#annotating-diagrams" title="Link to this heading">#</a></h2>
+<p>You can annotate parts of your drawing using the <code class="docutils literal notranslate"><span class="pre">text()</span></code> method to add labels or notes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="examples">
+<h2>Examples:<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Simple Circuit:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>RC Circuit:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>
+        <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>
+        <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>
+        <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/1968f6d95295eecc5184f864f4ad698ca8ad4d4cb4364d8de2f8d424b3321b0b.svg"><img alt="../_images/1968f6d95295eecc5184f864f4ad698ca8ad4d4cb4364d8de2f8d424b3321b0b.svg" height="430" src="../_images/1968f6d95295eecc5184f864f4ad698ca8ad4d4cb4364d8de2f8d424b3321b0b.svg" width="943" /></a>
+</div>
+</div>
+<p>Example 1: Simple Series Circuit
+Target: Create a circuit with a voltage source, two resistors in series, and ground.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>  <span class="c1"># Voltage source with label V1</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>  <span class="c1"># First resistor with label R1</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span>  <span class="c1"># Second resistor with label R2</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>  <span class="c1"># Ground connection</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/c0506456a685d61341ca41bfa0e38e13950da2760d5ebe38a7a20d8e46faec85.svg"><img alt="../_images/c0506456a685d61341ca41bfa0e38e13950da2760d5ebe38a7a20d8e46faec85.svg" height="430" src="../_images/c0506456a685d61341ca41bfa0e38e13950da2760d5ebe38a7a20d8e46faec85.svg" width="943" /></a>
+</div>
+</div>
+<p>Example 2: RC Circuit
+Target: Create a simple RC circuit with a voltage source, one resistor, one capacitor, and ground.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>  <span class="c1"># Voltage source labeled V1</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>  <span class="c1"># Resistor labeled R1</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>  <span class="c1"># Capacitor labeled C1, placed vertically</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>  <span class="c1"># Ground connection</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/13f2a9d66ba2ca58465484c878eca65c8dcdda55c3f9644cae1d1d942c7c9a39.svg"><img alt="../_images/13f2a9d66ba2ca58465484c878eca65c8dcdda55c3f9644cae1d1d942c7c9a39.svg" height="430" src="../_images/13f2a9d66ba2ca58465484c878eca65c8dcdda55c3f9644cae1d1d942c7c9a39.svg" width="943" /></a>
+</div>
+</div>
+<p>Example 3: Parallel Circuit
+Target: Create a parallel circuit with two resistors connected in parallel to a voltage source and ground.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>  <span class="c1"># Voltage source</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span>  <span class="c1"># Connecting line with a node</span>
+    
+    <span class="c1"># Resistor R1 path</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>  <span class="c1"># Resistor R1 vertically down</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Ground connected to Resistor R1</span>
+    
+    <span class="c1"># Resistor R2 path</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span>  <span class="c1"># Resistor R2 horizontally right</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Ground connected to Resistor R2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/524479416dca65e9e862b272c5596272dfbafe4d360500be64c2b554710a7fdb.svg"><img alt="../_images/524479416dca65e9e862b272c5596272dfbafe4d360500be64c2b554710a7fdb.svg" height="430" src="../_images/524479416dca65e9e862b272c5596272dfbafe4d360500be64c2b554710a7fdb.svg" width="943" /></a>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>  <span class="c1"># Voltage source</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="n">d</span> <span class="o">+=</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span>  <span class="c1"># Connecting line with a node</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="c1"># Resistor R1 path</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>  <span class="c1"># Resistor R1 vertically down</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;Line&#39; and &#39;Dot&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Example 4: Circuit with Direction Changes
+Target: Create a circuit where components change directions (up/down) and are labeled.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>  <span class="c1"># Voltage source labeled V1</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>  <span class="c1"># Resistor R1 to the right</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>  <span class="c1"># Capacitor C1 vertically down</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">left</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span>  <span class="c1"># Resistor R2 to the left</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>  <span class="c1"># Ground connection</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/956bd371c1f81928907398b9d4fba447290af3f87c054f1ecfee995ae0437fab.svg"><img alt="../_images/956bd371c1f81928907398b9d4fba447290af3f87c054f1ecfee995ae0437fab.svg" height="430" src="../_images/956bd371c1f81928907398b9d4fba447290af3f87c054f1ecfee995ae0437fab.svg" width="943" /></a>
+</div>
+</div>
+<p>Example 5: Annotating the Circuit
+Target: Annotate parts of a circuit, like adding a text box for a voltage source and resistor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;V1&#39;</span><span class="p">)</span>  <span class="c1"># Voltage source labeled V1</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span>  <span class="c1"># Resistor labeled R1</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>  <span class="c1"># Ground connection</span>
+    
+    <span class="c1"># Adding text annotations</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Power Supply&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>  <span class="c1"># Annotation for voltage source</span>
+    <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Resistor Load&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Annotation for resistor</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../_images/07eb9bd031abc60a6f18bf0e44d133b05e8ed06ac02ef5c6425f9200bac75dfc.svg"><img alt="../_images/07eb9bd031abc60a6f18bf0e44d133b05e8ed06ac02ef5c6425f9200bac75dfc.svg" height="430" src="../_images/07eb9bd031abc60a6f18bf0e44d133b05e8ed06ac02ef5c6425f9200bac75dfc.svg" width="943" /></a>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>  <span class="c1"># Ground connection</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Adding text annotations</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Power Supply&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>  <span class="c1"># Annotation for voltage source</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">d</span> <span class="o">+=</span> <span class="n">e</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Resistor Load&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Annotation for resistor</span>
+
+<span class="ne">AttributeError</span>: module &#39;schemdraw.elements&#39; has no attribute &#39;Text&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>        <span class="kn">import</span> <span class="nn">schemdraw</span>
+        <span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;100K$\Omega$&#39;</span><span class="p">))</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;0.1$\mu$F&#39;</span><span class="p">))</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">))</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">)</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;10V&#39;</span><span class="p">))</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;schematic.svg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:4: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:5: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+&lt;&gt;:4: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:5: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+C:\Users\Dr\AppData\Local\Temp\ipykernel_14260\3039039562.py:4: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  d.add(elm.Resistor(label=&#39;100K$\Omega$&#39;))
+C:\Users\Dr\AppData\Local\Temp\ipykernel_14260\3039039562.py:5: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+  d.add(elm.Capacitor(d=&#39;down&#39;, botlabel=&#39;0.1$\mu$F&#39;))
+C:\Users\Dr\AppData\Local\Temp\ipykernel_14260\3039039562.py:4: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  d.add(elm.Resistor(label=&#39;100K$\Omega$&#39;))
+C:\Users\Dr\AppData\Local\Temp\ipykernel_14260\3039039562.py:5: SyntaxWarning: invalid escape sequence &#39;\m&#39;
+  d.add(elm.Capacitor(d=&#39;down&#39;, botlabel=&#39;0.1$\mu$F&#39;))
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Capacitor</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="n">botlabel</span><span class="o">=</span><span class="s1">&#39;0.1$\mu$F&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">Ground</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;10V&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">d</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="nn">File e:\HadiSadoghiYazdi\.M_HomePage\Lib\site-packages\schemdraw\schemdraw.py:303,</span> in <span class="ni">Drawing.add</span><span class="nt">(self, element)</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span> <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Element</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">298</span><span class="w">     </span><span class="sd">&#39;&#39;&#39; Add an element to the drawing.</span>
+<span class="g g-Whitespace">    </span><span class="mi">299</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">300</span><span class="sd">         Args:</span>
+<span class="g g-Whitespace">    </span><span class="mi">301</span><span class="sd">             element: The element to add.</span>
+<span class="g g-Whitespace">    </span><span class="mi">302</span><span class="sd">     &#39;&#39;&#39;</span>
+<span class="ne">--&gt; </span><span class="mi">303</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_here</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theta</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">_place</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_here</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theta</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">dwgparams</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interactive</span><span class="p">:</span>
+
+<span class="ne">TypeError</span>: Element._place() missing 1 required positional argument: &#39;dwgtheta&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Circuit_Electronics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drawing-circuit-elements">Drawing Circuit Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-direction">Changing Direction:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-syntax">Basic Syntax:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-elements">Customizing Elements:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotating-diagrams">Annotating Diagrams:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr.Hadi Sadoghi Yazdi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024 Pattern Recognition Lab.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
