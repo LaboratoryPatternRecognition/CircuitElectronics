@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Part 1: Thevenin Equivalent Calculation &#8212; Dr.Hadi Sadoghi Yazdi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Circuit_Electronics/PySpice_circuit_example7/PySpice_circuit_example7';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../Introduction_CircuitElectronics.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-light" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
+    <script>document.write(`<img src="../../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-dark" alt="Dr.Hadi Sadoghi Yazdi - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../Introduction_CircuitElectronics.html">
+                    Introduction to Circuit and Electronics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections of Circuit and Electronics course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../BasicElements.html">Basic component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KVL_KCL.html">Voltage , Current</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NodalMeshAnalysis.html">Basic Nodal and Mesh Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../RC_RL_RLC.html">R-C, R-L circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Diode_chapter.html">Diode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DiodeApplication.html">Diode Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BJT1.html">Bipolar junction transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FET.html">Field Effect Transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpAmp.html">Operational Amplifier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching assistant</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../PySpice_Installation_Manual.html">PySpice Installation Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PySpice_circuit_example1.html">Example 1: RESISTIVE DIVIDER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PySpice_circuit_example6.html">Example 6: Thevenin and Norton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Students effort</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DiodeCharacteristicCurve.html">Simulating and Plotting the Characteristic Curve of a Diode</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Contact_Me.html">Contact Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../About_Me.html">About Me</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git/issues/new?title=Issue%20on%20page%20%2FCircuit_Electronics/PySpice_circuit_example7/PySpice_circuit_example7.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Circuit_Electronics/PySpice_circuit_example7/PySpice_circuit_example7.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Part 1: Thevenin Equivalent Calculation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h3>Example 7: Maximum Power Transfer Theorem</h3>
+<p><strong>Authors:</strong><br>
+Sania Dolat, Ali Saadatpour</p>
+<p><strong>Contacts:</strong><br>
+its.saniadlt@gmail.com<br>
+Qstzen@proton.me</p>
+<p>Objective:</p>
+<p>To investigate and verify that maximum power is delivered to a load resistor when the load resistance 
+<i>R</i><sub>LOAD</sub> is equal to the Thevenin resistance <i>R</i><sub>TH</sub> of the circuit.</p>
+<p>The maximum power transfer theorem states that maximum power is delivered to the load when the resistance of the load 
+<i>R</i><sub>LOAD</sub> is equal to the Thevenin equivalent resistance <i>R</i><sub>TH</sub> of the circuit supplying the power. 
+This is an essential concept in electrical engineering, particularly in designing circuits for efficient power delivery.</p>
+<p>When a circuit is simplified using Thevenin’s theorem, it consists of:</p>
+<ul>
+    <li>Thevenin equivalent voltage source ( <i>V</i><sub>TH</sub> ) : This is the open-circuit voltage seen from the load terminals.</li>  
+    <li>Thevenin equivalent resistance ( <i>R</i><sub>TH</sub> ) : This is the resistance seen by the load when all independent voltage sources are replaced by short circuits and current sources by open circuits.</li>
+</ul>
+<p><strong>Theory:</strong><br>
+The power delivered to the load <i>R</i><sub>TH</sub> is given by the following formula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{\mathrm{LOAD}} &amp;= \frac{V_{\mathrm{TH}}^2}{\left(R_{\mathrm{TH}} + R_{\mathrm{LOAD}}\right)^2} \cdot R_{\mathrm{LOAD}} \\
+\end{aligned}
+\end{split}\]</div>
+<ul>
+    <li><i>V</i><sub>TH</sub>: Thevenin equivalent voltage (constant).</li>  
+    <li><i>R</i><sub>TH</sub>: Thevenin equivalent resistance (constant).</li>  
+    <li><i>R</i><sub>LOAD</sub>: Load resistance (variable).</li>
+</ul>
+<p>The goal is to calculate and plot the power delivered to <i>R</i><sub>TH</sub> for different values of 
+<i>R</i><sub>TH</sub>, and show that maximum power is transferred when <i>R</i><sub>LOAD</sub> = <i>R</i><sub>TH</sub>.</p>
+<p>​</p>
+<p>We use the previous example for this theory :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PySpice.Logging.Logging</span> <span class="kn">import</span> <span class="n">setup_logging</span>
+
+<span class="c1"># Enable logging for PySpice</span>
+<span class="n">setup_logging</span><span class="p">()</span>
+
+<span class="c1"># Create the Thevenin circuit</span>
+<span class="n">thevenin_circuit</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="s1">&#39;Thevenin Circuit&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define the components</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">10</span><span class="nd">@u_V</span><span class="p">)</span>  <span class="c1"># 10V voltage source</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">I</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="nd">@u_mA</span><span class="p">)</span>  <span class="c1"># 0.1A current source</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_kΩ</span><span class="p">)</span>  <span class="c1"># Resistors</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_kΩ</span><span class="p">)</span>  <span class="c1"># Load resistor connection</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">PySpice.Logging.Logging</span> <span class="kn">import</span> <span class="n">setup_logging</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;PySpice&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Question.jpg" src="Circuit_Electronics/PySpice_circuit_example7/attachment:Question.jpg" /></p>
+<p>Consider Network 2 as <i>R</i><sub>LOAD</sub>.</p>
+<section id="part-1-thevenin-equivalent-calculation">
+<h1>Part 1: Thevenin Equivalent Calculation<a class="headerlink" href="#part-1-thevenin-equivalent-calculation" title="Link to this heading">#</a></h1>
+<ol>
+    <li><strong>Circuit Analysis:</strong></li>
+    <p>Given any complex circuit, find the Thevenin equivalent circuit. This is done by following these steps:</p>  
+<p><strong>Step 1:</strong></p>
+<p> Find the open-circuit voltage across the load terminals <i>V</i><sub>TH</sub>.</p>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span> <span class="o">=</span> <span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">operating_point</span><span class="p">()</span>
+
+<span class="n">thevenin_voltage</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">analysis</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Thevenin Voltage (Vth) = </span><span class="si">{</span><span class="n">thevenin_voltage</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> V&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Thevenin Voltage (Vth) = -18.00 V
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\sinat\AppData\Local\Temp\ipykernel_19228\323703168.py:4: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  thevenin_voltage = float(analysis[&#39;a&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<ol>
+    <p><strong>Step 2:</strong></p>
+    <p>Replace all voltage sources with short circuits and all current sources with open circuits. Find the equivalent resistance looking into the circuit from the load terminals.</p>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">V1</span><span class="o">.</span><span class="n">dc_value</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Short-circuit the voltage source</span>
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">I1</span><span class="o">.</span><span class="n">dc_value</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Open-circuit the current source</span>
+
+<span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">I</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_uA</span><span class="p">)</span>  <span class="c1"># 1 µA test current source</span>
+
+<span class="c1"># Perform DC analysis again to measure voltage across &#39;a&#39;</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">thevenin_circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">operating_point</span><span class="p">()</span>
+
+<span class="c1"># The voltage across node &#39;a&#39; is used to calculate the Thevenin resistance</span>
+<span class="n">voltage_test</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">analysis</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">])</span>
+<span class="n">thevenin_resistance</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">voltage_test</span> <span class="o">/</span> <span class="mf">1e-6</span><span class="p">)</span>  <span class="c1"># Rth = V_test / I_test (1 µA = 1e-6 A)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Thevenin Resistance (Rth) = </span><span class="si">{</span><span class="n">thevenin_resistance</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> Ω&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Thevenin Resistance (Rth) = 600.00 Ω
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\sinat\AppData\Local\Temp\ipykernel_19228\302438453.py:11: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  voltage_test = float(analysis[&#39;a&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<ul>
+    <li>The Thevenin resistance is calculated using Ohm's Law:</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+R_{\mathrm{TH}} &amp;= \frac{V_{\text{test}}}{I_{\text{test}}}
+\end{aligned}
+\]</div>
+<ul>
+    <li><i>R</i><sub>TH</sub> is printed out for reference.</li>
+</ul>
+<h4>Part 2: Power Calculation, Simulation & Graphical Representation</h4>
+<p><strong>Power Calculation:</strong><br>
+For each value of <i>R</i><sub>LOAD</sub>, calculate the power delivered to the load using the formula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{\mathrm{LOAD}} &amp;= \frac{V_{\mathrm{TH}}^2}{\left(R_{\mathrm{TH}} + R_{\mathrm{LOAD}}\right)^2} \cdot R_{\mathrm{LOAD}} \\
+\end{aligned}
+\end{split}\]</div>
+<p>Calculate the power for different values of <i>R</i><sub>TH</sub>, ranging from 0.1×<i>R</i><sub>TH</sub> to 10×<i>R</i><sub>TH</sub>.</p><p>We can observe that the power peaks when <i>R</i><sub>TH</sub> = <i>R</i><sub>LOAD</sub> .</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Given values from previous simulation or manually assigned</span>
+<span class="n">V_TH</span> <span class="o">=</span> <span class="n">thevenin_voltage</span>  <span class="c1"># Thevenin voltage calculated earlier</span>
+<span class="n">R_TH</span> <span class="o">=</span> <span class="n">thevenin_resistance</span>  <span class="c1"># Thevenin resistance calculated earlier (600 Ω)</span>
+
+<span class="c1"># Range of load resistances (60 Ohm to 6000 Ohms)</span>
+<span class="n">R_LOAD_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>  <span class="c1"># 500 values between 60Ω and 6000Ω</span>
+
+<span class="c1"># Calculate the power delivered to the load for each R_LOAD</span>
+<span class="n">power_values</span> <span class="o">=</span> <span class="p">(</span><span class="n">V_TH</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">R_LOAD_values</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">R_TH</span> <span class="o">+</span> <span class="n">R_LOAD_values</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># Plot the power as a function of load resistance</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">R_LOAD_values</span><span class="p">,</span> <span class="n">power_values</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Power Delivered to Load&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Mark the point where R_LOAD = 600 Ohms</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$R_{</span><span class="se">\\</span><span class="s1">mathrm</span><span class="si">{LOAD}</span><span class="s1">} = 600 </span><span class="se">\\</span><span class="s1">Omega$ (Max Power)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$R_{</span><span class="se">\\</span><span class="s1">mathrm</span><span class="si">{LOAD}</span><span class="s1">} </span><span class="se">\\</span><span class="s1"> (</span><span class="se">\\</span><span class="s1">Omega)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$P_{</span><span class="se">\\</span><span class="s1">mathrm</span><span class="si">{LOAD}</span><span class="s1">} </span><span class="se">\\</span><span class="s1"> (</span><span class="se">\\</span><span class="s1">mathrm</span><span class="si">{Watts}</span><span class="s1">)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Power vs Load Resistance&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># Customize grid and legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="../../_images/e9b1d03bd4ac335ae36b9df94227b367a1ac8e2dd4218664b12116b7ed08db78.png"><img alt="../../_images/e9b1d03bd4ac335ae36b9df94227b367a1ac8e2dd4218664b12116b7ed08db78.png" src="../../_images/e9b1d03bd4ac335ae36b9df94227b367a1ac8e2dd4218664b12116b7ed08db78.png" style="width: 943px; height: 430px;" /></a>
+</div>
+</div>
+<ul>
+    <li>This block calculates the power delivered to the load resistor <i>R</i><sub>LOAD</sub> over a range of values (60 Ω to 6000 Ω).</li>  
+    <li>The power values are plotted as a function of <i>R</i><sub>LOAD</sub>.</li>  
+    <li>A red dashed vertical line is drawn at <i>R</i><sub>LOAD</sub> = 600 Ω to highlight the maximum power point.</li>
+</ul>
+<h4>Part 3: Questions</h4>
+<h3>Why does maximum power occur when <i>R<sub>TH</sub> = R<sub>LOAD</sub>?</i></h3>
+<p>The Maximum Power Transfer Theorem states that maximum power is delivered to a load when the load resistance <i>R<sub>LOAD</sub></i> matches the Thevenin resistance <i>R<sub>TH</sub></i> of the source.</p>
+<p>Here's why this happens:</p>
+<p>The power delivered to the load is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{\mathrm{LOAD}} &amp;= \frac{V_{\mathrm{TH}}^2}{\left(R_{\mathrm{TH}} + R_{\mathrm{LOAD}}\right)^2} \cdot R_{\mathrm{LOAD}} \\
+\end{aligned}
+\end{split}\]</div>
+<p>Where <i>V<sub>TH</sub></i> is the Thevenin equivalent voltage, <i>R<sub>TH</sub></i> is the Thevenin equivalent resistance, and <i>R<sub>LOAD</sub></i> is the load resistance.</p>
+<p>When <i>R<sub>LOAD</sub> = R<sub>TH</sub></i>, the denominator in the equation is minimized, maximizing the overall power delivered to the load.</p>
+<p>If <i>R<sub>LOAD</sub></i> is too small or too large, the voltage drop across the load decreases, and either too much power is dissipated in <i>R<sub>TH</sub></i> (if <i>R<sub>LOAD</sub></i> is too small) or the current decreases (if <i>R<sub>LOAD</sub></i> is too large), leading to less power being delivered to the load.</p>
+<p>In essence, when the load and source resistances are matched, the circuit is impedance-matched, which allows maximum energy transfer from the source to the load.</p><h3>Mathematical Proof of the Maximum Power Transfer Theorem</h3>
+<h4>1. Power Delivered to the Load:</h4>
+<p>The power delivered to the load <i>P<sub>LOAD</sub></i> is given by the following formula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{\mathrm{LOAD}} &amp;= I_{\mathrm{LOAD}}^2 \cdot R_{\mathrm{LOAD}} \\
+\end{aligned}
+\end{split}\]</div>
+<p>Where <i>I<sub> LOAD</sub></i> is the current through the load resistor.</p>
+<p>From Ohm's law, the current in the circuit is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+I_{\mathrm{LOAD}} &amp;= \frac{V_{\mathrm{TH}}}{R_{\mathrm{TH}} + R_{\mathrm{LOAD}}} \\
+\end{aligned}
+\end{split}\]</div>
+<p>Substitute this into the power formula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{\mathrm{LOAD}} &amp;= \left( \frac{V_{\mathrm{TH}}}{R_{\mathrm{TH}} + R_{\mathrm{LOAD}}} \right)^2 \cdot R_{\mathrm{LOAD}} \\
+\end{aligned}
+\end{split}\]</div>
+<h4>2. Differentiating Power with Respect to <i>R<sub>LOAD</sub></i>:</h4>
+<p>To find the condition for maximum power, we differentiate <i>P<sub>LOAD</sub></i> with respect to <i>R<sub>LOAD</sub></i> and set the derivative equal to 0:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{d}{dR_{\mathrm{LOAD}}} \left( \frac{V_{\mathrm{TH}}^2 \cdot R_{\mathrm{LOAD}}}{(R_{\mathrm{TH}} + R_{\mathrm{LOAD}})^2} \right) &amp;= 0 \\
+\end{aligned}
+\end{split}\]</div>
+<h4>3. Applying the Quotient Rule:</h4>
+<p>Let <i>f(R<sub>LOAD</sub>) = V<sub>TH</sub><sup>2</sup> &middot; R<sub>LOAD</sub></i> and <i>g(R<sub>LOAD</sub>) = (R<sub>TH</sub> + R<sub>LOAD</sub>)<sup>2</sup></i>, so the power can be rewritten as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{\mathrm{LOAD}} &amp;= \frac{f(R_{\mathrm{LOAD}})}{g(R_{\mathrm{LOAD}})} \\
+\end{aligned}
+\end{split}\]</div>
+<p>Using the quotient rule for differentiation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{d}{dR_{\mathrm{LOAD}}} \left( \frac{f(R_{\mathrm{LOAD}})}{g(R_{\mathrm{LOAD}})} \right) &amp;= \frac{f'(R_{\mathrm{LOAD}}) \cdot g(R_{\mathrm{LOAD}}) - f(R_{\mathrm{LOAD}}) \cdot g'(R_{\mathrm{LOAD}})}{g(R_{\mathrm{LOAD}})^2} \\
+\end{aligned}
+\end{split}\]</div>
+<p>Now, calculate the derivatives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f'(R_{\mathrm{LOAD}}) &amp;= V_{\mathrm{TH}}^2 \\
+g'(R_{\mathrm{LOAD}}) &amp;= 2(R_{\mathrm{TH}} + R_{\mathrm{LOAD}}) \\
+\end{aligned}
+\end{split}\]</div>
+<p>Substitute these into the quotient rule formula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{dP_{\mathrm{LOAD}}}{dR_{\mathrm{LOAD}}} &amp;= \frac{V_{\mathrm{TH}}^2 \cdot (R_{\mathrm{TH}} + R_{\mathrm{LOAD}})^2 - V_{\mathrm{TH}}^2 \cdot R_{\mathrm{LOAD}} \cdot 2(R_{\mathrm{TH}} + R_{\mathrm{LOAD}})}{(R_{\mathrm{TH}} + R_{\mathrm{LOAD}})^4} \\
+\end{aligned}
+\end{split}\]</div>
+<h4>4. Conclusion:</h4>
+<p>For maximum power, set the derivative equal to 0:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+R_{\mathrm{TH}}^2 - R_{\mathrm{LOAD}}^2 &amp;= 0 \\
+\end{aligned}
+\end{split}\]</div>
+<p>This gives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+R_{\mathrm{TH}} &amp;= R_{\mathrm{LOAD}} \\
+\end{aligned}
+\end{split}\]</div>
+<p>Thus, the power delivered to the load is maximized when:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+R_{\mathrm{TH}} &amp;= R_{\mathrm{LOAD}}
+\end{aligned}
+\]</div>
+<h3>What happens to the power delivered when <i>R<sub>LOAD</sub></i> is much larger or smaller than <i>R<sub>TH</sub> ?</h3>
+<h4>When <i>R<sub>LOAD</sub></i> is much smaller than <i>R<sub>TH</sub> :</h4>
+<p>If the load resistance <i>R<sub>LOAD</sub></i> is much smaller than the Thevenin resistance <i>R<sub>TH</sub></i>, most of the voltage will drop across <i>R<sub>TH</sub></i>, and only a small portion of the voltage will drop across <i>R<sub>LOAD</sub></i> .</p>
+<p>This results in a higher current, but because the voltage drop across <i>R<sub>LOAD</sub></i> is small, the power delivered to the load is also small .</p>
+<p>In this case, the circuit behaves as if it is "shorted," and most of the power is dissipated in the internal resistance <i>R<sub>TH</sub></i>, not in the load .</p>
+<h4>When <i>R<sub>LOAD</sub></i> is much larger than <i>R<sub>TH</sub> :</h4>
+<p>If the load resistance <i>R<sub>LOAD</sub></i> is much larger than the Thevenin resistance <i>R<sub>TH</sub></i>, the current in the circuit will be very small, since total resistance increases significantly . </p>
+<p>Even though most of the voltage will drop across <i>R<sub>LOAD</sub></i> , the small current results in less power delivered to the load.</p>
+<p>The circuit behaves as if it is "open" or "highly resistive," causing minimal power transfer .</p>
+<h4>Conclusion :</h4>
+<p>In both cases (too small or too large <i>R<sub>LOAD</sub></i>), the power delivered to the load is less than the maximum, which occurs when <i>R<sub>LOAD</sub> = R<sub>TH</sub></i> .</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Circuit_Electronics\PySpice_circuit_example7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr.Hadi Sadoghi Yazdi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024 Pattern Recognition Lab.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
