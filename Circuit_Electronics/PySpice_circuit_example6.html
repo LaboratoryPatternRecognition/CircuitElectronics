@@ -401,9 +401,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thevenin-and-norton"><strong>Thevenin</strong> and <strong>Norton</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thevenin-circuit">Thevenin Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-of-circuit">figure of Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">Simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ploting">Ploting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result-1">result 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norton-circuit">Norton Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norton-of-circuit">Norton of Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-and-current">Voltage and Current</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-norton-current">Example of Norton current</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Thevenin Circuit</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Norton Circuit</strong></a></li>
 </ul>
@@ -424,6 +433,8 @@ Sania Dolat, Ali Saadatpour</p>
 <p><strong>contacts:</strong><br />
 <a class="reference external" href="mailto:its&#46;saniadlt&#37;&#52;&#48;gmail&#46;com">its<span>&#46;</span>saniadlt<span>&#64;</span>gmail<span>&#46;</span>com</a><br />
 <a class="reference external" href="mailto:Qstzen&#37;&#52;&#48;proton&#46;me">Qstzen<span>&#64;</span>proton<span>&#46;</span>me</a></p>
+<section id="thevenin-and-norton">
+<h2><strong>Thevenin</strong> and <strong>Norton</strong><a class="headerlink" href="#thevenin-and-norton" title="Link to this heading">#</a></h2>
 <p><strong>Thevenin</strong> and <strong>Norton</strong> theorems are techniques used in circuit analysis.<br />
 <strong>Thevenin’s theorem</strong> simplifies a complex circuit to a single voltage source and a resistor, making analysis easier.<br />
 <strong>Norton’s theorem</strong> simplifies the circuit to a current source and a parallel resistor.<br />
@@ -436,8 +447,9 @@ Both methods provide equivalent circuits that produce the same voltage and curre
   V_{th} &amp; = I_{No} R_{no}
 \end{align}\end{split}
 \end{split}\]</div>
-<p>A picture below is the circuit we want to analyse for Thevinan and Norton theorems</p>
-<p><img alt="Question.jpg" src="Circuit_Electronics/attachment:Question.jpg" /></p>
+<p>A picture below is the circuit we want to analyse for Thevinan and Norton theorems
+<img alt="Question.jpg" src="Circuit_Electronics/attachment:Question.jpg" /></p>
+</section>
 <section id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -473,8 +485,11 @@ Both methods provide equivalent circuits that produce the same voltage and curre
 </div>
 </div>
 </div>
+</section>
+<section id="figure-of-circuit">
+<h2>figure of Circuit<a class="headerlink" href="#figure-of-circuit" title="Link to this heading">#</a></h2>
 <p>For applying Thevenin theorem in circuit above, we need to add the components base on the circuit depicted below</p>
-<p><img alt="Open Circuit for Norton.jpg" src="Circuit_Electronics/attachment:Open%20Circuit%20for%20Norton.jpg" /></p>
+<p><img alt="OpenCircuitforNorton.jpg" src="Circuit_Electronics/attachment:Open%20Circuit%20for%20Norton.jpg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Voltage source</span>
@@ -499,6 +514,9 @@ Both methods provide equivalent circuits that produce the same voltage and curre
 </div>
 </div>
 </div>
+</section>
+<section id="simulation">
+<h2>Simulation<a class="headerlink" href="#simulation" title="Link to this heading">#</a></h2>
 <p>After adding components to the circuit, we need to simulate and analyse the circuit</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -520,6 +538,9 @@ Both methods provide equivalent circuits that produce the same voltage and curre
 </div>
 </div>
 </div>
+</section>
+<section id="ploting">
+<h2>Ploting<a class="headerlink" href="#ploting" title="Link to this heading">#</a></h2>
 <p>Let’s plot the voltages and currents for each branch and node</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -557,6 +578,9 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\1284257669.py:7: DeprecationWarn
 </div>
 </div>
 </div>
+</section>
+<section id="result-1">
+<h2>result 1<a class="headerlink" href="#result-1" title="Link to this heading">#</a></h2>
 <p>As you can see the Thevenin voltage is equal to -18.00 V</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -585,8 +609,11 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\1284257669.py:7: DeprecationWarn
 </div>
 </div>
 </div>
-<p>Now let’s apply the Norton theorem for the circuit. For this we need to add the components base on the circuit depicted below</p>
-<p><img alt="Short Circuit for Norton.jpg" src="Circuit_Electronics/attachment:Short%20Circuit%20for%20Norton.jpg" /></p>
+</section>
+<section id="norton-of-circuit">
+<h2>Norton of Circuit<a class="headerlink" href="#norton-of-circuit" title="Link to this heading">#</a></h2>
+<p>Now let’s apply the Norton theorem for the circuit. For this we need to add the components base on the circuit depicted below
+<img alt="ShortCircuitforNorton.jpg" src="Circuit_Electronics/attachment:Short%20Circuit%20for%20Norton.jpg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Voltage source</span>
@@ -611,6 +638,9 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\1284257669.py:7: DeprecationWarn
 </div>
 </div>
 </div>
+</section>
+<section id="analysis">
+<h2>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h2>
 <p>After adding components to the circuit, we need to simulate and analyse the circuit</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -626,6 +656,9 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\1284257669.py:7: DeprecationWarn
 </div>
 </div>
 </div>
+</section>
+<section id="voltage-and-current">
+<h2>Voltage and Current<a class="headerlink" href="#voltage-and-current" title="Link to this heading">#</a></h2>
 <p>Let’s plot the voltages and currents for each branch and node</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -662,7 +695,11 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\3431291225.py:7: DeprecationWarn
 </div>
 </div>
 </div>
-<p>As you can see the Norton current is equal to 30.00 mA</p>
+</section>
+<section id="example-of-norton-current">
+<h2>Example of Norton current<a class="headerlink" href="#example-of-norton-current" title="Link to this heading">#</a></h2>
+<p>As you can see the Norton current is equal to 30.00 mA
+The Thevenin voltage of this circuit is equal to -18.00 V and the Norton current is equal to 30.00 mA. Now we need to calculate the R_th (Thevenin resistor).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">norton_current</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="p">[</span><span class="s1">&#39;vr5_plus&#39;</span><span class="p">])</span><span class="o">*</span><span class="mi">1000</span>
@@ -680,7 +717,6 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\3431291225.py:7: DeprecationWarn
 </div>
 </div>
 </div>
-<p>The Thevenin voltage of this circuit is equal to -18.00 V and the Norton current is equal to 30.00 mA. Now we need to calculate the R_th (Thevenin resistor).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R_eq</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">thevenin_voltage</span><span class="o">/</span><span class="n">norton_current</span><span class="p">)</span>
@@ -694,15 +730,15 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\3431291225.py:7: DeprecationWarn
 </div>
 </div>
 </div>
-<p>Now that we calculate the Thevenin voltage, Norton current and R_eq we can simplify the circuit using Thevenin and Norton theorem.</p>
 </section>
 <section id="id1">
 <h2><strong>Thevenin Circuit</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p><img alt="equivalent to Thevenin .jpg" src="Circuit_Electronics/attachment:equivalent%20to%20Thevenin%20.jpg" /></p>
+<p>Now that we calculate the Thevenin voltage, Norton current and R_eq we can simplify the circuit using Thevenin and Norton theorem.
+<img alt="equivalenttoThevenin.jpg" src="Circuit_Electronics/attachment:equivalent%20to%20Thevenin%20.jpg" /></p>
 </section>
 <section id="id2">
 <h2><strong>Norton Circuit</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p><img alt="equivalent to Norton.jpg" src="Circuit_Electronics/attachment:equivalent%20to%20Norton.jpg" /></p>
+<p><img alt="equivalenttoNorton.jpg" src="Circuit_Electronics/attachment:equivalent%20to%20Norton.jpg" /></p>
 </section>
 </section>
 
@@ -770,9 +806,18 @@ C:\Users\Sina\AppData\Local\Temp\ipykernel_9476\3431291225.py:7: DeprecationWarn
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thevenin-and-norton"><strong>Thevenin</strong> and <strong>Norton</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thevenin-circuit">Thevenin Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-of-circuit">figure of Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">Simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ploting">Ploting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result-1">result 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norton-circuit">Norton Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norton-of-circuit">Norton of Circuit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-and-current">Voltage and Current</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-norton-current">Example of Norton current</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Thevenin Circuit</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Norton Circuit</strong></a></li>
 </ul>
