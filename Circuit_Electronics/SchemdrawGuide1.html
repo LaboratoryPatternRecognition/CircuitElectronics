@@ -16,43 +16,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -64,6 +67,7 @@
     <link rel="prev" title="Diode Characteristic Curve" href="DiodeCharacteristicCurve.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -139,6 +132,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../Introduction_CircuitElectronics.html">
   
@@ -152,21 +147,17 @@
     
     
     <img src="../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-light" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
-    <script>document.write(`<img src="../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-dark" alt="Dr.Hadi Sadoghi Yazdi - Home"/>`);</script>
+    <img src="../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-dark pst-js-only" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -209,6 +200,7 @@
 <li class="toctree-l1"><a class="reference internal" href="StudentEffort/batteryModel/battery_model.html">Battery Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="StudentEffort/Sensitivity_analysis1.html">Sensitivity analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="StudentEffort/WhatBias/bias1.html"><strong>Bias:</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="StudentEffort/Supermesh/Supermesh.html">Supermesh</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
 <ul class="nav bd-sidenav">
@@ -243,9 +235,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -368,27 +360,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -645,16 +629,7 @@ Grounds: <code class="docutils literal notranslate"><span class="pre">e.Ground()
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">schemdraw</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">():</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;schemdraw&#39;
-</pre></div>
-</div>
+<img alt="../_images/36b3a119e2c33312f4b5a0bfb8b31fbff695ca7dac702bf5abf9cd7169519717.svg" src="../_images/36b3a119e2c33312f4b5a0bfb8b31fbff695ca7dac702bf5abf9cd7169519717.svg" />
 </div>
 </div>
 <section id="here-is-a-simple-line-of-a-circut-including-a-capacitor-a-resistor-and-a-diode">
@@ -674,7 +649,7 @@ the element is rotated in that direction, and future elements take the same dire
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/8419dc4a933bb394e07e41dc9cc53e5917815dd1b053e90ca014c74c69739c09.svg"><img alt="../_images/8419dc4a933bb394e07e41dc9cc53e5917815dd1b053e90ca014c74c69739c09.svg" height="430" src="../_images/8419dc4a933bb394e07e41dc9cc53e5917815dd1b053e90ca014c74c69739c09.svg" width="943" /></a>
+<img alt="../_images/c2be89c05b66d111547c6af434678239c43af6cfb29d8fc495b094d6fee62f67.svg" src="../_images/c2be89c05b66d111547c6af434678239c43af6cfb29d8fc495b094d6fee62f67.svg" />
 </div>
 </div>
 </section>
@@ -693,7 +668,7 @@ the element is rotated in that direction, and future elements take the same dire
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/24a174bd41bc6181a1329ab8e13ad9c7fb0c364aebf61eb9c329fbed0163eb2f.svg"><img alt="../_images/24a174bd41bc6181a1329ab8e13ad9c7fb0c364aebf61eb9c329fbed0163eb2f.svg" height="430" src="../_images/24a174bd41bc6181a1329ab8e13ad9c7fb0c364aebf61eb9c329fbed0163eb2f.svg" width="943" /></a>
+<img alt="../_images/8fadd943e05ee43004f7dc3e950e11f45ba145e225c96b6a10b057d44b03d195.svg" src="../_images/8fadd943e05ee43004f7dc3e950e11f45ba145e225c96b6a10b057d44b03d195.svg" />
 </div>
 </div>
 </section>
@@ -712,7 +687,7 @@ the element is rotated in that direction, and future elements take the same dire
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/a5847d41131010cb9976beb81737c32ee038df95ecc11d0b004765ccf2a40054.svg"><img alt="../_images/a5847d41131010cb9976beb81737c32ee038df95ecc11d0b004765ccf2a40054.svg" height="430" src="../_images/a5847d41131010cb9976beb81737c32ee038df95ecc11d0b004765ccf2a40054.svg" width="943" /></a>
+<img alt="../_images/1cf14a60f0042248e8a0c1a8214f58f148de4b585b95e0699774959eea361207.svg" src="../_images/1cf14a60f0042248e8a0c1a8214f58f148de4b585b95e0699774959eea361207.svg" />
 </div>
 </div>
 </section>
@@ -735,7 +710,7 @@ The theta method can be used to specify any rotation angle in degrees.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/84ccd00446a9659a03d019c7b6a3b90a7ea4a2ee6e4b26ed4a0c07aee2659be9.svg"><img alt="../_images/84ccd00446a9659a03d019c7b6a3b90a7ea4a2ee6e4b26ed4a0c07aee2659be9.svg" height="430" src="../_images/84ccd00446a9659a03d019c7b6a3b90a7ea4a2ee6e4b26ed4a0c07aee2659be9.svg" width="943" /></a>
+<img alt="../_images/091ff417e7b77792f51f1727ee42f04b0d51cf5c4303e246d76ab995f2b65ec1.svg" src="../_images/091ff417e7b77792f51f1727ee42f04b0d51cf5c4303e246d76ab995f2b65ec1.svg" />
 </div>
 </div>
 <section id="in-this-example-you-can-see-that-it-is-possible-to-rotate-the-element-in-any-direction-we-want">
@@ -763,7 +738,7 @@ The <code class="docutils literal notranslate"><span class="pre">k</span></code>
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/945d44a381796abe2b55ced761c6993a9d7a6877978e201a75eb9ff342d2f753.svg"><img alt="../_images/945d44a381796abe2b55ced761c6993a9d7a6877978e201a75eb9ff342d2f753.svg" height="430" src="../_images/945d44a381796abe2b55ced761c6993a9d7a6877978e201a75eb9ff342d2f753.svg" width="943" /></a>
+<img alt="../_images/2a98d69b113ea7d02ce813eeec8576eb679f9250331995d08b9126e1f089b220.svg" src="../_images/2a98d69b113ea7d02ce813eeec8576eb679f9250331995d08b9126e1f089b220.svg" />
 </div>
 </div>
 <section id="as-expected-and-described-in-the-comments-of-the-code-the-circuit-has-been-created">
@@ -787,7 +762,7 @@ For example, to draw an opamp and place a resistor on the output, store the Opam
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/21c4a402776ca726e9eac8a69ce3b2c86321cae29cefbc6232b5654c0ffed3ce.svg"><img alt="../_images/21c4a402776ca726e9eac8a69ce3b2c86321cae29cefbc6232b5654c0ffed3ce.svg" height="430" src="../_images/21c4a402776ca726e9eac8a69ce3b2c86321cae29cefbc6232b5654c0ffed3ce.svg" width="943" /></a>
+<img alt="../_images/3d67ed66ff26ab286a96b2f8314a15027104032aef5bb3817ac8fdcc5e8e51c7.svg" src="../_images/3d67ed66ff26ab286a96b2f8314a15027104032aef5bb3817ac8fdcc5e8e51c7.svg" />
 </div>
 </div>
 </section>
@@ -809,7 +784,7 @@ For example, to draw an opamp and place a resistor on the output, store the Opam
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/3787493f97f3ab24451d6aeeae1dc47e3c3168fd2242d1c3f037b5774ac71734.svg"><img alt="../_images/3787493f97f3ab24451d6aeeae1dc47e3c3168fd2242d1c3f037b5774ac71734.svg" height="430" src="../_images/3787493f97f3ab24451d6aeeae1dc47e3c3168fd2242d1c3f037b5774ac71734.svg" width="943" /></a>
+<img alt="../_images/c36f7cbf92cd0f964af101e2829f513d24aecbffafc57d4d88c5854d9c0d8a5e.svg" src="../_images/c36f7cbf92cd0f964af101e2829f513d24aecbffafc57d4d88c5854d9c0d8a5e.svg" />
 </div>
 </div>
 </section>
@@ -829,7 +804,7 @@ For example, to draw an opamp and place a resistor on the output, store the Opam
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/081f4838bca5cdf45ac6bfde54bc7e1a24e8f6c8ea22beb96f197856c39d37fb.svg"><img alt="../_images/081f4838bca5cdf45ac6bfde54bc7e1a24e8f6c8ea22beb96f197856c39d37fb.svg" height="430" src="../_images/081f4838bca5cdf45ac6bfde54bc7e1a24e8f6c8ea22beb96f197856c39d37fb.svg" width="943" /></a>
+<img alt="../_images/c6af19ec67bf7aacc702b66d5c128c7eb4758cc22bfcb4de52ae2a13ef350fea.svg" src="../_images/c6af19ec67bf7aacc702b66d5c128c7eb4758cc22bfcb4de52ae2a13ef350fea.svg" />
 </div>
 </div>
 </section>
@@ -845,7 +820,7 @@ For example, to draw an opamp and place a resistor on the output, store the Opam
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/1603e6b208b1316dcf9eda23a5c6db7491666f62177c6f30636f1b7cb9b03ae3.svg"><img alt="../_images/1603e6b208b1316dcf9eda23a5c6db7491666f62177c6f30636f1b7cb9b03ae3.svg" height="430" src="../_images/1603e6b208b1316dcf9eda23a5c6db7491666f62177c6f30636f1b7cb9b03ae3.svg" width="943" /></a>
+<img alt="../_images/856e4bbe62fa8111175e03aeeb270f2587d0fd965a23ffcbadf8c6c0b572db64.svg" src="../_images/856e4bbe62fa8111175e03aeeb270f2587d0fd965a23ffcbadf8c6c0b572db64.svg" />
 </div>
 </div>
 </section>
@@ -864,7 +839,7 @@ Notice the Diode is stretched longer than the standard element length in order t
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/4c357a9f6a9f59f3d39160cff6bb115d6548ea08d6c58108fcfa5eda1852234b.svg"><img alt="../_images/4c357a9f6a9f59f3d39160cff6bb115d6548ea08d6c58108fcfa5eda1852234b.svg" height="430" src="../_images/4c357a9f6a9f59f3d39160cff6bb115d6548ea08d6c58108fcfa5eda1852234b.svg" width="943" /></a>
+<img alt="../_images/4e26ce6fcda25f0798057ac6b70ea57276aa0d20a2e88923880005ec19d1beb9.svg" src="../_images/4e26ce6fcda25f0798057ac6b70ea57276aa0d20a2e88923880005ec19d1beb9.svg" />
 </div>
 </div>
 </section>
@@ -894,7 +869,7 @@ These methods automatically change the drawing direction. Here, the Line element
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/fd417c3fa03240828ca35f4dfe511b3aa1d838da1171a6bce1abe73d429d5aab.svg"><img alt="../_images/fd417c3fa03240828ca35f4dfe511b3aa1d838da1171a6bce1abe73d429d5aab.svg" height="430" src="../_images/fd417c3fa03240828ca35f4dfe511b3aa1d838da1171a6bce1abe73d429d5aab.svg" width="943" /></a>
+<img alt="../_images/cfcb46ee1d45d981f9e7b138bbb1059759dbf28ebe4c4104b88355f5477c13cd.svg" src="../_images/cfcb46ee1d45d981f9e7b138bbb1059759dbf28ebe4c4104b88355f5477c13cd.svg" />
 </div>
 </div>
 </section>
@@ -913,7 +888,7 @@ These methods automatically change the drawing direction. Here, the Line element
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/004eaff7931145b4c99ec5ea8e3667048549b5dbd2f5cc00859e9871d186b615.svg"><img alt="../_images/004eaff7931145b4c99ec5ea8e3667048549b5dbd2f5cc00859e9871d186b615.svg" height="430" src="../_images/004eaff7931145b4c99ec5ea8e3667048549b5dbd2f5cc00859e9871d186b615.svg" width="943" /></a>
+<img alt="../_images/2e60f14f7df4de42ba0ff83c31847bf5fd0936727c370494aa77699710fb3cfc.svg" src="../_images/2e60f14f7df4de42ba0ff83c31847bf5fd0936727c370494aa77699710fb3cfc.svg" />
 </div>
 </div>
 </section>
@@ -930,7 +905,7 @@ These methods automatically change the drawing direction. Here, the Line element
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/b248e6ca46182980572bfba4b79fd9b066b63febb5f744158d373420aab521aa.svg"><img alt="../_images/b248e6ca46182980572bfba4b79fd9b066b63febb5f744158d373420aab521aa.svg" height="430" src="../_images/b248e6ca46182980572bfba4b79fd9b066b63febb5f744158d373420aab521aa.svg" width="943" /></a>
+<img alt="../_images/99c383cbbf0e16ec817233834fddadff354be8e7fcd1f13c77f1aa9c634e3cc0.svg" src="../_images/99c383cbbf0e16ec817233834fddadff354be8e7fcd1f13c77f1aa9c634e3cc0.svg" />
 </div>
 </div>
 <section id="note">
@@ -952,7 +927,7 @@ These methods automatically change the drawing direction. Here, the Line element
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/f16963e7ae375abfcf5576e0ed13c78e8650a7a87fd8a9df47d3136aa56d939a.svg"><img alt="../_images/f16963e7ae375abfcf5576e0ed13c78e8650a7a87fd8a9df47d3136aa56d939a.svg" height="430" src="../_images/f16963e7ae375abfcf5576e0ed13c78e8650a7a87fd8a9df47d3136aa56d939a.svg" width="943" /></a>
+<img alt="../_images/555bc6c32bc7456e38d1eda6788f9c5f1c80d9abc5185ac3c55bfb8dd3c56fea.svg" src="../_images/555bc6c32bc7456e38d1eda6788f9c5f1c80d9abc5185ac3c55bfb8dd3c56fea.svg" />
 </div>
 </div>
 <section id="in-the-second-with-a-second-drawing-was-added-and-the-first-drawing-was-added-to-it-3-times">
@@ -973,7 +948,7 @@ These methods automatically change the drawing direction. Here, the Line element
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/52a77cc85b03573bf88cc5a9dee34dc04941c6b76d954cfcf178291ce4a23592.svg"><img alt="../_images/52a77cc85b03573bf88cc5a9dee34dc04941c6b76d954cfcf178291ce4a23592.svg" height="430" src="../_images/52a77cc85b03573bf88cc5a9dee34dc04941c6b76d954cfcf178291ce4a23592.svg" width="943" /></a>
+<img alt="../_images/5338e6053e416e3b2c0c07e0fe479d2e024c921aeeb6dd1e0399b8511a9aa32b.svg" src="../_images/5338e6053e416e3b2c0c07e0fe479d2e024c921aeeb6dd1e0399b8511a9aa32b.svg" />
 </div>
 </div>
 <section id="here-is-a-simple-one-we-will-see-more-complicated-labeled-circuits-in-the-following-section">
@@ -999,7 +974,7 @@ These methods automatically change the drawing direction. Here, the Line element
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/a6fbfde6029a4506ba093724e41b2a5b04628a16b65547a903069d3eda4d9870.svg"><img alt="../_images/a6fbfde6029a4506ba093724e41b2a5b04628a16b65547a903069d3eda4d9870.svg" height="430" src="../_images/a6fbfde6029a4506ba093724e41b2a5b04628a16b65547a903069d3eda4d9870.svg" width="943" /></a>
+<img alt="../_images/5df2e9f1830a032f9113d17514e4283bd0c962f5b1b033ace3c6774d5252f67d.svg" src="../_images/5df2e9f1830a032f9113d17514e4283bd0c962f5b1b033ace3c6774d5252f67d.svg" />
 </div>
 </div>
 <section id="you-can-see-the-switch-and-the-t-0-part">
@@ -1025,7 +1000,7 @@ These methods automatically change the drawing direction. Here, the Line element
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/3dc26b24bf5a8cb226d3f6884cd569a510197ae5b7c125bb7e2fd3de55c24e40.svg"><img alt="../_images/3dc26b24bf5a8cb226d3f6884cd569a510197ae5b7c125bb7e2fd3de55c24e40.svg" height="430" src="../_images/3dc26b24bf5a8cb226d3f6884cd569a510197ae5b7c125bb7e2fd3de55c24e40.svg" width="943" /></a>
+<img alt="../_images/8933c81e3f7b21c29f432d993fb5b0e9896d14206417447dae1ffe88eac44f95.svg" src="../_images/8933c81e3f7b21c29f432d993fb5b0e9896d14206417447dae1ffe88eac44f95.svg" />
 </div>
 </div>
 </section>
@@ -1057,7 +1032,7 @@ These methods automatically change the drawing direction. Here, the Line element
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/448f165749e5a06f0f2446db55792dfaba9e651cfc7518dc60ed776ddbde49e7.svg"><img alt="../_images/448f165749e5a06f0f2446db55792dfaba9e651cfc7518dc60ed776ddbde49e7.svg" height="430" src="../_images/448f165749e5a06f0f2446db55792dfaba9e651cfc7518dc60ed776ddbde49e7.svg" width="943" /></a>
+<img alt="../_images/60581b7a1f7e5d5a245367f7d36202944eb7ad196d24afd5ce98c7b5dea88f27.svg" src="../_images/60581b7a1f7e5d5a245367f7d36202944eb7ad196d24afd5ce98c7b5dea88f27.svg" />
 </div>
 </div>
 <section id="expected-circuit-was-made">
@@ -1094,7 +1069,7 @@ This also demonstrates the <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/05d2dfe5c5a11488865e15276c3d29711ef1114d948933518626adbe7bb0836c.svg"><img alt="../_images/05d2dfe5c5a11488865e15276c3d29711ef1114d948933518626adbe7bb0836c.svg" height="430" src="../_images/05d2dfe5c5a11488865e15276c3d29711ef1114d948933518626adbe7bb0836c.svg" width="943" /></a>
+<img alt="../_images/418bd4b0fefc516e51d64a68037c2d9a9fba4e7d8d303dfe401c9f22f7d486ff.svg" src="../_images/418bd4b0fefc516e51d64a68037c2d9a9fba4e7d8d303dfe401c9f22f7d486ff.svg" />
 </div>
 </div>
 <section id="here-is-a-infinite-looped-circuit">
@@ -1154,7 +1129,7 @@ Also note the use of newline characters inside resistor and capacitor labels.</p
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/e640d9d7540effb5ca25e5d0fc7cfe9fb297f1b5f2f00918f9872911909f0959.svg"><img alt="../_images/e640d9d7540effb5ca25e5d0fc7cfe9fb297f1b5f2f00918f9872911909f0959.svg" height="430" src="../_images/e640d9d7540effb5ca25e5d0fc7cfe9fb297f1b5f2f00918f9872911909f0959.svg" width="943" /></a>
+<img alt="../_images/82f450677a6408c8d25f3aa50534a7be737cbb63880ff8d055ec286a5e39cbab.svg" src="../_images/82f450677a6408c8d25f3aa50534a7be737cbb63880ff8d055ec286a5e39cbab.svg" />
 </div>
 </div>
 <section id="here-is-an-example-including-everything-we-mentioned">
@@ -1230,7 +1205,8 @@ Also note the use of newline characters inside resistor and capacitor labels.</p
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1377,8 +1353,8 @@ By Dr.Hadi Sadoghi Yazdi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
