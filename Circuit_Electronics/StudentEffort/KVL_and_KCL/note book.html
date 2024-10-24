@@ -1,0 +1,1191 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>KVL &amp; KCL &#8212; Dr.Hadi Sadoghi Yazdi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Circuit_Electronics/StudentEffort/KVL_and_KCL/note book';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Contact Me" href="../../../Contact_Me.html" />
+    <link rel="prev" title="Supermesh" href="../Supermesh/Supermesh.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../Introduction_CircuitElectronics.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-light" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
+    <img src="../../../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-dark pst-js-only" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../Introduction_CircuitElectronics.html">
+                    Introduction to Circuit and Electronics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections of Circuit and Electronics course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../BasicElements.html">Basic component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KVL_KCL.html">Voltage , Current</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NodalMeshAnalysis.html">Basic Nodal and Mesh Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../RC_RL_RLC.html">R-C, R-L circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Diode_chapter.html">Diode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DiodeApplication.html">Diode Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../BJT1.html">Bipolar junction transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../FET.html">Field Effect Transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../OpAmp.html">Operational Amplifier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching assistant</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_Installation_Manual.html">PySpice Installation Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_circuit_example1.html">Example 1: RESISTIVE DIVIDER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_circuit_example2.html">Example 2: DIODE CIRCUIT</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Students effort</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../DiodeCharacteristicCurve.html">Diode Characteristic Curve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SchemdrawGuide1.html">Schemdraw Guide book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../independentcurrentandvoltagesources/miniProject.html">Independent current/voltage sources</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../AveragePower.html"><strong>Average power</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassiveComponents/Passive%20Components.html">Passive Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Linearization/LinearizationProject.html"><strong>Linear approximation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../batteryModel/battery_model.html">Battery Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sensitivity_analysis1.html">Sensitivity analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../WhatBias/bias1.html"><strong>Bias:</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Supermesh/Supermesh.html">Supermesh</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">KVL &amp; KCL</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Contact_Me.html">Contact Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../About_Me.html">About Me</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git/issues/new?title=Issue%20on%20page%20%2FCircuit_Electronics/StudentEffort/KVL_and_KCL/note book.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/Circuit_Electronics/StudentEffort/KVL_and_KCL/note book.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>KVL & KCL</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kirchhoff-s-current-law-kvl">Kirchhoff’s Current Law (KVL)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage">Voltage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-energy">Conservation of Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-of-kvl">statement of KVL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closed-path">Closed path</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebraic-sum-of-voltages">Algebraic sum of voltages</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-kvl-equation">Writing KVL equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-one">Solution of example one</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-two">Solution of example two</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-three">Solution of example three</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-polarity-of-voltages-matter">Does polarity of voltages matter?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit">Open Circuit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-four">Solution of example four</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5">Example 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-five">Solution of example five</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Kirchhoff’s Current Law (KCL)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#current">Current</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-charge">Conservation of Charge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-of-kcl">statement of KCL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#node">Node</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebraic-sum-of-the-currents">Algebraic sum of the currents</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-kcl-equation">Writing KCL equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6">Example 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-six">Solution of example six</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7">Example 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-seven">Solution of example seven</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-direction-of-currents">Determining the direction of currents</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-problems-using-kvl-kcl">Solving problems using KVL &amp; KCL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8">Example 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-eight">Solution of example eight</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-9">Example 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-nine">Solution of example nine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="kvl-kcl">
+<h1>KVL &amp; KCL<a class="headerlink" href="#kvl-kcl" title="Link to this heading">#</a></h1>
+<p>Author : Kourosh Arfae Shahidi</p>
+<p>Gmail  : <a class="reference external" href="mailto:kourosh&#46;a&#46;shahidi&#37;&#52;&#48;gmail&#46;com">kourosh<span>&#46;</span>a<span>&#46;</span>shahidi<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>fall 2024</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Kirchhoff’s Laws are two fundamental principles in electrical circuit analysis that help maintain the core physical concepts of conservation of charge and conservation of energy.</p>
+<ul>
+<li><h2 class="rubric" id="kirchhoff-s-current-law-kcl">Kirchhoff’s Current Law (KCL):</h2>
+<p>This law states that the total current entering a junction (or node) in an electrical circuit must equal the total current leaving the junction. In other words, no current is lost or gained at a node. KCL is based on the principle of conservation of electric charge, ensuring that the total charge remains constant in the circuit.</p>
+</li>
+<li><h2 class="rubric" id="kirchhoff-s-voltage-law-kvl">Kirchhoff’s Voltage Law (KVL):</h2>
+<p>This law states that the sum of all electrical potential differences (voltages) around any closed loop in a circuit is equal to zero. This implies that the total energy provided by voltage sources in the loop is exactly balanced by the energy consumed by the resistive elements. KVL is based on the principle of conservation of energy, ensuring that energy is neither lost nor created within a closed loop.</p>
+</li>
+</ul>
+</section>
+<section id="kirchhoff-s-current-law-kvl">
+<h2>Kirchhoff’s Current Law (KVL)<a class="headerlink" href="#kirchhoff-s-current-law-kvl" title="Link to this heading">#</a></h2>
+</section>
+<section id="voltage">
+<h2>Voltage<a class="headerlink" href="#voltage" title="Link to this heading">#</a></h2>
+<p>voltage is a measure of potential energy difference across the element. This potential difference represents the work required to move charge through the element, and it’s measured in volts(V).</p>
+</section>
+<section id="conservation-of-energy">
+<h2>Conservation of Energy<a class="headerlink" href="#conservation-of-energy" title="Link to this heading">#</a></h2>
+<p>An electric field has the conservative property, namely the work in moving an electric charge around a closed path in the field is zero. In other words as moving around a closed loop, or circuit, you will end up back to where you started in the circuit and therefore back to the same initial potential with no loss of voltage around the loop.<br />
+Kirchhoff’s voltage law states the above property in terms of voltages in a circuit.</p>
+</section>
+<section id="statement-of-kvl">
+<h2>statement of KVL<a class="headerlink" href="#statement-of-kvl" title="Link to this heading">#</a></h2>
+<p>the algebraic sum of the voltages around a closed path in an electric circuit is zero.</p>
+<p>The two key terms in the statement of KVL are <strong>closed path</strong> and <strong>algebraic sum of voltages</strong>.</p>
+<section id="closed-path">
+<h3>Closed path<a class="headerlink" href="#closed-path" title="Link to this heading">#</a></h3>
+<p>A closed path in an electric circuit is any path that starts at some point in the circuit and returns to that point after traversing a number of components. a closed path can jump across several components or even across an open pair of terminals.</p>
+<p><img alt="title" src="../../../_images/Figure_1.png" /></p>
+</section>
+<section id="algebraic-sum-of-voltages">
+<h3>Algebraic sum of voltages<a class="headerlink" href="#algebraic-sum-of-voltages" title="Link to this heading">#</a></h3>
+<p>Now, suppose a unit positive charge is moved clockwise around the closed path, When the charge is moved from the higher-potential terminal to the lower-potential terminal of a component (that is, from the reference positive to the reference negative terminal), it loses a potential energy equal to the voltage across the component.</p>
+<p>On the other hand, when a unit positive charge is moved from the lower-potential terminal to the higher-potential terminal of a component (that is, from the reference negative to the reference positive terminal), it gains a potential energy equal to the voltage across the component.</p>
+<p>The losses and gains in the potential energy of a unit charge moving across the components in a closed path must be subtracted and added, respectively, to determine the net change in its potential energy.</p>
+<p><strong>The resulting algebraic sum of the voltages in the closed path must be zero, since the work done in moving a charge through a closed path in an electric field is zero.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">STYLE_IEC</span><span class="p">)</span>
+    <span class="n">R1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v1$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">])</span>
+    <span class="n">R2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v2$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">])</span>
+    <span class="n">R3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v3$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">R4</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v4$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">])</span>
+    <span class="n">R5</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v5$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">left</span><span class="p">()</span><span class="o">.</span><span class="n">tox</span><span class="p">(</span><span class="n">R1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">R6</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v6$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">R1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">LoopCurrent</span><span class="p">([</span><span class="n">R1</span><span class="p">,</span> <span class="n">R4</span><span class="p">,</span> <span class="n">R5</span><span class="p">,</span> <span class="n">R6</span><span class="p">],</span> <span class="n">pad</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$closed path$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/44c77dfaf372150ff1ce3ec0fcb3641e339fb8a580ac5e9ca67102819613f106.svg" src="../../../_images/44c77dfaf372150ff1ce3ec0fcb3641e339fb8a580ac5e9ca67102819613f106.svg" />
+</div>
+</div>
+</section>
+</section>
+<section id="writing-kvl-equation">
+<h2>Writing KVL equation<a class="headerlink" href="#writing-kvl-equation" title="Link to this heading">#</a></h2>
+<p>We can apply KVL to a circuit in several different ways. One method that leads to fewer equation-writing errors than others consists of moving mentally around the closed path in a clockwise direction and writing down directly the voltage of each element whose (+) terminal is entered, and writing down the negative of every voltage first met at the (−) sign.</p>
+<ul class="simple">
+<li><p>If the direction of path is from plus to minus across a component, that voltage is added in the KVL equation.</p></li>
+<li><p>If the direction of path is from minus to plus across a component, that voltage is subtracted in the KVL equation.</p></li>
+</ul>
+<p><strong>The algebraic sum of the voltages in a closed path, obtained by using the above convention, is then equated to zero.</strong></p>
+<p><img alt="title" src="../../../_images/Figure_4.png" /></p>
+<p>For the closed path in figure above, the direction of the path is from + to - in v1 , v4 and v6, and from - to + in v2, v3 and v5. therefor , the kvl equation becomes :</p>
+<blockquote>
+<div><p>v1 - v2 - v3 + v4 - v5 + v6 = 0</p>
+</div></blockquote>
+<section id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Link to this heading">#</a></h3>
+<p>Choose three closed path in the circuit below and write the KVL equation for them</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">STYLE_IEC</span><span class="p">)</span>
+    <span class="n">R1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v1$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">up</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">R2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v2$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">R4</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v4$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">R3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v3$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="p">()</span>
+    <span class="n">R5</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v5$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">R4</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">R6</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v6$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">up</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">tox</span><span class="p">(</span><span class="n">R2</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+    <span class="c1"># elm.Line().at(R1.end).up()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">R1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
+    <span class="n">R7</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v7$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">R8</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v8$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">R6</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/3af600e022f8862f8003546b445e2766b85ef5585291429337623b48e3076a14.svg" src="../../../_images/3af600e022f8862f8003546b445e2766b85ef5585291429337623b48e3076a14.svg" />
+</div>
+</div>
+</section>
+<section id="solution-of-example-one">
+<h3>Solution of example one<a class="headerlink" href="#solution-of-example-one" title="Link to this heading">#</a></h3>
+<p>First, we select three closed circuits :</p>
+<p><img alt="title" src="../../../_images/Figure_5.png" /></p>
+<blockquote>
+<div><p>path 1 : v1 - v7 - v8 + v6 + v5 - v3 = 0</p>
+</div></blockquote>
+<blockquote>
+<div><p>path 2 : v1 - v2 + v6 + v5 - v3 = 0</p>
+</div></blockquote>
+<blockquote>
+<div><p>path 3 : -v2 + v8 + v7 = 0</p>
+</div></blockquote>
+</section>
+<section id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Link to this heading">#</a></h3>
+<p>Calculate the voltage v8 in the circuit of Figure below :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">STYLE_IEC</span><span class="p">)</span>
+    <span class="n">R1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v1=100v$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
+    <span class="n">R2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v2=50v$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">R3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v3=50v$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">R4</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v4=200v$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="p">()</span>
+    <span class="n">R5</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v5=100v$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">R2</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">R6</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v6=200v$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span>
+    <span class="n">R8</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v8$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">R7</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v7=50v$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">R4</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/e1d7cbf9b0b15f176f889fd04bb9cc78ebb5e711fd2431c631e4d152b46ed904.svg" src="../../../_images/e1d7cbf9b0b15f176f889fd04bb9cc78ebb5e711fd2431c631e4d152b46ed904.svg" />
+</div>
+</div>
+</section>
+<section id="solution-of-example-two">
+<h3>Solution of example two<a class="headerlink" href="#solution-of-example-two" title="Link to this heading">#</a></h3>
+<p>Two closed paths are available for this calculation</p>
+<p>first one:</p>
+<p><img alt="title" src="../../../_images/Figure_7.png" /></p>
+<p>The kvl equation of path1 is:</p>
+<blockquote>
+<div><p>-v1 - v2 - v5 + v6 + v8 - v7 + v4 = 0</p>
+</div></blockquote>
+<blockquote>
+<div><p>-100 -50 - 100 + 200 + v8 - 50 + 200 = 0</p>
+</div></blockquote>
+<blockquote>
+<div><p>v8 = -100v</p>
+</div></blockquote>
+<p>second one:</p>
+<p><img alt="title" src="../../../_images/Figure_8.png" /></p>
+<p>the kvl equation of path2 is:</p>
+<blockquote>
+<div><p>v3 - v5 + v6 + v8 - v7 = 0</p>
+</div></blockquote>
+<blockquote>
+<div><p>50 - 100 + 200 + v8 - 50 = 0</p>
+</div></blockquote>
+<blockquote>
+<div><p>v8 = -100v</p>
+</div></blockquote>
+</section>
+<section id="example-3">
+<h3>Example 3<a class="headerlink" href="#example-3" title="Link to this heading">#</a></h3>
+<p>In the circuit shown in figure below evaluate the voltage marked Vx</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">STYLE_IEC</span><span class="p">)</span>
+    <span class="n">v1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$v1$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">r1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v2$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v3$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$v4$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">v1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">r3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v5$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">v3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$v6$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">v4</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$v7$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">toy</span><span class="p">(</span><span class="n">v1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">r4</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v8$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">v2</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+    <span class="n">v5</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$v9$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">r4</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">theta</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+    <span class="n">r5</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v10$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">v3</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/f879e4b1dfd228dcafef6fb3f4cc13bcce9d42712ab1a8d5335236ce1b448f48.svg" src="../../../_images/f879e4b1dfd228dcafef6fb3f4cc13bcce9d42712ab1a8d5335236ce1b448f48.svg" />
+</div>
+</div>
+</section>
+<section id="solution-of-example-three">
+<h3>Solution of example three<a class="headerlink" href="#solution-of-example-three" title="Link to this heading">#</a></h3>
+<p>First, we consider the three closed paths: path 1, path 2 and path 3 . And then we write KVL equation for each one of them :</p>
+<p><img alt="title" src="../../../_images/Figure_9.png" /></p>
+<ul class="simple">
+<li><p>path 1:</p></li>
+</ul>
+<blockquote>
+<div><p>-v1 + v2 + v3 - v4 = 0</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>path 2:</p></li>
+</ul>
+<blockquote>
+<div><p>v4 - v3 + v5 - v6 - v7 - v8 = 0</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>path 3:</p></li>
+</ul>
+<blockquote>
+<div><p>-v9 + v10 - v7 - v8 = 0</p>
+</div></blockquote>
+</section>
+<section id="does-polarity-of-voltages-matter">
+<h3>Does polarity of voltages matter?<a class="headerlink" href="#does-polarity-of-voltages-matter" title="Link to this heading">#</a></h3>
+<p>Since the actual polarities of voltages across the components in a circuit are not always known beforehand, they are usually assigned arbitrarily. If the assigned polarities match the actual polarities in a component, then the answer will be a positive voltage. If the assigned polarities do not match the actual polarities, then the answer will be a negative voltage, as in the preceding example. It is not necessary, however, to go back and reassign polarities in such cases; the answer is left as a negative value.</p>
+</section>
+</section>
+<section id="open-circuit">
+<h2>Open Circuit<a class="headerlink" href="#open-circuit" title="Link to this heading">#</a></h2>
+<p>A pair of terminals is said to be open circuited when there is an open gap between them, which represents an infinite resistance. Current through an open-circuited pair of terminals is zero (except when an infinite voltage is applied across the terminals). The voltage across an open circuit is, in general, not zero.</p>
+<section id="example-4">
+<h3>Example 4<a class="headerlink" href="#example-4" title="Link to this heading">#</a></h3>
+<p>Calculate the voltage across the open circuit in Figure below</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">STYLE_IEC</span><span class="p">)</span>
+    <span class="n">v1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$v1=8v$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$v2=14v$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">r1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;$v3=7v$&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="nb">open</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">v5=30v</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">v1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">v3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$v4=19v$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="nb">open</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/a8ce61915484a09fcaf06d1442c2c6f144125be0c33adcca545ef7b3b5124776.svg" src="../../../_images/a8ce61915484a09fcaf06d1442c2c6f144125be0c33adcca545ef7b3b5124776.svg" />
+</div>
+</div>
+</section>
+<section id="solution-of-example-four">
+<h3>Solution of example four<a class="headerlink" href="#solution-of-example-four" title="Link to this heading">#</a></h3>
+<p>First, label the voltage across the open circuit as v and assign reference polarities (arbitrarily) as shown in Figure below. Next write a KVL equation around the closed path that includes the open circuit.</p>
+<p><img alt="title" src="../../../_images/Figure_11.png" /></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(-v1 + v2 - v3 + v_{ac} + v4 - v5 = 0 \)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(v_{ac} = 12v\)</span></p>
+</div></blockquote>
+</section>
+<section id="example-5">
+<h3>Example 5<a class="headerlink" href="#example-5" title="Link to this heading">#</a></h3>
+<p>Calculate the voltage across open circuit shown in figure below</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">STYLE_IEC</span><span class="p">)</span>
+    <span class="n">v1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;v1=45v&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">r1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">v2=15v</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">(</span><span class="nb">open</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="s1">&#39;                V3&#39;</span><span class="p">])</span>
+    <span class="n">r3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">v7=30v</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">v1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span> 
+    <span class="n">v3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;v6=90v&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">([</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;$v5=60v$&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">scaley</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">up</span><span class="p">()</span> 
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;v4=75v&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="p">()</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">(</span><span class="nb">open</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/5bc7311ee16e822141ba38c60123940e1a6098ea436d3867c8db31495e60a459.svg" src="../../../_images/5bc7311ee16e822141ba38c60123940e1a6098ea436d3867c8db31495e60a459.svg" />
+</div>
+</div>
+</section>
+<section id="solution-of-example-five">
+<h3>Solution of example five<a class="headerlink" href="#solution-of-example-five" title="Link to this heading">#</a></h3>
+<p>By writing the kvl equation clockwise, we can get the required voltage :</p>
+<blockquote>
+<div><p>-v1 + v2 + v3 - v4 - v5 - v6 - v7 = 0</p>
+</div></blockquote>
+<blockquote>
+<div><p>-45 + 15 + v3 - 75 - 60 - 90 - 30 = 0</p>
+</div></blockquote>
+<blockquote>
+<div><p>v3 = 285v</p>
+</div></blockquote>
+</section>
+</section>
+<section id="id1">
+<h2>Kirchhoff’s Current Law (KCL)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+</section>
+<section id="current">
+<h2>Current<a class="headerlink" href="#current" title="Link to this heading">#</a></h2>
+<p>The current present in a discrete path, such as a metallic wire, has both a numerical value and a direction associated with it; it is a measure of the rate at which charge flows through a circuit in a specified direction</p>
+<p>Current is symbolized by I or i, and so</p>
+<div class="math notranslate nohighlight">
+\[ I = \frac{\Delta Q}{\Delta T} $$ or $$  i = \frac{dq}{dt} \]</div>
+<p>The charge transferred between time t0 and t may be expressed as a definite integral</p>
+<div class="math notranslate nohighlight">
+\[ \int_{q(t_0)}^{q(t)}  \, dq = \int_{t_0}^{t} i \, dt \]</div>
+<div class="math notranslate nohighlight">
+\[ q(t) = \int_{t_0}^{t} i \, dt + q(t_0) \]</div>
+</section>
+<section id="conservation-of-charge">
+<h2>Conservation of Charge<a class="headerlink" href="#conservation-of-charge" title="Link to this heading">#</a></h2>
+<p>The Conservation of Charge is a fundamental principle in physics and electrical engineering stating that the total electric charge in an isolated system remains constant over time. This law implies that charge can neither be created nor destroyed; it can only be transferred from one part of a system to another.</p>
+<p>This law states that throughout any process occurring within a system, the algebraic sum of the electric charges within the system does not change . Since currents involve flow of changes , Kirchhoff’s current low restates the charge conservation principle in terms of currents in a circuit.</p>
+</section>
+<section id="statement-of-kcl">
+<h2>statement of KCL<a class="headerlink" href="#statement-of-kcl" title="Link to this heading">#</a></h2>
+<p><strong>The algebraic sum of the currents at a node in an electric circuit is zero</strong><br />
+in other words<br />
+<strong>The total current entering a circuits junction is exactly equal to the total current leaving the same junction</strong></p>
+<ul class="simple">
+<li><p>The key terms in the statement of KCL are <strong>node</strong> and <strong>algebraic sum of the currents</strong></p></li>
+</ul>
+<section id="node">
+<h3>Node<a class="headerlink" href="#node" title="Link to this heading">#</a></h3>
+<p>The terminals of a branch in a circuit are called nodes, as shown in Figure below, and KCL applies to any node in a circuit. When many branches meet at a common node, a single node is often shown spread out in order to avoid clutter in the circuit diagram.</p>
+<p><img alt="title" src="../../../_images/Figure_13.png" /></p>
+</section>
+<section id="algebraic-sum-of-the-currents">
+<h3>Algebraic sum of the currents<a class="headerlink" href="#algebraic-sum-of-the-currents" title="Link to this heading">#</a></h3>
+<p>Consider the portion of a circuit shown in Figure below, with currents assigned to the branches, where some currents are entering and others are leaving the node. A distinction must be made between them by using appropriate algebraic signs and this leads to the “algebraic sum” referred to in the statement of KCL.</p>
+<p><img alt="title" src="../../../_images/Figure_14.png" /></p>
+</section>
+</section>
+<section id="writing-kcl-equation">
+<h2>Writing KCL equation<a class="headerlink" href="#writing-kcl-equation" title="Link to this heading">#</a></h2>
+<p>The following sign convention will be used in writing KCL equations.</p>
+<ul class="simple">
+<li><p>A current leaving a node is written with a positive sign</p></li>
+<li><p>A current entering a node is written with a negative sign</p></li>
+</ul>
+<p>The algebraic sum of the currents at a node, obtained by using the above convention, is then equated to zero.</p>
+<section id="example-6">
+<h3>Example 6<a class="headerlink" href="#example-6" title="Link to this heading">#</a></h3>
+<p>Write a KCL equation for each node in the circuit of Figure below</p>
+<p><img alt="title" src="../../../_images/Figure_15.png" /></p>
+</section>
+<section id="solution-of-example-six">
+<h3>Solution of example six<a class="headerlink" href="#solution-of-example-six" title="Link to this heading">#</a></h3>
+<p>Node 1:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(i_2 + i_1 + i_3 = 0\)</span></p>
+</div></blockquote>
+<p>Node 2:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(-i_1 + i_4 - i_5 = 0\)</span></p>
+</div></blockquote>
+<p>Node 3:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(i_5 - i_6 - i_3 = 0\)</span></p>
+</div></blockquote>
+<p>Node 4:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(-i_2 - i_4 + i_6 = 0\)</span></p>
+</div></blockquote>
+</section>
+<section id="example-7">
+<h3>Example 7<a class="headerlink" href="#example-7" title="Link to this heading">#</a></h3>
+<p>Calculate the current through the short circuit points A and B in the circuit of Figure below</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw.elements</span> <span class="k">as</span> <span class="nn">elm</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">STYLE_IEC</span><span class="p">)</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">r1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">CurrentLabel</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$i_1=7.5A$&#39;</span><span class="p">)</span>
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">CurrentLabel</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$i_</span><span class="si">{sc}</span><span class="s1">$&#39;</span><span class="p">)</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">i1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceI</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">l1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">r3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">i1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">CurrentLabel</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">r3</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$i_4=16A$&#39;</span><span class="p">)</span>
+    <span class="n">i2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">SourceI</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$i_3=2A$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">endpoints</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">r2</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="n">r4</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">scalex</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">CurrentLabel</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ofst</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">r4</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$i_2=4A$&#39;</span><span class="p">)</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/0f380c3b17ad2fc0c1ca2f7c1f8d0b3b9007f9415e199bfc22463d7107254a24.svg" src="../../../_images/0f380c3b17ad2fc0c1ca2f7c1f8d0b3b9007f9415e199bfc22463d7107254a24.svg" />
+</div>
+</div>
+</section>
+<section id="solution-of-example-seven">
+<h3>Solution of example seven<a class="headerlink" href="#solution-of-example-seven" title="Link to this heading">#</a></h3>
+<p>The KCL equation at node A :</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(-i_1 - i_2 - i_3 + i_{sc} + i_4 = 0\)</span></p>
+</div></blockquote>
+<p>Which leads to :</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(i_{sc} = -2.5 A\)</span></p>
+</div></blockquote>
+</section>
+<section id="determining-the-direction-of-currents">
+<h3>Determining the direction of currents<a class="headerlink" href="#determining-the-direction-of-currents" title="Link to this heading">#</a></h3>
+<p>Since the actual directions of currents in the branches of a circuit are not always known beforehand, they are usually assigned arbitrarily. If the assigned direction matches the actual direction in a branch, then the answer will be a positive current. If the assigned direction does not match the actual direction, then the answer will be a negative current, as in the previous example. It is not necessary, however, to go back and reassign current directions in such cases; the answer is left as a negative value.</p>
+</section>
+</section>
+<section id="solving-problems-using-kvl-kcl">
+<h2>Solving problems using KVL &amp; KCL<a class="headerlink" href="#solving-problems-using-kvl-kcl" title="Link to this heading">#</a></h2>
+</section>
+<section id="example-8">
+<h2>Example 8<a class="headerlink" href="#example-8" title="Link to this heading">#</a></h2>
+<p>Determine <span class="math notranslate nohighlight">\(v_x\)</span> in the circuit of Figure below</p>
+<p><img alt="title" src="../../../_images/Figure_17.png" /></p>
+</section>
+<section id="solution-of-example-eight">
+<h2>Solution of example eight<a class="headerlink" href="#solution-of-example-eight" title="Link to this heading">#</a></h2>
+<p>We begin by labeling voltages and currents on the rest of the elements in the circuit. Note that <span class="math notranslate nohighlight">\(V_x\)</span> appears across the <span class="math notranslate nohighlight">\(2\Omega\)</span> resistor and the source <span class="math notranslate nohighlight">\(i_x\)</span> as well.</p>
+<p><img alt="title" src="../../../_images/Figure_18.png" /></p>
+<p>If we can obtain the current through the <span class="math notranslate nohighlight">\(2\Omega\)</span> resistor, Ohm’s law will yield <span class="math notranslate nohighlight">\(V_x\)</span> . Writing the appropriate KCL equation, we see that :</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(i_2 = i_4 + i_x\)</span></p>
+</div></blockquote>
+<p>Since we were given the current flowing from the 60 V source, perhaps we should consider starting from that side of the circuit. Instead of finding <span class="math notranslate nohighlight">\(V_x\)</span> using <span class="math notranslate nohighlight">\(i_2\)</span>, it might be possible to find <span class="math notranslate nohighlight">\(V_x\)</span> directly using KVL. We can write the following KVL equations:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(-60 + V_8 - V_{10} = 0\)</span></p>
+</div></blockquote>
+<p>and</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(-V_{10} + V_4 + V_x = 0\)</span></p>
+</div></blockquote>
+<p>We now have two equations in four unknowns. we can calculate that <span class="math notranslate nohighlight">\(V_8 = 5 \times 8 = 40\Omega\)</span> through Ohm’s law. Thus :</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(V_{10} = 0 + 60 - 40 = 20V\)</span></p>
+</div></blockquote>
+<p>So we can calculate the <span class="math notranslate nohighlight">\(V_x\)</span> :</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(V_x = 20 - V_4\)</span></p>
+</div></blockquote>
+<p>If we can determine v4, the problem is solved. The best route to finding a numerical value for the voltage <span class="math notranslate nohighlight">\(V_4\)</span> in this case is to employ Ohm’s law, which requires a value for <span class="math notranslate nohighlight">\(i_4\)</span>. From KCL, we see that :</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(i_4 = 5 - i_{10} = 5 - \frac{V_{10}}{10} = 5 - \frac{20}{10} = 3\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(V_4 = 3 \times 4 = 12V\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(V_x = 20 - 12 = 8V\)</span></p>
+</div></blockquote>
+</section>
+<section id="example-9">
+<h2>Example 9<a class="headerlink" href="#example-9" title="Link to this heading">#</a></h2>
+<p>Find the current flowing in the 40Ω Resistor :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">elm</span>
+
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d1</span><span class="p">:</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="n">elm</span><span class="o">.</span><span class="n">STYLE_IEC</span><span class="p">)</span>
+    <span class="n">b1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">BatteryCell</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$10V$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">up</span><span class="p">()</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="n">r1</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$10\Omega$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$20\Omega$&#39;</span><span class="p">)</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">BatteryCell</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$20V$&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">elm</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">tox</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">r3</span> <span class="o">=</span> <span class="n">elm</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;$40\Omega$&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:7: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:9: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:12: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:7: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:9: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:12: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_10960\2948437889.py:7: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  r1 = elm.Resistor().label(&#39;$10\Omega$&#39;).right()
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_10960\2948437889.py:9: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  r2 = elm.Resistor().label(&#39;$20\Omega$&#39;)
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_10960\2948437889.py:12: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  r3 = elm.Resistor().label(&#39;$40\Omega$&#39;).at(r1.end).down()
+</pre></div>
+</div>
+<img alt="../../../_images/dac3690c408a73c7069f7921081f6876f7b241fd4a2a942ceefe2138c5933332.svg" src="../../../_images/dac3690c408a73c7069f7921081f6876f7b241fd4a2a942ceefe2138c5933332.svg" />
+</div>
+</div>
+</section>
+<section id="solution-of-example-nine">
+<h2>Solution of example nine<a class="headerlink" href="#solution-of-example-nine" title="Link to this heading">#</a></h2>
+<p>First, using kvl, we determine the branch current with the element, then we write the kvl equation by selecting the paths :</p>
+<p><img alt="title" src="../../../_images/Figure_19.png" /></p>
+<ul class="simple">
+<li><p>path 1 :</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(-10 + 40(I_s - i_1) - 10i_1 = 0\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>path 2 :</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(20 - 20I_s - 40(I_s - i_1) = 0\)</span></p>
+</div></blockquote>
+<p>If we simplify the equations, we get two equations with two unknowns :</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(60I_s - 40i_1 = 20\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(40I_s + 30i_1 = 10\)</span></p>
+</div></blockquote>
+<p>By solving the quadratic equation:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(i_1 = \frac{1}{7}\)</span>  and  <span class="math notranslate nohighlight">\(I_s = \frac{3}{7}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(I_s - i_1 = \frac{2}{7} = 0.285\)</span></p>
+</div></blockquote>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>In this project, we first referred to the basic concepts of voltage and electric current in a circuit. Then, we discussed the laws of conservation of energy and electric charge, and realized that the work done in transferring an electric charge in a closed loop is zero, and the number of electric charges in a closed system always remains constant. After that, we introduced Kirchhoff’s laws, which are derived from the previous two laws, stating that the algebraic sum of voltages in a closed loop equals zero and the algebraic sum of currents at a junction equals zero too.<br />
+Finally, by understanding these two laws, we can easily analyze electrical circuits.</p>
+</section>
+<section id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.electronics-tutorials.ws/dccircuits/kirchhoffs-current-law.html">https://www.electronics-tutorials.ws/dccircuits/kirchhoffs-current-law.html</a></p></li>
+<li><p><a class="reference external" href="https://www.electronics-tutorials.ws/dccircuits/kirchhoffs-voltage-law.html">https://www.electronics-tutorials.ws/dccircuits/kirchhoffs-voltage-law.html</a></p></li>
+<li><p><a class="reference external" href="https://www.electronics-tutorials.ws/dccircuits/dcp_4.html">https://www.electronics-tutorials.ws/dccircuits/dcp_4.html</a></p></li>
+<li><p>ENGINEERING CIRCUIT ANALYSIS(William H. Hayt, Jr. (deceased))</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Circuit_Electronics\StudentEffort\KVL_and_KCL"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Supermesh/Supermesh.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Supermesh</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../../Contact_Me.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Contact Me</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kirchhoff-s-current-law-kvl">Kirchhoff’s Current Law (KVL)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage">Voltage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-energy">Conservation of Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-of-kvl">statement of KVL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closed-path">Closed path</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebraic-sum-of-voltages">Algebraic sum of voltages</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-kvl-equation">Writing KVL equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-one">Solution of example one</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-two">Solution of example two</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-three">Solution of example three</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-polarity-of-voltages-matter">Does polarity of voltages matter?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-circuit">Open Circuit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-four">Solution of example four</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5">Example 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-five">Solution of example five</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Kirchhoff’s Current Law (KCL)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#current">Current</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-charge">Conservation of Charge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-of-kcl">statement of KCL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#node">Node</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebraic-sum-of-the-currents">Algebraic sum of the currents</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-kcl-equation">Writing KCL equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6">Example 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-six">Solution of example six</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7">Example 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-seven">Solution of example seven</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-the-direction-of-currents">Determining the direction of currents</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-problems-using-kvl-kcl">Solving problems using KVL &amp; KCL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8">Example 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-eight">Solution of example eight</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-9">Example 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-example-nine">Solution of example nine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr.Hadi Sadoghi Yazdi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024 Pattern Recognition Lab.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -55,7 +55,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -201,6 +201,7 @@
 <li class="toctree-l1"><a class="reference internal" href="StudentEffort/Sensitivity_analysis1.html">Sensitivity analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="StudentEffort/WhatBias/bias1.html"><strong>Bias:</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="StudentEffort/Supermesh/Supermesh.html">Supermesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StudentEffort/KVL_and_KCL/note%20book.html">KVL &amp; KCL</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
 <ul class="nav bd-sidenav">
@@ -459,7 +460,7 @@ Although machine learning algorithms are used in circuit design to reduce the ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0f3451b0f293fc4506987af30022e88ff451668801c75b3dd432ea793090afb9.svg" src="../_images/0f3451b0f293fc4506987af30022e88ff451668801c75b3dd432ea793090afb9.svg" />
+<img alt="../_images/a60a5079dc9afab557be0d5f011c1a76d1077c7726b11f02febd11cd167e183a.svg" src="../_images/a60a5079dc9afab557be0d5f011c1a76d1077c7726b11f02febd11cd167e183a.svg" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -514,7 +515,7 @@ Although machine learning algorithms are used in circuit design to reduce the ti
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6142f288761148dda66c9719b2b2a2ab789e5833d2e0365be3e4b7036af0bb6a.svg" src="../_images/6142f288761148dda66c9719b2b2a2ab789e5833d2e0365be3e4b7036af0bb6a.svg" />
+<img alt="../_images/33de4ccf6f3450605064bede0a73f059c3b14f616acc4bf88b74e392136304ad.svg" src="../_images/33de4ccf6f3450605064bede0a73f059c3b14f616acc4bf88b74e392136304ad.svg" />
 </div>
 </div>
 </section>
@@ -571,8 +572,10 @@ Although machine learning algorithms are used in circuit design to reduce the ti
 </section>
 <section id="pyspice-installation">
 <h2>PySpice Installation<a class="headerlink" href="#pyspice-installation" title="Link to this heading">#</a></h2>
-<p>pip3 install pyspice
-download ngspice-43_64.7z then add to windows path ngspice.exe</p>
+<p>1- pip3 install pyspice</p>
+<p>2- download ngspice-43_64.7z then add to windows path ngspice.exe</p>
+<p>3-pyspice-post-installation –install-ngspice-dll</p>
+<p>4-pyspice-post-installation –check-install</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PySpice.Spice.Simulation</span> <span class="k">as</span> <span class="nn">simulation</span>
@@ -641,108 +644,11 @@ download ngspice-43_64.7z then add to windows path ngspice.exe</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">CDefError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">30</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="k">for</span> <span class="n">voltage</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">3000</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="n">source</span><span class="o">.</span><span class="n">dc_value</span> <span class="o">=</span> <span class="n">voltage</span>
-<span class="ne">---&gt; </span><span class="mi">30</span>     <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">operating_point</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="c1">#analysis = simulator.transient(step_time=0.01 @ u_ms, end_time=50 @ u_ms)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\Netlist.py:1292,</span> in <span class="ni">Circuit.simulator</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1291</span> <span class="k">def</span> <span class="nf">simulator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1292</span>     <span class="k">return</span> <span class="n">CircuitSimulator</span><span class="o">.</span><span class="n">factory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\Simulation.py:1167,</span> in <span class="ni">CircuitSimulator.factory</span><span class="nt">(cls, circuit, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1164</span>         <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;parallel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">   </span><span class="mi">1166</span> <span class="k">if</span> <span class="n">sub_cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1167</span>     <span class="k">return</span> <span class="n">sub_cls</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1168</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1169</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown simulator type&#39;</span><span class="p">)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Simulation.py:99,</span> in <span class="ni">NgSpiceSharedCircuitSimulator.__init__</span><span class="nt">(self, circuit, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span> <span class="n">ngspice_shared</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ngspice_shared&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="k">if</span> <span class="n">ngspice_shared</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">99</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_ngspice_shared</span> <span class="o">=</span> <span class="n">NgSpiceShared</span><span class="o">.</span><span class="n">new_instance</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_ngspice_shared</span> <span class="o">=</span> <span class="n">ngspice_shared</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Shared.py:449,</span> in <span class="ni">NgSpiceShared.new_instance</span><span class="nt">(cls, ngspice_id, send_data, verbose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="bp">cls</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;New instance for id </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ngspice_id</span><span class="p">))</span>
-<span class="ne">--&gt; </span><span class="mi">449</span>     <span class="n">instance</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">ngspice_id</span><span class="o">=</span><span class="n">ngspice_id</span><span class="p">,</span> <span class="n">send_data</span><span class="o">=</span><span class="n">send_data</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span>     <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="n">ngspice_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">instance</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span>     <span class="k">return</span> <span class="n">instance</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Shared.py:479,</span> in <span class="ni">NgSpiceShared.__init__</span><span class="nt">(self, ngspice_id, send_data, verbose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">476</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extensions</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">478</span> <span class="bp">self</span><span class="o">.</span><span class="n">_library_path</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">--&gt; </span><span class="mi">479</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_library</span><span class="p">(</span><span class="n">verbose</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_ngspice</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">482</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_running</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Shared.py:533,</span> in <span class="ni">NgSpiceShared._load_library</span><span class="nt">(self, verbose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="n">api_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s1">&#39;api.h&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">api_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">533</span>     <span class="n">ffi</span><span class="o">.</span><span class="n">cdef</span><span class="p">(</span><span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Load library </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">library_path</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span> <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\api.py:112,</span> in <span class="ni">FFI.cdef</span><span class="nt">(self, csource, override, packed, pack)</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="k">def</span> <span class="nf">cdef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">csource</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">packed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pack</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Parse the given C source.  This registers all declared functions,</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span><span class="sd">     types, and global variables.  The functions and global variables can</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span><span class="sd">     then be accessed via either &#39;ffi.dlopen()&#39; or &#39;ffi.verify()&#39;.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="sd">     packed=True).</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">112</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_cdef</span><span class="p">(</span><span class="n">csource</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">,</span> <span class="n">packed</span><span class="o">=</span><span class="n">packed</span><span class="p">,</span> <span class="n">pack</span><span class="o">=</span><span class="n">pack</span><span class="p">)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\api.py:126,</span> in <span class="ni">FFI._cdef</span><span class="nt">(self, csource, override, **options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">124</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">125</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_cdef_version</span> <span class="o">=</span> <span class="nb">object</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">126</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">csource</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">127</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_cdefsources</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">csource</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span>     <span class="k">if</span> <span class="n">override</span><span class="p">:</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\cparser.py:390,</span> in <span class="ni">Parser.parse</span><span class="nt">(self, csource, override, packed, pack, dllexport)</span>
-<span class="g g-Whitespace">    </span><span class="mi">386</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">387</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_options</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;override&#39;</span><span class="p">:</span> <span class="n">override</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">388</span>                      <span class="s1">&#39;packed&#39;</span><span class="p">:</span> <span class="n">pack</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">389</span>                      <span class="s1">&#39;dllexport&#39;</span><span class="p">:</span> <span class="n">dllexport</span><span class="p">}</span>
-<span class="ne">--&gt; </span><span class="mi">390</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_internal_parse</span><span class="p">(</span><span class="n">csource</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">391</span> <span class="k">finally</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">392</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_options</span> <span class="o">=</span> <span class="n">prev_options</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\cparser.py:429,</span> in <span class="ni">Parser._internal_parse</span><span class="nt">(self, csource)</span>
-<span class="g g-Whitespace">    </span><span class="mi">427</span>         <span class="n">realtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_unknown_ptr_type</span><span class="p">(</span><span class="n">decl</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">428</span>     <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">429</span>         <span class="n">realtype</span><span class="p">,</span> <span class="n">quals</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_type_and_quals</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">430</span>             <span class="n">decl</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">decl</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">partial_length_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">431</span>             <span class="n">typedef_example</span><span class="o">=</span><span class="s2">&quot;*(</span><span class="si">%s</span><span class="s2"> *)0&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">decl</span><span class="o">.</span><span class="n">name</span><span class="p">,))</span>
-<span class="g g-Whitespace">    </span><span class="mi">432</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_declare</span><span class="p">(</span><span class="s1">&#39;typedef &#39;</span> <span class="o">+</span> <span class="n">decl</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">realtype</span><span class="p">,</span> <span class="n">quals</span><span class="o">=</span><span class="n">quals</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">433</span> <span class="k">elif</span> <span class="n">decl</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;Pragma&#39;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">434</span>     <span class="c1"># skip pragma, only in pycparser 2.15</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\cparser.py:683,</span> in <span class="ni">Parser._get_type_and_quals</span><span class="nt">(self, typenode, name, partial_length_ok, typedef_example)</span>
-<span class="g g-Whitespace">    </span><span class="mi">680</span> <span class="c1">#</span>
-<span class="g g-Whitespace">    </span><span class="mi">681</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">pycparser</span><span class="o">.</span><span class="n">c_ast</span><span class="o">.</span><span class="n">Struct</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">682</span>     <span class="c1"># &#39;struct foobar&#39;</span>
-<span class="ne">--&gt; </span><span class="mi">683</span>     <span class="n">tp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_struct_union_enum_type</span><span class="p">(</span><span class="s1">&#39;struct&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">684</span>     <span class="k">return</span> <span class="n">tp</span><span class="p">,</span> <span class="n">quals</span>
-<span class="g g-Whitespace">    </span><span class="mi">685</span> <span class="c1">#</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\cparser.py:830,</span> in <span class="ni">Parser._get_struct_union_enum_type</span><span class="nt">(self, kind, type, name, nested)</span>
-<span class="g g-Whitespace">    </span><span class="mi">828</span> <span class="c1">#</span>
-<span class="g g-Whitespace">    </span><span class="mi">829</span> <span class="k">if</span> <span class="n">tp</span><span class="o">.</span><span class="n">fldnames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">830</span>     <span class="k">raise</span> <span class="n">CDefError</span><span class="p">(</span><span class="s2">&quot;duplicate declaration of struct </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">831</span> <span class="n">fldnames</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">832</span> <span class="n">fldtypes</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="ne">CDefError</span>: &lt;cdef source string&gt;:7: duplicate declaration of struct ngcomplex
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Hadi\AppData\Local\Temp\ipykernel_7360\75300024.py:45: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  plt.legend()
 </pre></div>
 </div>
+<img alt="../_images/86ca293a3adb4116c95cbeef8ede483e049b851ab9c102c1164baded8e8f9eff.png" src="../_images/86ca293a3adb4116c95cbeef8ede483e049b851ab9c102c1164baded8e8f9eff.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -774,74 +680,11 @@ download ngspice-43_64.7z then add to windows path ngspice.exe</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">19</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="s1">&#39;input</span><span class="si">%u</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="n">i</span><span class="nd">@u_V</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">i</span><span class="nd">@u_kΩ</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">19</span> <span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">operating_point</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">node_A</span> <span class="o">=</span> <span class="n">analysis</span><span class="o">.</span><span class="n">A</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\Netlist.py:1292,</span> in <span class="ni">Circuit.simulator</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1291</span> <span class="k">def</span> <span class="nf">simulator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1292</span>     <span class="k">return</span> <span class="n">CircuitSimulator</span><span class="o">.</span><span class="n">factory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\Simulation.py:1167,</span> in <span class="ni">CircuitSimulator.factory</span><span class="nt">(cls, circuit, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1164</span>         <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;parallel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">   </span><span class="mi">1166</span> <span class="k">if</span> <span class="n">sub_cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1167</span>     <span class="k">return</span> <span class="n">sub_cls</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1168</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1169</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown simulator type&#39;</span><span class="p">)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Simulation.py:99,</span> in <span class="ni">NgSpiceSharedCircuitSimulator.__init__</span><span class="nt">(self, circuit, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span> <span class="n">ngspice_shared</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ngspice_shared&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="k">if</span> <span class="n">ngspice_shared</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">99</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_ngspice_shared</span> <span class="o">=</span> <span class="n">NgSpiceShared</span><span class="o">.</span><span class="n">new_instance</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_ngspice_shared</span> <span class="o">=</span> <span class="n">ngspice_shared</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Shared.py:449,</span> in <span class="ni">NgSpiceShared.new_instance</span><span class="nt">(cls, ngspice_id, send_data, verbose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="bp">cls</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;New instance for id </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ngspice_id</span><span class="p">))</span>
-<span class="ne">--&gt; </span><span class="mi">449</span>     <span class="n">instance</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">ngspice_id</span><span class="o">=</span><span class="n">ngspice_id</span><span class="p">,</span> <span class="n">send_data</span><span class="o">=</span><span class="n">send_data</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span>     <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="n">ngspice_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">instance</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span>     <span class="k">return</span> <span class="n">instance</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Shared.py:479,</span> in <span class="ni">NgSpiceShared.__init__</span><span class="nt">(self, ngspice_id, send_data, verbose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">476</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extensions</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">478</span> <span class="bp">self</span><span class="o">.</span><span class="n">_library_path</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">--&gt; </span><span class="mi">479</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_library</span><span class="p">(</span><span class="n">verbose</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_ngspice</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">482</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_running</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Shared.py:539,</span> in <span class="ni">NgSpiceShared._load_library</span><span class="nt">(self, verbose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">537</span> <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">538</span>     <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">539</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ngspice_shared</span> <span class="o">=</span> <span class="n">ffi</span><span class="o">.</span><span class="n">dlopen</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">library_path</span><span class="p">)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\api.py:150,</span> in <span class="ni">FFI.dlopen</span><span class="nt">(self, name, flags)</span>
-<span class="g g-Whitespace">    </span><span class="mi">147</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;dlopen(name): name must be a file name, None, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">148</span>                     <span class="s2">&quot;or an already-opened &#39;void *&#39; handle&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">149</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">150</span>     <span class="n">lib</span><span class="p">,</span> <span class="n">function_cache</span> <span class="o">=</span> <span class="n">_make_ffi_library</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_function_caches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">function_cache</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_libraries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lib</span><span class="p">)</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\api.py:834,</span> in <span class="ni">_make_ffi_library</span><span class="nt">(ffi, libname, flags)</span>
-<span class="g g-Whitespace">    </span><span class="mi">832</span> <span class="k">def</span> <span class="nf">_make_ffi_library</span><span class="p">(</span><span class="n">ffi</span><span class="p">,</span> <span class="n">libname</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">833</span>     <span class="n">backend</span> <span class="o">=</span> <span class="n">ffi</span><span class="o">.</span><span class="n">_backend</span>
-<span class="ne">--&gt; </span><span class="mi">834</span>     <span class="n">backendlib</span> <span class="o">=</span> <span class="n">_load_backend_lib</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">libname</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">835</span>     <span class="c1">#</span>
-<span class="g g-Whitespace">    </span><span class="mi">836</span>     <span class="k">def</span> <span class="nf">accessor_function</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-
-<span class="nn">File h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\cffi\api.py:829,</span> in <span class="ni">_load_backend_lib</span><span class="nt">(backend, name, flags)</span>
-<span class="g g-Whitespace">    </span><span class="mi">827</span>     <span class="k">if</span> <span class="n">first_error</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">828</span>         <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">.  Additionally, </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">first_error</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">829</span>     <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">830</span> <span class="k">return</span> <span class="n">backend</span><span class="o">.</span><span class="n">load_library</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
-
-<span class="ne">OSError</span>: cannot load library &#39;h:\HadiSadoghiYazdi\Circuit\Lib\site-packages\PySpice\Spice\NgSpice\Spice64_dll\dll-vs\ngspice.dll&#39;: error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called &#39;h:\\HadiSadoghiYazdi\\Circuit\\Lib\\site-packages\\PySpice\\Spice\\NgSpice\\Spice64_dll\\dll-vs\\ngspice.dll&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Node a:  1.64 V
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Hadi\AppData\Local\Temp\ipykernel_7360\1259790737.py:23: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  print(&#39;Node {}: {:5.2f} V&#39;.format(str(node_A), float(node_A)))
 </pre></div>
 </div>
 </div>
