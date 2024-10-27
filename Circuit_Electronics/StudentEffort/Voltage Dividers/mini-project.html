@@ -1,0 +1,1350 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Voltage Dividers &#8212; Dr.Hadi Sadoghi Yazdi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Circuit_Electronics/StudentEffort/Voltage Dividers/mini-project';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Contact Me" href="../../../Contact_Me.html" />
+    <link rel="prev" title="Active components" href="../Active%20component/diode.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../Introduction_CircuitElectronics.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-light" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
+    <img src="../../../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-dark pst-js-only" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../Introduction_CircuitElectronics.html">
+                    Introduction to Circuit and Electronics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections of Circuit and Electronics course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../BasicElements.html">Basic component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KVL_KCL.html">Voltage , Current</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NodalMeshAnalysis.html">Basic Nodal and Mesh Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../RC_RL_RLC.html">R-C, R-L circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Diode_chapter.html">Diode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DiodeApplication.html">Diode Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../BJT1.html">Bipolar junction transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../FET.html">Field Effect Transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../OpAmp.html">Operational Amplifier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching assistant</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_Installation_Manual.html">PySpice Installation Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_circuit_example1.html">Example 1: RESISTIVE DIVIDER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_circuit_example2.html">Example 2: DIODE CIRCUIT</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Students effort</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../DiodeCharacteristicCurve.html">Diode Characteristic Curve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SchemdrawGuide1.html">Schemdraw Guide book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../independentcurrentandvoltagesources/miniProject.html">Independent current/voltage sources</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../AveragePower.html"><strong>Average power</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassiveComponents/Passive%20Components.html">Passive Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Linearization/LinearizationProject.html"><strong>Linear approximation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../batteryModel/battery_model.html">Battery Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sensitivity_analysis1.html">Sensitivity analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../WhatBias/bias1.html"><strong>Bias:</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Supermesh/Supermesh.html">Supermesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KVL_and_KCL/note%20book.html">KVL &amp; KCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../R-2R%20DAC/R-2R%20DAC.html">R-2R DAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Active%20component/diode.html">Active components</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Voltage Dividers</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Contact_Me.html">Contact Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../About_Me.html">About Me</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git/issues/new?title=Issue%20on%20page%20%2FCircuit_Electronics/StudentEffort/Voltage Dividers/mini-project.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/Circuit_Electronics/StudentEffort/Voltage Dividers/mini-project.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Voltage Dividers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Voltage Dividers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Layout :</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1- Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-voltage-divider">2- Ideal Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-dividers-on-a-logarithmic-scale">3- Voltage Dividers on a Logarithmic Scale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-tap-voltage-divider">4- Multiple-Tap Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thevenin-equivalent-of-the-voltage-divider">5- Thevenin Equivalent of the Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-thevenin-equivalents-are-useful-as-voltage-dividers">6- Meta: Thevenin Equivalents are Useful as Voltage Dividers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loaded-voltage-dividers">7- Loaded Voltage Dividers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-resistance-intuition">8- Parallel Resistance Intuition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-divider-approximations">9- Voltage Divider Approximations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-for-an-unknown-resistance">10- Solving for an Unknown Resistance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">11- Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prohibited-uses">12- Prohibited uses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">13- Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">14- References</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-volatage-divider">Ideal Volatage Divider</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-voltage-dividers-analyzing-r1-r2-and-vout">Understanding Voltage Dividers: Analyzing <strong>R1</strong>, <strong>R2</strong>, and <strong>Vout</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-of-voltage-dividers">Equation of voltage dividers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplifying-the-equation-of-voltage-dividers">Simplifying the equation of voltage dividers</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Voltage Dividers on a Logarithmic Scale</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-with-pyspice">Analysis with PySpice</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Multiple-Tap Voltage Divider</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Analysis with PySpice</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Thevenin Equivalent of the Voltage Divider</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Meta: Thevenin Equivalents are Useful as Voltage Dividers</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#original-voltage-divider">Original Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Analysis with PySpice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thevenin-equivalent-of-voltage-divider">Thevenin Equivalent of Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Analysis with PySpice</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Parallel Resistance Intuition</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-mode">The first Mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-mode">The second Mode</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Voltage Divider Approximations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Solving for an Unknown Resistance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Applications</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiometers">Potentiometers</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Prohibited uses</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Conclusion</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">References</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="voltage-dividers">
+<h1>Voltage Dividers<a class="headerlink" href="#voltage-dividers" title="Link to this heading">#</a></h1>
+<p>Author : Mahdy Albaji</p>
+<p>contact : <a class="reference external" href="mailto:mahdyalbajieng&#37;&#52;&#48;gmail&#46;com">mahdyalbajieng<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="layout">
+<h1>Layout :<a class="headerlink" href="#layout" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>1- Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+</section>
+<section id="ideal-voltage-divider">
+<h2>2- Ideal Voltage Divider<a class="headerlink" href="#ideal-voltage-divider" title="Link to this heading">#</a></h2>
+</section>
+<section id="voltage-dividers-on-a-logarithmic-scale">
+<h2>3- Voltage Dividers on a Logarithmic Scale<a class="headerlink" href="#voltage-dividers-on-a-logarithmic-scale" title="Link to this heading">#</a></h2>
+</section>
+<section id="multiple-tap-voltage-divider">
+<h2>4- Multiple-Tap Voltage Divider<a class="headerlink" href="#multiple-tap-voltage-divider" title="Link to this heading">#</a></h2>
+</section>
+<section id="thevenin-equivalent-of-the-voltage-divider">
+<h2>5- Thevenin Equivalent of the Voltage Divider<a class="headerlink" href="#thevenin-equivalent-of-the-voltage-divider" title="Link to this heading">#</a></h2>
+</section>
+<section id="meta-thevenin-equivalents-are-useful-as-voltage-dividers">
+<h2>6- Meta: Thevenin Equivalents are Useful as Voltage Dividers<a class="headerlink" href="#meta-thevenin-equivalents-are-useful-as-voltage-dividers" title="Link to this heading">#</a></h2>
+</section>
+<section id="loaded-voltage-dividers">
+<h2>7- Loaded Voltage Dividers<a class="headerlink" href="#loaded-voltage-dividers" title="Link to this heading">#</a></h2>
+</section>
+<section id="parallel-resistance-intuition">
+<h2>8- Parallel Resistance Intuition<a class="headerlink" href="#parallel-resistance-intuition" title="Link to this heading">#</a></h2>
+</section>
+<section id="voltage-divider-approximations">
+<h2>9- Voltage Divider Approximations<a class="headerlink" href="#voltage-divider-approximations" title="Link to this heading">#</a></h2>
+</section>
+<section id="solving-for-an-unknown-resistance">
+<h2>10- Solving for an Unknown Resistance<a class="headerlink" href="#solving-for-an-unknown-resistance" title="Link to this heading">#</a></h2>
+</section>
+<section id="applications">
+<h2>11- Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
+</section>
+<section id="prohibited-uses">
+<h2>12- Prohibited uses<a class="headerlink" href="#prohibited-uses" title="Link to this heading">#</a></h2>
+</section>
+<section id="conclusion">
+<h2>13- Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+</section>
+<section id="references">
+<h2>14- References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Introduction<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p><strong>A voltage divider</strong> is a passive linear circuit that produces an output voltage (Vout) that is a fraction of
+its input voltage (Vin). It usually consists of two resistors in series, which allows it to convert a higher voltage to a lower <a class="reference external" href="http://resistance.in">resistance.in</a> fact Voltage dividers are just particular combinations of resistors in series when connected to ideal voltage and current sources.</p>
+<ul class="simple">
+<li><p>reminder : The voltage of two parallel resistors is equal.</p></li>
+</ul>
+<p><strong>Voltage Dividers</strong> are often a useful shortcut when analyzing larger circuits. (Since more complex subcircuits can be approximated as a resistor, the terminology and techniques here can be applied more broadly beyond resistors.) We start with the ideal case, look at the non-ideal case, and then time the approximations. We show They are useful in design and analysis.</p>
+<p><img alt="title" src="../../../_images/Figure_1.jpg" /></p>
+<ul class="simple">
+<li><p>Figure(1): Voltage Divider Module for Arduino</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ideal-volatage-divider">
+<h1>Ideal Volatage Divider<a class="headerlink" href="#ideal-volatage-divider" title="Link to this heading">#</a></h1>
+<p>There are two important parts to voltage dividers: <strong>the circuit</strong> and <strong>the circuit equation</strong></p>
+<p>A voltage divider involves applying a voltage source to two resistors in series, you may have noticed,</p>
+<p>There are several different methods, but they are basically the same circuit.</p>
+<p><img alt="title" src="../../../_images/Figure_2.png" /></p>
+<ul class="simple">
+<li><p>Figure(2): Schematic examples of voltage dividers. Long and short resistors, same/different angles, etc.</p></li>
+</ul>
+<section id="understanding-voltage-dividers-analyzing-r1-r2-and-vout">
+<h2>Understanding Voltage Dividers: Analyzing <strong>R1</strong>, <strong>R2</strong>, and <strong>Vout</strong><a class="headerlink" href="#understanding-voltage-dividers-analyzing-r1-r2-and-vout" title="Link to this heading">#</a></h2>
+<p>We call the resistor closest to the input voltage <strong>R1</strong> and the resistor closest to the ground <strong>R2</strong>. We call the voltage drop in <strong>R2</strong> <strong>Vout</strong>, which creates the voltage divider of our circuit. It all depends on the circuit, <strong>Vout</strong> is our voltage divided by a fraction of the input voltage.</p>
+</section>
+<section id="equation-of-voltage-dividers">
+<h2>Equation of voltage dividers<a class="headerlink" href="#equation-of-voltage-dividers" title="Link to this heading">#</a></h2>
+<p>Consider the following circuit :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span> <span class="c1"># Here we connect a voltage source with two resistors in series</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;V-in&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">)</span> <span class="c1"># Display the input voltage</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;R1&quot;</span><span class="p">)</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="c1"># Display the output voltage</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/6c814399fd0c0ecef5d6904a325868843801527bf0e03cde3e0a117e889d1536.svg" src="../../../_images/6c814399fd0c0ecef5d6904a325868843801527bf0e03cde3e0a117e889d1536.svg" />
+</div>
+</div>
+<p>As mentioned, when a voltage is applied across the pair, the output voltage is a fraction of the input voltage.</p>
+<p>This can be seen by using <strong>Kirchhoff’s voltage law</strong> plus <strong>Ohm’s law</strong> to write the sum of the voltage differences around the loop :</p>
+<div class="math notranslate nohighlight">
+\[ -Vin + iR1 + iR2 = 0\]</div>
+<div class="math notranslate nohighlight">
+\[ Vin = i(R1+R2) \]</div>
+<p>\begin{equation}<br />
+\frac{Vin}{(R1+R2)} = i<br />
+\end{equation}
+$<span class="math notranslate nohighlight">\( Equation(1)\)</span>$</p>
+<p>Now we can write Ohm’s Law for R2:
+$<span class="math notranslate nohighlight">\( Vout = iR2 \)</span><span class="math notranslate nohighlight">\( 
+and substitute in our expression for the loop current **i** above:
+\begin{equation}  
+\ Vout = Vin(\frac{R2}{R1 + R2})
+\end{equation}
+\)</span><span class="math notranslate nohighlight">\( Equation(2)\)</span>$</p>
+<ul class="simple">
+<li><p>This relationship states that the output voltage is <strong>directly</strong> proportional to the input voltage and the ratio of <strong>R1</strong> and <strong>R2</strong>.</p></li>
+<li><p>This equation holds for any impedances like resistance, capacitance, inductance, etc.</p></li>
+</ul>
+<p>For convenience, we’ll pull out the fraction <em>f</em>, the <strong>voltage divider ratio</strong>:
+$<span class="math notranslate nohighlight">\( f = \frac{R2}{R1 + R2} \)</span><span class="math notranslate nohighlight">\(
+where \)</span><span class="math notranslate nohighlight">\(Vout=Vin⋅f\)</span>$
+Since resistances can’t be <strong>negative</strong>, <em>0≤f≤1</em></p>
+</section>
+<section id="simplifying-the-equation-of-voltage-dividers">
+<h2>Simplifying the equation of voltage dividers<a class="headerlink" href="#simplifying-the-equation-of-voltage-dividers" title="Link to this heading">#</a></h2>
+<p>When using voltage dividers, some general points should be taken into account.</p>
+<p>These simplifications make checking the voltage divider circuit a little easier.</p>
+<ol class="arabic simple">
+<li><p>In the relatively common special case of two equal resistances R1 = R2 , the ratio: $<span class="math notranslate nohighlight">\(f = \frac{1}{2}\)</span>$</p></li>
+</ol>
+<ul class="simple">
+<li><p>the output voltage is half of the input. Regardless of the resistor values, it is the same.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>If <strong>R1 &gt;&gt; R2</strong> : <em>f</em> –&gt; 0 : $<span class="math notranslate nohighlight">\(Vout ≈ Vin.\frac{0}{R1} = 0\)</span>$</p></li>
+</ol>
+<ul class="simple">
+<li><p>If <strong>R2</strong> is much smaller than <strong>R1</strong>, the output voltage will be small compared to the input.
+Most of the input voltage falls on <strong>R1</strong>.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>If <strong>R1 &lt;&lt; R2</strong> : <em>f</em> –&gt; 1 : $<span class="math notranslate nohighlight">\(Vout ≈ Vin.\frac{R2}{R2} = Vin \)</span>$</p></li>
+</ol>
+<ul class="simple">
+<li><p>If <strong>R2</strong> is much larger (at least an order of magnitude) than <strong>R1</strong>,
+the output voltage is too close to the input. There is a small voltage across <strong>R1</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Voltage Dividers on a Logarithmic Scale<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<p>Because a voltage divider outputs a multiplicatively-scaled version of the input signal,
+if we take the logarithm of both sides (in any base),
+we find that the voltage divider ratio turns into an additive constant:
+$<span class="math notranslate nohighlight">\( Vout = Vin.f\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( log(Vout) = log(Vin) + log(f)\)</span>$
+As <em>f≤1</em>,it will always be the case that <em>log(f)≤0</em>.</p>
+<p>Here’s an example with a function generator driving a voltage divider where we’re plotting the voltages on a log scale:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;10+5*SIN(2*PI)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;R1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$900\Omega$&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$100\Omega$&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="p">()</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">push</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/467879808320246b4c945a5f72c43b36c831d70f77a6e5f88a09a28d068fb85b.svg" src="../../../_images/467879808320246b4c945a5f72c43b36c831d70f77a6e5f88a09a28d068fb85b.svg" />
+</div>
+</div>
+<p>Notice how on a log scale, the two traces appear simply vertically shifted by a constant offset.</p>
+<p><img alt="title" src="../../../_images/Figure_3.png" /></p>
+<ul class="simple">
+<li><p>Figure(3): Understanding Vertical Shifts on a Logarithmic Scale</p></li>
+</ul>
+<section id="analysis-with-pyspice">
+<h2>Analysis with PySpice<a class="headerlink" href="#analysis-with-pyspice" title="Link to this heading">#</a></h2>
+<p>In the analysis of the above circuit, it can be seen that the analysis in the logarithmic scale provides comprehensible numbers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import pyspice and Math </span>
+<span class="kn">import</span> <span class="nn">PySpice.Logging.Logging</span> <span class="k">as</span> <span class="nn">Logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">Logging</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">math</span> 
+
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create a new circuit</span>
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="s1">&#39;Voltage Divider&#39;</span><span class="p">)</span>
+<span class="c1"># Initialization of source and resistors</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">900</span><span class="nd">@u_Ω</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">100</span><span class="nd">@u_Ω</span><span class="p">)</span>
+<span class="c1"># Create a simulator</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="c1"># Start Analysis</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">operating_point</span><span class="p">()</span>
+<span class="c1"># print</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Node </span><span class="si">{}</span><span class="s1">: </span><span class="si">{:5.2f}</span><span class="s1"> V&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">node</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Node 2:  1.00 V
+Node 1: 10.00 V
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\3422020804.py:21: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  print(&#39;Node {}: {:5.2f} V&#39;.format(str(node), float(node)))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id3">
+<h1>Multiple-Tap Voltage Divider<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
+<p>Voltage dividers can be made with N series resistors to have N−1
+nodes between them. As long as there’s no current entering or leaving the voltage divider chain, from the point of view of any particular tap, the resistors “above” can be combined into one, and the resistors “below” can be combined into another.</p>
+<p>This makes it easy to create a large number of voltage ratios given a single input. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+<span class="c1"># Create a Drawing</span>
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="c1"># Scaled down for better display</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># Initialization of source</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;12V&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># Initialization of Resistor</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;R5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$3k\Omega$&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;rgt&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R4&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$4k\Omega$&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;rgt&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R3&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$1.7k\Omega$&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;rgt&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$800\Omega$&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;rgt&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$2.5k\Omega$&#39;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">left</span><span class="p">()</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">push</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">tox</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/b1582ee8258d8929716aaa79fc5ffb769c3f20e23f26ff9eb7d44d259f7d8278.svg" src="../../../_images/b1582ee8258d8929716aaa79fc5ffb769c3f20e23f26ff9eb7d44d259f7d8278.svg" />
+</div>
+</div>
+<p>The schematic above uses five resistors in series. It turns a 12-volt input into four different outputs, which might be useful in a computer’s power supply.</p>
+<p>As it’s a series circuit, there’s only one current, and it’s easily determined by considering the resistors in series:
+$<span class="math notranslate nohighlight">\( i(total) = \frac{Vin}{ΣR} \)</span><span class="math notranslate nohighlight">\(
+Any one resistor’s voltage drop is then just:
+\)</span><span class="math notranslate nohighlight">\(Δv_n = R_n⋅i(total)\)</span><span class="math notranslate nohighlight">\(
+and the fraction of the total voltage drop across any one resistor \)</span>R_n<span class="math notranslate nohighlight">\( is:
+\)</span><span class="math notranslate nohighlight">\(f_n= \frac{Δv_n}{Vin}\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(f_n= \frac{R_n.i(total)}{Vin}\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(f_n= (\frac{R_n}{Vin})(\frac{Vin}{ΣR})\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(f_n= \frac{R_n}{ΣR}\)</span>$</p>
+<ul class="simple">
+<li><p>The fractional voltage drop across one resistor is just the ratio of its resistance to the sum of all resistances.</p></li>
+</ul>
+<p>For the five resistors in series above, we can calculate the voltages at each node (relative to ground) by looking at the ratio of resistance “below” that node (i.e. between that node and ground) to the total resistance of the chain. In this example with nodes and resistors as labeled above:
+$<span class="math notranslate nohighlight">\( v_A = (Δv_1) = Vin(f_1)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( v_B = (Δv_1 + Δv_2) = Vin(f_1+f_2)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( v_C = (Δv_1 + Δv_2 + Δv_3) = Vin(f_1+f_2+f_3)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( v_D = (Δv_1 + Δv_2 + Δv_3 + Δv_4) = Vin(f_1+f_2+f_3+f_4)\)</span>$</p>
+<ul class="simple">
+<li><p>When we work out the solution for the circuit above:
+$<span class="math notranslate nohighlight">\( v_A = Vin(\frac{R1}{R1+R2+R3+R4+R5}) = 2.5V\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( v_B = Vin(\frac{R1+R2}{R1+R2+R3+R4+R5}) = 3.3V\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( v_C = Vin(\frac{R1+R2+R3}{R1+R2+R3+R4+R5}) = 5.0V\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( v_D = Vin(\frac{R1+R2+R3+R4}{R1+R2+R3+R4+R5}) = 9.0V\)</span><span class="math notranslate nohighlight">\(
+As we’ll see later, this type of circuit is not very power efficient and would not be able to supply much current( \)</span>vin=12V<span class="math notranslate nohighlight">\( 
+and \)</span>∑R=12kΩ<span class="math notranslate nohighlight">\( so that \)</span>itotal=1mA$).
+However, it would be one potentially valid way to turn a single reference voltage into a number of other proportional reference voltages, which could then be used as part of a feedback loop in an efficient switching power supply design.</p></li>
+</ul>
+<section id="id4">
+<h2>Analysis with PySpice<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>To measure the accuracy of the obtained values, we analyze the above circuit using PySpice :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PySpice.Logging.Logging</span> <span class="k">as</span> <span class="nn">Logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">Logging</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+
+
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create a new circuit</span>
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="s1">&#39;Voltage Divider&#39;</span><span class="p">)</span>
+<span class="c1"># Initialization of source and resistors</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">12</span><span class="nd">@u_V</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">1.7</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.8</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mf">2.5</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="c1"># Create a simulator</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="c1"># Start Analysis</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">operating_point</span><span class="p">()</span>
+<span class="c1"># print</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Node </span><span class="si">{}</span><span class="s1">: </span><span class="si">{:5.2f}</span><span class="s1"> V&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">node</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Node 5:  2.50 V
+Node 4:  3.30 V
+Node 3:  5.00 V
+Node 2:  9.00 V
+Node 1: 12.00 V
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\3071606079.py:23: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  print(&#39;Node {}: {:5.2f} V&#39;.format(str(node), float(node)))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id5">
+<h1>Thevenin Equivalent of the Voltage Divider<a class="headerlink" href="#id5" title="Link to this heading">#</a></h1>
+<p>When we include a driving voltage source, we can include consider what happens when we look at the intermediate terminal of a voltage divider to find the Thevenin equivalent circuit :</p>
+<p><img alt="title" src="../../../_images/Figure_41.png" /></p>
+<ul class="simple">
+<li><p>Figure(4): the Thevenin equivalent ofthis voltage divider, looking into terminals A and B</p></li>
+</ul>
+<p>The open-circuit voltage is just the voltage we’d measure across these terminals with no external current flow, which is just the fractional input voltage we calculated above:
+$<span class="math notranslate nohighlight">\( Veq = Vout,unloaded = Vin(\frac{R2}{R1+R2}) \)</span>$
+Once we start to allow current to flow externally to and from these terminals, the measured voltage will change.
+As described in the Thevenin section, we can insert a test current source and set all independent sources to <strong>zero</strong> to calculate the <strong>equivalent resistance</strong>:</p>
+<p><img alt="title" src="../../../_images/Figure_51.png" /></p>
+<ul class="simple">
+<li><p>Figure(5): Thevenin Equivalent Circuit Test Current</p></li>
+</ul>
+<p>From here, it’s clear that the equivalent resistance is that of the two resistors in <strong>parallel</strong>:
+$<span class="math notranslate nohighlight">\( Req = (R_1 || R_2) = \frac{R_1 R_2}{R_1+R_2}\)</span>$
+Thus, <em>the two-resistor voltage divider</em> looks like <em>a one-resistor Thevenin equivalent circuit</em>:</p>
+<p><img alt="title" src="../../../_images/Figure_6.png" /></p>
+<ul class="simple">
+<li><p>Figure(6): Thevenin Equivalent Circuit</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id6">
+<h1>Meta: Thevenin Equivalents are Useful as Voltage Dividers<a class="headerlink" href="#id6" title="Link to this heading">#</a></h1>
+<p>We just transformed a two-resistor voltage divider into a one-resistor Thevenin equivalent circuit, which has identical current-voltage curve behavior with respect to some externally-connected load. But once we have a Thevenin equivalent circuit, often the most useful thing to do with it is to connect it to some external load. If that load is a resistor, then we’ve just formed a new voltage divider.</p>
+<p>For example, we could take the three-resistor circuit on the left and consider R1 and R2 to form a voltage divider, and then replace them with their Thevenin equivalent:</p>
+<section id="original-voltage-divider">
+<h2>Original Voltage Divider<a class="headerlink" href="#original-voltage-divider" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw</span> 
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+<span class="c1"># Create a Drawing</span>
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="c1"># Initialization of source and resistors</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;Vin</span><span class="se">\n</span><span class="s2">12V&quot;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;Original Voltage Divider&quot;</span><span class="p">)</span>
+    <span class="n">R1</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;R1</span><span class="se">\n</span><span class="s2">$3k\Omega$&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">push</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">R3</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;R3</span><span class="se">\n</span><span class="s2">$1.5k\Omega$&quot;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;bot&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">left</span><span class="p">()</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="n">R2</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;R2</span><span class="se">\n</span><span class="s2">$1k\Omega$&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">left</span><span class="p">()</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">push</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Ground</span><span class="p">()</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:9: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:12: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:15: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:9: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:12: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:15: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\3710455832.py:9: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  R1 = e.Resistor().label(&quot;R1\n$3k\Omega$&quot;).down().dot()
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\3710455832.py:12: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  R3 = e.Resistor().label(&quot;R3\n$1.5k\Omega$&quot;,loc= &#39;bot&#39;).down()
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\3710455832.py:15: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  R2 = e.Resistor().label(&quot;R2\n$1k\Omega$&quot;).down()
+</pre></div>
+</div>
+<img alt="../../../_images/17df3a78efaab653cd8605e0cc01ac2d310b47c7080fd849d9f26f011466f71d.svg" src="../../../_images/17df3a78efaab653cd8605e0cc01ac2d310b47c7080fd849d9f26f011466f71d.svg" />
+</div>
+</div>
+</section>
+<section id="id7">
+<h2>Analysis with PySpice<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>With Pyspice, the circuit is analyzed and the voltage of each node and the branch current are as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PySpice.Logging.Logging</span> <span class="k">as</span> <span class="nn">Logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">Logging</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">math</span> 
+
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create a new circuit</span>
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="s1">&#39;Voltage Divider&#39;</span><span class="p">)</span>
+<span class="c1"># Initialization of source and resistors</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span><span class="mi">12</span><span class="nd">@u_V</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span> <span class="mi">1</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span><span class="mf">1.5</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span> <span class="nd">@u_V</span><span class="p">)</span>
+<span class="c1"># Create a simulator</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="c1"># Start Analysis</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">operating_point</span><span class="p">()</span>
+<span class="c1"># print Voltage of Nodes</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Node </span><span class="si">{}</span><span class="s1">: </span><span class="si">{:5.2f}</span><span class="s1"> V&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">node</span><span class="p">)))</span>
+<span class="c1"># print Current of Branches</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Node </span><span class="si">{}</span><span class="s1">: </span><span class="si">{:5.2f}</span><span class="s1"> A&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">node</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Node 3:  2.00 V
+Node 2:  2.00 V
+Node 1: 12.00 V
+Node vinput: -0.00 A
+Node vtest:  0.00 A
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\4120531681.py:22: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  print(&#39;Node {}: {:5.2f} V&#39;.format(str(node), float(node)))
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\4120531681.py:25: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  print(&#39;Node {}: {:5.2f} A&#39;.format(str(node), float(node)))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="thevenin-equivalent-of-voltage-divider">
+<h2>Thevenin Equivalent of Voltage Divider<a class="headerlink" href="#thevenin-equivalent-of-voltage-divider" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import schemdraw</span>
+<span class="kn">import</span> <span class="nn">schemdraw</span> 
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+<span class="c1"># Create a new Drawing</span>
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="c1"># Initialization of source and resistors</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;Veq</span><span class="se">\n</span><span class="s2">3V&quot;</span><span class="p">)</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;Req</span><span class="se">\n</span><span class="s2">$750\Omega$&quot;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;bot&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">()</span>
+    <span class="n">R3</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;R3</span><span class="se">\n</span><span class="s2">$1.5k\Omega$&quot;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;bot&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">tox</span><span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:8: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:10: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:8: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+&lt;&gt;:10: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\2946394754.py:8: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  R = e.Resistor().label(&quot;Req\n$750\Omega$&quot;,loc=&#39;bot&#39;).right()
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\2946394754.py:10: SyntaxWarning: invalid escape sequence &#39;\O&#39;
+  R3 = e.Resistor().label(&quot;R3\n$1.5k\Omega$&quot;,loc= &#39;bot&#39;).down()
+</pre></div>
+</div>
+<img alt="../../../_images/c129428a3a8b3113d65d2b8a17a4b0901b4f35f822f3978c6b57aef02283cfc6.svg" src="../../../_images/c129428a3a8b3113d65d2b8a17a4b0901b4f35f822f3978c6b57aef02283cfc6.svg" />
+</div>
+</div>
+</section>
+<section id="id8">
+<h2>Analysis with PySpice<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>With Pyspice, the circuit is analyzed and the voltage of each node and the branch current are as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PySpice.Logging.Logging</span> <span class="k">as</span> <span class="nn">Logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">Logging</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+
+<span class="kn">from</span> <span class="nn">PySpice.Spice.Netlist</span> <span class="kn">import</span> <span class="n">Circuit</span>
+<span class="kn">from</span> <span class="nn">PySpice.Unit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create a new circuit</span>
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="s1">&#39;Voltage Divider&#39;</span><span class="p">)</span>
+<span class="c1"># Initialization of source and resistors</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span><span class="mi">3</span><span class="nd">@u_V</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="s1">&#39;eq&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">750</span><span class="nd">@u_Ω</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">R</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">circuit</span><span class="o">.</span><span class="n">gnd</span><span class="p">,</span><span class="mf">1.5</span><span class="nd">@u_kΩ</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">V</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span> <span class="nd">@u_V</span><span class="p">)</span>
+<span class="c1"># Create a simulator</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">simulator</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">nominal_temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="c1"># Start Analysis</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">operating_point</span><span class="p">()</span>
+<span class="c1"># print</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">analysis</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Node </span><span class="si">{}</span><span class="s1">: </span><span class="si">{:5.2f}</span><span class="s1"> V&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">node</span><span class="p">)))</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">analysis</span><span class="o">.</span><span class="n">branches</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Node </span><span class="si">{}</span><span class="s1">: </span><span class="si">{:5.2f}</span><span class="s1"> A&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">node</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Node 3:  2.00 V
+Node 2:  2.00 V
+Node 1:  3.00 V
+Node vinput: -0.00 A
+Node vtest:  0.00 A
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\3320399848.py:20: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  print(&#39;Node {}: {:5.2f} V&#39;.format(str(node), float(node)))
+C:\Users\Hadi\AppData\Local\Temp\ipykernel_17056\3320399848.py:22: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  print(&#39;Node {}: {:5.2f} A&#39;.format(str(node), float(node)))
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>By running these simulations, it is concluded that the current passing through R3 is the same in both cases
+Replacing a voltage divider by its Thevenin equivalent may itself form a new voltage divider, which can again be solved in the same way. This is a great problem solving technique.</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id9">
+<h1>Parallel Resistance Intuition<a class="headerlink" href="#id9" title="Link to this heading">#</a></h1>
+<p>What’s the intuition behind the load current in a loaded voltage divider causing a voltage drop proportional to the parallel resistance of R1 and R2, which (before considering the load) appear to be in series?</p>
+<ul class="simple">
+<li><p>A quick way to remember this is to consider the extreme cases and work backwards.
+Two modes are considered:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><strong><span class="math notranslate nohighlight">\(R_1 = 0\)</span></strong> or <strong><span class="math notranslate nohighlight">\(R_2 = 0\)</span></strong> (but not both at once)</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(R_1 = ∞\)</span></strong> or <strong><span class="math notranslate nohighlight">\(R_2 = ∞\)</span></strong> (but not both at once)</p></li>
+</ol>
+<section id="the-first-mode">
+<h2>The first Mode<a class="headerlink" href="#the-first-mode" title="Link to this heading">#</a></h2>
+<p>At one extreme, consider <strong><span class="math notranslate nohighlight">\(R_1=0\)</span></strong> or <strong><span class="math notranslate nohighlight">\(R_2=0\)</span></strong> (but not both at once). In this case, the output voltage won’t change at all with <strong><span class="math notranslate nohighlight">\(i_3\)</span></strong>. Zero resistance in parallel with a non-zero resistance is always zero equivalent resistance. In this extreme, the load is directly connected (with zero resistance) to one end of the voltage source.</p>
+<p>Here’s how the loaded voltage divider simplifies at the zero-resistance extreme:</p>
+<p><img alt="title" src="../../../_images/Figure_71.png" /></p>
+<ul class="simple">
+<li><p>Figure(7): Voltage Divider Parallel Resistance Intuition with <strong>Zero</strong> Resistance</p></li>
+</ul>
+</section>
+<section id="the-second-mode">
+<h2>The second Mode<a class="headerlink" href="#the-second-mode" title="Link to this heading">#</a></h2>
+<p>At the other extreme, consider <strong><span class="math notranslate nohighlight">\(R_1=∞\)</span></strong> or <strong><span class="math notranslate nohighlight">\(R_2=∞\)</span></strong>(but not both at once). In this case the voltage divider is basically disconnected at one end. Infinite resistance in parallel with a finite resistance is always equal to the finite resistance.</p>
+<ul class="simple">
+<li><p>(For parallel resistances, recall that the total resistance is always smaller than the smallest of the individual resistances. Or equivalently, the total conductance is always greater than the largest of the individual conductances.)</p></li>
+</ul>
+<p>Here’s how the loaded voltage divider simplifies at the infinite-resistance extreme:</p>
+<p><img alt="title" src="../../../_images/Figure_81.png" /></p>
+<ul class="simple">
+<li><p>Figure(8): Voltage Divider Parallel Resistance Intuition with <strong>Infinite</strong> Resistance</p></li>
+</ul>
+<blockquote>
+<div><p>The Dual Effect of Load Current on Current Distribution in Finite Resistances:</p>
+</div></blockquote>
+<p>What about a case in the middle, where both resistances are finite? One way to think about it is that a small increase in the load current <strong>i3</strong> has a <em>dual</em> effect: increasing i1and reducing <strong>i2</strong>. In fact, neither of the two currents <strong>i1</strong> or <strong>i2</strong> need to change by the fullmagnitude of the change in <strong>i3</strong>, because they literally split the difference (with opposite sign, but that’s just a matter of labeling currents):
+$<span class="math notranslate nohighlight">\(Δi_1 - Δi_2 = Δi_3\)</span><span class="math notranslate nohighlight">\(
+For example, if **\)</span>R_1=R_2<span class="math notranslate nohighlight">\(**, then they’ll split the difference equally, with **\)</span>Δi_1=\frac{1}{2}Δi_3<span class="math notranslate nohighlight">\(**, and **\)</span>Δi_2=-\frac{1}{2}Δi_3$**. Because the magnitude of the change in current through each resistor is smaller, its change in voltage is also smaller, simply due to Ohm’s Law.</p>
+<p>This illustration shows how the load current is split equally by both of the voltage divider’s resistors when R1 = R2 :</p>
+<p><img alt="title" src="../../../_images/Figure_91.png" /></p>
+<ul class="simple">
+<li><p>Figure(9): Voltage Divider with Equal Resistances Sharing Load Current</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id10">
+<h1>Voltage Divider Approximations<a class="headerlink" href="#id10" title="Link to this heading">#</a></h1>
+<p>In practice, essentially all real-world voltage dividers are loaded: something will be connected to the middle terminal so that the intermediate point is useful – or else we would have simply used a single resistor or none at all!</p>
+<p>However, as seen in the loaded voltage divider equation, the math for determining <strong>Vout</strong> becomes significantly more complicated once we introduce a load current <strong>i3</strong>. It’d be nice to know when it is and isn’t safe to approximate a voltage divider as being approximately unloaded.
+The answer comes from considering the additional voltage drop due to loading to be an approximation error term <strong>Verr</strong> :
+$<span class="math notranslate nohighlight">\(Vout = Vin(\frac{R_2}{R_1+R_2}) - i_3(\frac{R_1R_2}{R_1+R_2})\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(Vout = Vout,ideal + Verr\)</span><span class="math notranslate nohighlight">\(
+If we focus on only the error term:
+\)</span><span class="math notranslate nohighlight">\(Verr = -i_3(\frac{R_1R_2}{R_1+R_2})\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(Verr = -i3(R_1 || R_2)\)</span>$</p>
+<ul class="simple">
+<li><p>If we know the maximum load current magnitude <strong><span class="math notranslate nohighlight">\(|i3,max|\)</span></strong>, and we can decide the maximum voltage error <strong>|verr,max|</strong> we’re willing to tolerate, then we can put a bound on <strong>(R1||R2)</strong> :
+$<span class="math notranslate nohighlight">\(|i3,max|(R_1 || R_2) ≤ |Verr,max|\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\((R_1 || R_2) ≤ \frac{|Verr,max|}{|i3,max|}\)</span>$
+If our tolerable voltage error is small, the resistances will also have to be small. If our tolerable load current is large, this will also force the resistances to be small. Defining this in terms of maximum tolerances means that even if the actual load current varies, as long as it’s smaller than the maximum load current we designed for, we can be confident that our voltage divider will still be within our design bounds.</p></li>
+</ul>
+<p>This is incredibly useful in practice because it means that we don’t have to design our entire system at once. <strong>Approximations let us partition a large design problem into a series of smaller ones where we’re free to solve one part at a time</strong>.</p>
+<p>This has two benefits:</p>
+<ol class="arabic simple">
+<li><p>Faster design time. It’s often easier to solve two small subproblems than a single large one.</p></li>
+<li><p>More robust performance. The solution we reach by decomposing our system into modules with error bounds may be more tolerant of unintented component variance because it was already designed with calculated error bounds in mind. In contrast, an optimized-all-at-once solution may be surprisingly fragile when some component is 5% different from its desired value. (This fragility risk is especially prevalent once we start adding any nonlinear circuit elements, such as transistors and amplifiers.)</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id11">
+<h1>Solving for an Unknown Resistance<a class="headerlink" href="#id11" title="Link to this heading">#</a></h1>
+<p>One common use case for a voltage divider is for measuring an unknown resistance value. For example, we can use a fixed resistance value <strong><span class="math notranslate nohighlight">\(R_1\)</span></strong> and an unknown value <strong><span class="math notranslate nohighlight">\(R_2\)</span></strong> that we’d like to determine. (<strong><span class="math notranslate nohighlight">\(R_2\)</span></strong> might be a temperature-dependent or light-dependent resistor, for example.)In this case, we can measure the voltage divider’s output voltage <strong>Vout</strong>
+(using a multimeter or a analog-to-digital converter, for example), and express that as a fraction of the known applied voltage <strong>Vin</strong>. Then we’d solve the ideal voltage divider equation for the unknown resistance as follows:
+$<span class="math notranslate nohighlight">\(\frac{Vout}{Vin} = f = \frac{R_2}{R_1+R_2}\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(fR_1+fR_2 = R_2\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(fR_1=(1-f)R_2\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(R_2 = R_1(\frac{f}{1-f})\)</span><span class="math notranslate nohighlight">\(
+If we know **\)</span>R_1<span class="math notranslate nohighlight">\(**, and we can measure **f** , then calculating **\)</span>R_2$** is straightforward.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">schemdraw</span>
+<span class="kn">from</span> <span class="nn">schemdraw</span> <span class="kn">import</span> <span class="n">elements</span> <span class="k">as</span> <span class="n">e</span>
+<span class="k">with</span> <span class="n">schemdraw</span><span class="o">.</span><span class="n">Drawing</span><span class="p">()</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span> <span class="c1"># Here we connect a voltage source with two resistors in series</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">SourceV</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;5V&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">)</span> <span class="c1"># Display the input voltage</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Resistor</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;R1&quot;</span><span class="p">)</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">Dot</span><span class="p">()</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="c1"># Display the output voltage</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">ResistorVar</span><span class="p">()</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="s1">&#39;R2&#39;</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/c4bb2bad8119c18314833fad89fd932f077efeb5a294f3cf9965c893351102f7.svg" src="../../../_images/c4bb2bad8119c18314833fad89fd932f077efeb5a294f3cf9965c893351102f7.svg" />
+</div>
+</div>
+<p><img alt="title" src="../../../_images/Figure_10.png" />
+<img alt="title" src="../../../_images/Figure_111.png" /></p>
+<ul class="simple">
+<li><p>Figure(10,11): Measuring Unknown Resistance with Voltage Divider</p></li>
+</ul>
+<p>The DC Sweep varies R2. The plot is set to show the ratio <strong>f</strong> in the top plot, and then uses the equation above to back-calculate the value of <strong><span class="math notranslate nohighlight">\(R_2\)</span></strong> from the measured voltages.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id12">
+<h1>Applications<a class="headerlink" href="#id12" title="Link to this heading">#</a></h1>
+<p>Voltage dividers have various applications, some of which have been introduced, and are also among the most common circuits in electrical engineering. The numbers associated with them are distinctly different. However, only a limited number are presented here.</p>
+<section id="potentiometers">
+<h2>Potentiometers<a class="headerlink" href="#potentiometers" title="Link to this heading">#</a></h2>
+<p>A potentiometer is a variable resistor that can be used to make a voltage divider.</p>
+<p><img alt="title" src="../../../_images/Figure_12.png" /></p>
+<ul class="simple">
+<li><p>Figure(12): Potentiometer surface information: from top left, clockwise: a standard 10K trimmer potentiometer, two-axis joystick, soft potentiometer, sliding potentiometer, classic right angle, a board-fit trimmer potentiometer.</p></li>
+<li><p>Understanding the Functionality of a Potentiometer
+Inside the potentiometer is a resistor and a slider that divides the resistance into two parts and moves to adjust the ratio between the two parts of the resistance. Outside it is usually a tripod: two legs are connected to the end of the resistor, and the third connection is placed on the slider.</p></li>
+</ul>
+<p><img alt="title" src="../../../_images/Figure_131.png" /></p>
+<ul class="simple">
+<li><p>Figure(13): Your symbol ticks a potentiometer. Pin 1 and 3 are the ends of the resistor and pin 2 is connected to the slider.</p></li>
+<li><p>If the outputs of the pins are connected to a voltage source (one to ground and the other to Vin), the output (Vout) on the middle pin is the divided voltage. If you turn the potentiometer completely in one direction, the voltage can be zero, if you turn it in the other direction, the output will be equal to the input. If the slider is in the middle, the output voltage is half of the input voltage.</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id13">
+<h1>Prohibited uses<a class="headerlink" href="#id13" title="Link to this heading">#</a></h1>
+<p>As a tempting method a voltage divider may be used to step down the voltage, converting a 12V voltage source to 5V, voltage dividers should not be used as a load power supply.</p>
+<p>Any current required by the load must be supplied through R1. The current and voltage of R1 provide energy that is wasted as heat. If this power exceeds the resistor’s tolerance (typically between ⅛W and 1W), heat will cause a major problem, potentially melting the weak resistor…</p>
+<p>Basically, a voltage divider is not used as a voltage source for anything that requires a small amount of power.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id14">
+<h1>Conclusion<a class="headerlink" href="#id14" title="Link to this heading">#</a></h1>
+<p>Voltage dividers are straightforward and practical components in electronic circuits used to reduce voltage levels. They operate by connecting two resistors in series, and the output voltage across one of the resistors is directly related to the ratio of their values.</p>
+<p>In summary, voltage dividers offer a simple and efficient means to adjust voltage levels without the need for complex devices. However, it is essential to consider their limitations and appropriate applications. Among these limitations are the effects of external loads on the output voltage and the necessity for careful selection of resistor values. Ultimately, when employed with precision and understanding of their characteristics, voltage dividers can optimize performance and reduce costs in electronic circuit design.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id15">
+<h1>References<a class="headerlink" href="#id15" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://ultimateelectronicsbook.com/voltage-dividers">https://ultimateelectronicsbook.com/voltage-dividers</a></p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Voltage_divider">https://en.wikipedia.org/wiki/Voltage_divider</a></p>
+<p><a class="reference external" href="https://melec.ir/%D8%AA%D9%82%D8%B3%DB%8C%D9%85%E2%80%8C-%DA%A9%D9%86%D9%86%D8%AF%D9%87%E2%80%8C-%D9%87%D8%A7%DB%8C-%D9%88%D9%84%D8%AA%D8%A7%DA%98/">https://melec.ir/تقسیم‌-کننده‌-های-ولتاژ/</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Circuit_Electronics\StudentEffort\Voltage Dividers"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Active%20component/diode.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Active components</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../../Contact_Me.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Contact Me</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Voltage Dividers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Layout :</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1- Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-voltage-divider">2- Ideal Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-dividers-on-a-logarithmic-scale">3- Voltage Dividers on a Logarithmic Scale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-tap-voltage-divider">4- Multiple-Tap Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thevenin-equivalent-of-the-voltage-divider">5- Thevenin Equivalent of the Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-thevenin-equivalents-are-useful-as-voltage-dividers">6- Meta: Thevenin Equivalents are Useful as Voltage Dividers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loaded-voltage-dividers">7- Loaded Voltage Dividers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-resistance-intuition">8- Parallel Resistance Intuition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-divider-approximations">9- Voltage Divider Approximations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-for-an-unknown-resistance">10- Solving for an Unknown Resistance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">11- Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prohibited-uses">12- Prohibited uses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">13- Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">14- References</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-volatage-divider">Ideal Volatage Divider</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-voltage-dividers-analyzing-r1-r2-and-vout">Understanding Voltage Dividers: Analyzing <strong>R1</strong>, <strong>R2</strong>, and <strong>Vout</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-of-voltage-dividers">Equation of voltage dividers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplifying-the-equation-of-voltage-dividers">Simplifying the equation of voltage dividers</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Voltage Dividers on a Logarithmic Scale</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-with-pyspice">Analysis with PySpice</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Multiple-Tap Voltage Divider</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Analysis with PySpice</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Thevenin Equivalent of the Voltage Divider</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Meta: Thevenin Equivalents are Useful as Voltage Dividers</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#original-voltage-divider">Original Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Analysis with PySpice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thevenin-equivalent-of-voltage-divider">Thevenin Equivalent of Voltage Divider</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Analysis with PySpice</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Parallel Resistance Intuition</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-mode">The first Mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-mode">The second Mode</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Voltage Divider Approximations</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Solving for an Unknown Resistance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Applications</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiometers">Potentiometers</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Prohibited uses</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Conclusion</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">References</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr.Hadi Sadoghi Yazdi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024 Pattern Recognition Lab.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
