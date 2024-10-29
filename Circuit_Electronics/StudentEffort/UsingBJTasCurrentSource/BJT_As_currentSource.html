@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Using The BJT as Current Source &#8212; Dr.Hadi Sadoghi Yazdi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Circuit_Electronics/StudentEffort/UsingBJTasCurrentSource/BJT_As_currentSource';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../Introduction_CircuitElectronics.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-light" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
+    <img src="../../../_static/Hadi_Sadoghi_Yazdi.png" class="logo__image only-dark pst-js-only" alt="Dr.Hadi Sadoghi Yazdi - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../Introduction_CircuitElectronics.html">
+                    Introduction to Circuit and Electronics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections of Circuit and Electronics course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../BasicElements.html">Basic component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../KVL_KCL.html">Voltage , Current</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NodalMeshAnalysis.html">Basic Nodal and Mesh Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../RC_RL_RLC.html">R-C, R-L circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Diode_chapter.html">Diode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DiodeApplication.html">Diode Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../BJT1.html">Bipolar junction transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../FET.html">Field Effect Transistor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../OpAmp.html">Operational Amplifier</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching assistant</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_Installation_Manual.html">PySpice Installation Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_circuit_example1.html">Example 1: RESISTIVE DIVIDER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PySpice_circuit_example2.html">Example 2: DIODE CIRCUIT</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Students effort</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../DiodeCharacteristicCurve.html">Diode Characteristic Curve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SchemdrawGuide1.html">Schemdraw Guide book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../independentcurrentandvoltagesources/miniProject.html">Independent current/voltage sources</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../AveragePower.html"><strong>Average power</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassiveComponents/Passive%20Components.html">Passive Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Linearization/LinearizationProject.html"><strong>Linear approximation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../batteryModel/battery_model.html">Battery Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sensitivity_analysis1.html">Sensitivity analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../WhatBias/bias1.html"><strong>Bias:</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Supermesh/Supermesh.html">Supermesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../KVL_and_KCL/note%20book.html">KVL &amp; KCL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../R-2R%20DAC/R-2R%20DAC.html">R-2R DAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Active%20component/diode.html">Active components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Voltage%20Dividers/mini-project.html">Voltage Dividers</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contact</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Contact_Me.html">Contact Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../About_Me.html">About Me</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Student Effort1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://circuitelectronics.github.io/StudentEffort/Introduction_StudentEffort.html">My external link</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/h-sadoghi/dr-sadoghi.git/issues/new?title=Issue%20on%20page%20%2FCircuit_Electronics/StudentEffort/UsingBJTasCurrentSource/BJT_As_currentSource.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/Circuit_Electronics/StudentEffort/UsingBJTasCurrentSource/BJT_As_currentSource.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Using The BJT as Current Source</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-development-of-current-sources">Historical Development of Current Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-when-using-bjts-for-creating-precision-current-sources">Requirements when using BJTs for creating precision current sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-and-configurations-of-bjts-as-current-sources">Challenges and Configurations of BJTs as Current Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-two-transistor-current-sources-npn-and-pnp-configurations">Simplified Two-Transistor Current Sources: NPN and PNP Configurations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#design-of-a-current-sources">Design of a Current Sources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="using-the-bjt-as-current-source">
+<h1>Using The BJT as Current Source<a class="headerlink" href="#using-the-bjt-as-current-source" title="Link to this heading">#</a></h1>
+<p>Author : Negar Bahrampour<br />
+Contact : <a class="reference external" href="mailto:negarbahram03&#37;&#52;&#48;gmail&#46;com">negarbahram03<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>This project examines the development of bipolar junction transistors (BJTs) as current sources, highlighting advancements from vacuum tubes to silicon technology. It focuses on achieving precision through transistor matching, thermal stability, and reliable voltage supplies, while also discussing key configurations like current mirrors and their limitations.</p>
+</section>
+<section id="historical-development-of-current-sources">
+<h2>Historical Development of Current Sources<a class="headerlink" href="#historical-development-of-current-sources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>1940s-50s :</strong> Early current sources used vacuum tubes.</p></li>
+</ul>
+<p><img alt="" src="../../../_images/url.jpg" /><br />
+Thermionic vacuum tubes, mostly miniature style, some with top cap connections for higher voltages</p>
+<ul class="simple">
+<li><p><strong>1950s :</strong> Germanium PNP transistors became popular but Because of germanium’s unpredictability —particularly its instability with temperature— these current sources were not too practical.</p></li>
+</ul>
+<p><img alt="" src="../../../_images/Germanium.jpg.webp" /><br />
+OC28 Germanium PNP Low Power Transistor TO3 Vintage 70’s OMA064D</p>
+<ul class="simple">
+<li><p><strong>1960s :</strong> Silicon NPN and PNP transistors enabled better current sources. However, these current sources were neither accurate nor repeatable, because they were built using discrete transistors, diodes, and resistors.</p></li>
+</ul>
+<p><img alt="" src="../../../_images/Silicon.jpg" /><br />
+Lot of 3 RCA 2N5181 Silicon NPN Transistors New Old Stock Vintage 1970</p>
+<ul class="simple">
+<li><p><strong>Late 1960s :</strong> the silicon bipolar analog IC became a practical reality and simple current sources began to be used in their architectures for purposes of biasing and stability. Their performances far outperformed their discrete predecessors, because all of the necessary components were integrated into the chip’s design. As a result, much development focused on creating current sources for bipolar circuits between the mid- 60s and the early ’80s.</p></li>
+</ul>
+<p><img alt="" src="../../../_images/Intel.jpeg" /><br />
+Intel C4004 processor with grey traces</p>
+<ul class="simple">
+<li><p><strong>1980s and Beyond :</strong> Current sources were developed for various technologies, including complementary-bipolar, analog CMOS, and gallium arsenide (GaAs) RF amplifiers.</p></li>
+</ul>
+<p><img alt="" src="../../../_images/Requirements.png" /></p>
+</section>
+<section id="requirements-when-using-bjts-for-creating-precision-current-sources">
+<h2>Requirements when using BJTs for creating precision current sources<a class="headerlink" href="#requirements-when-using-bjts-for-creating-precision-current-sources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Tightly Matched Transistors :</strong> To achieve accurate current sources, transistors must have closely matched base-emitter voltages (VBE) and current gain (hFE). Differences in VBE (ΔVBE) cause errors in current matching and it is the most critical parameter, which can be viewed collectively like an op amp’s offset voltage (VOS), between a monolithic pair of transistors used as a current source. To be clear, the ∆VBE is the difference in voltage between the two VBEs needed to equalize the two collector currents. If the transistors’ VBEs are the same and the collector voltages are the same, then the collector currents will also be the same. Actually, current source errors are exponentially proportional to the transistors’ VBEs, therefore it is very important that one begins with as closely matched devices as possible.</p></li>
+</ul>
+<p><img alt="" src="../../../_images/Matching.png" /></p>
+<ul>
+<li><p><strong>Monolithic Array :</strong> in a monolithic array, devices are inherently thermally matched (sharing the same package or substrate), otherwise the slightly different ground potentials, temperature differences/gradients, and overall long-term drift will quickly degrade a discrete circuit’s performance. In fact, once a current source design has been built, one should measure its long-term TC VOS stability (measured in μV/month). Ideally, one should aim for 1 μV/month or something close to that. Any accompanying resistors used should be tight tolerance (0.1% or better), low TC types (less than 50 ppm). Although using discrete transistors would appear to be more convenient and economical, this approach can be mostly discarded, other than at a feasibility or initial development phase, for lack of close matching, long-term accuracy and drift, as well as circuit repeatability. The increased performance, stability, and low drift of the monolithic dual or quad transistor array, versus using discrete transistors, far outweighs any added cost. This translates into making a reliable, successful product compared to making one that is troublesome and unsuccessful. The same holds true today and will tomorrow.</p>
+<p><img alt="" src="../../../_images/table.png" /></p>
+</li>
+<li><p><strong>Stable, Low-noise Voltage Source:</strong> For low current requirements (i.e., less than 5 mA), a precision low-noise voltage reference may even be used. In some applications, a small electrolytic capacitor (10 μF), in parallel with a 0.01-μF ceramic disc capacitor, may be required to bypass the regulated output to the current source supply. A hash-free regulated supply is essential in all precision work.</p></li>
+</ul>
+</section>
+<section id="challenges-and-configurations-of-bjts-as-current-sources">
+<h2>Challenges and Configurations of BJTs as Current Sources<a class="headerlink" href="#challenges-and-configurations-of-bjts-as-current-sources" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><strong>Difficulty as a Two-Lead Current Source:</strong> Unlike some other semiconductor devices, BJTs can’t easily function as current sources with just two connections (leads). A two-lead current source would typically involve an input and output connection only, but BJTs require more control. For a BJT to act as an effective current source, at least three connections are typically necessary : (In some designs, four connections may be required for additional control and stabilization.)</p>
+<ul class="simple">
+<li><p>Input Terminal: To supply the control signal. <br></p></li>
+<li><p>Output Terminal: Where the controlled current flows. <br></p></li>
+<li><p>Voltage Bias Point: To set the transistor’s operating point. <br></p></li>
+</ul>
+<p>As a result, virtually all BJT current sources are configured as current mirrors (aka current reflectors), where an input current is mirrored at the output, in either a matched 1:1 or other ratio. This may be either a fraction or a multiple of the input, or scaled in some other manner.</p>
+</li>
+</ul>
+</section>
+<section id="simplified-two-transistor-current-sources-npn-and-pnp-configurations">
+<h2>Simplified Two-Transistor Current Sources: NPN and PNP Configurations<a class="headerlink" href="#simplified-two-transistor-current-sources-npn-and-pnp-configurations" title="Link to this heading">#</a></h2>
+<p>Although various BJT current source designs originally appeared, few of them were stable or else used an excessive number of components, as shown previously in Figure 4.16. The simplest two-transistor current sources of modern times are shown in Figure 4.18A and B, which can be built using a pair of either NPN or PNP devices. Technically speaking, the NPN circuit is a mirror-sink, while the PNP circuit is a mirror-source. This is because IC2 mirrors the current in IREF, and the IC2 current is either flowing into the circuit (NPN) or out of it (PNP). In either case, the pair of transistors are assumed to have identical characteristics. The PNP version of this circuit works identically, but with all polarities and currents reversed. Of the two types, the PNP version is more commonly used.<br />
+<img alt="" src="../../../_images/Basic.png" /></p>
+<p>In both current mirror circuits, Q1’s base and collector are shorted together, while the base and emitter act as a diode. The series resistor, R, provides a fixed voltage and current to Q1’s collector, as well as base current for Q1 and Q2. In the NPN circuit, because Q1’s collector and base are shorted, and its emitter is grounded, this clamps the VBE at approximately 0.65 volt above ground. The PNP circuit has its VBE at approximately 0.65 volt below VCC. Because both VBEs are assumed here to be identical, so too will be their collector currents. If Q1’s VBE is now impressed across transistor Q2, then theoretically the reference current, IREF, will be mirrored (duplicated) by Q2.<br />
+given:<br />
+$<span class="math notranslate nohighlight">\( I_{B1} = I_{B2} \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( V_{BE1} = V_{BE2} \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( \beta_{Q1} = \beta_{Q2} \)</span><span class="math notranslate nohighlight">\(
+then to determine the reference current, IREF in either NPN or PNP circuit:  
+\)</span><span class="math notranslate nohighlight">\(
+I_{REF} = \left( \frac{V_{CC1} - V_{BE1}}{R} \right)
+\)</span><span class="math notranslate nohighlight">\(
+Also, because the reference current is composed of both Q1’s collector current and both base currents, then:  
+\)</span><span class="math notranslate nohighlight">\(
+I_{R E F} = I_{C l} + 2 I_{B}
+\)</span><span class="math notranslate nohighlight">\(
+Therefore, the output current, IC2, is determined by:  
+\)</span><span class="math notranslate nohighlight">\(
+I_{O U T} = I_{C 2} = \left(\frac{\beta}{\beta + 2}\right)\left(\frac{V_{C C 1} - V_{B E 1}}{R}\right)
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\therefore I_{C1} \cong I_{C2}
+\)</span><span class="math notranslate nohighlight">\(
+The output resistance (ro) for this particular configuration is given by the internal col- lector-to-emitter resistance (rce) of Q2, derived from the BJT’s small-signal model:  
+\)</span><span class="math notranslate nohighlight">\( r_{o} = r_{ce2} \)</span><span class="math notranslate nohighlight">\(
+where rce is determined by:  
+\)</span><span class="math notranslate nohighlight">\(
+r_{ce2} = \frac{V_{CE2}}{I_{C2}}
+\)</span>$</p>
+<section id="design-of-a-current-sources">
+<h3>Design of a Current Sources<a class="headerlink" href="#design-of-a-current-sources" title="Link to this heading">#</a></h3>
+<p>Consider designing two simple 500-μA current sources using NPN and PNP transistors. The specifications include:</p>
+<ul class="simple">
+<li><p><strong>Transistors:</strong> NMT-2222 (NPN, 2N2222 type) and NMT-2907 (PNP, 2N2907 type), both in a SOT-6 package.</p></li>
+<li><p><strong>Supply Voltage (+VCC):</strong> 6 volts</p></li>
+<li><p><strong>VBE:</strong> 0.65 volts</p></li>
+<li><p><strong>hFE (current gain):</strong> 50</p></li>
+</ul>
+<p>Assuming identical base currents, gains, and base-to-emitter voltages for both transistors, the circuit behavior can be analyzed. then:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{l}
+V_{CC1} = V_{CC2} = 6 \, \text{V} \\
+V_{BE1} = V_{BE2} = 0.65 \, \text{V} \\
+\beta_{Q1} = \beta_{Q2} = 50 \\
+I_{B1} = I_{B2} = 10 \, \mu \text{A} \\
+I_{OUT} = 500 \, \mu \text{A}
+\end{array}
+\)</span>$
+<img alt="" src="../../../_images/circuits.png" /></p>
+<p>The circuit is a little deceptive, because at first glance one would deduce that IREF is exactly equal to IOUT, but this is a little misleading. One should remember that there is a difference between IREF and IC1. After all, IREF is the entire reference current coming through the resistor (R), whereas IC1 is that part of the reference current flowing into Q1’s collector. The rest makes up the two base currents flowing into the bases of Q1 and Q2. This was defined previously in equation 4.36. As a result, the reference cur- rent should not be set at 500 μA, but slightly higher at 520 μA (to accommodate the two times IB). This will result in an output current of 500 μA, as shown in Figure 4.19. Although this current source is one of the simplest (three components), not to mention quite popular, its regulation is soft and its output resistance is likewise poor at less than 1 KΩ. Others we will review shortly do a much better job in both regards. Nonetheless, if you want a simple, three-component current source, this may be all you need for your application. Also, this current source is often used in conjunction with additional mirrors, which can either multiply or divide its output current (IC2), or even invert it.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>This project explored the use of bipolar junction transistors (BJTs) as current sources, tracing their evolution from vacuum tubes to modern silicon technology. The analysis emphasized the challenges of achieving precision and stability, such as matching transistor characteristics and managing temperature effects. Various configurations, including current mirrors, were discussed, highlighting their limitations and practical applications.</p>
+</section>
+<section id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Link to this heading">#</a></h2>
+<p>Current Sources and Voltage References: A Design Reference for Electronics Engineers 1st Edition
+by Linden T. Harrison</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Circuit_Electronics\StudentEffort\UsingBJTasCurrentSource"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-development-of-current-sources">Historical Development of Current Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-when-using-bjts-for-creating-precision-current-sources">Requirements when using BJTs for creating precision current sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-and-configurations-of-bjts-as-current-sources">Challenges and Configurations of BJTs as Current Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-two-transistor-current-sources-npn-and-pnp-configurations">Simplified Two-Transistor Current Sources: NPN and PNP Configurations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#design-of-a-current-sources">Design of a Current Sources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr.Hadi Sadoghi Yazdi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024 Pattern Recognition Lab.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
